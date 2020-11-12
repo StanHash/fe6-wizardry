@@ -1,0 +1,5 @@
+
+// Makes time always 0. This was made to demonstrate use of EA/make.
+// hack by stan
+
+#include "Src/NoTime.lyn.event"

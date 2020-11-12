@@ -1,0 +1,8 @@
+
+.cache_dir
+
+*.gba
+*.sav
+
+*.o
+*.lyn.event

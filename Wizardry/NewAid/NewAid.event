@@ -1,0 +1,5 @@
+
+// Replaces Aid formula. Mounted units have 25 aid while others have their strength/magic as aid.
+// hack by stan
+
+#include "Src/NewAid.lyn.event"

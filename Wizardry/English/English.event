@@ -1,0 +1,10 @@
+#ifndef ENGLISH
+#define ENGLISH
+
+// ASCII support (Shift-JIS subset)
+// hack by stan
+
+#include "EnglishFontData.event"
+#include "Src/Sjis.lyn.event"
+
+#endif // ENGLISH

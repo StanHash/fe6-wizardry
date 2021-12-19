@@ -7,14 +7,6 @@ endif
 # including devkitARM tool definitions
 include $(DEVKITARM)/base_tools
 
-ifeq ($(OS),Windows_NT)
-  MONO :=
-  EXE  := .exe
-else
-  MONO := mono
-  EXE  :=
-endif
-
 # Making sure we are using python 3
 ifeq ($(shell python -c 'import sys; print(int(sys.version_info[0] > 2))'),1)
   export PYTHON3 := python
@@ -25,13 +17,14 @@ endif
 # EA
 
 EA_DIR := Tools/EventAssembler
-EA := $(MONO) $(EA_DIR)/ColorzCore.exe
+EA := $(EA_DIR)/ColorzCore
 
 # EA Tools
 
-LYN := $(EA_DIR)/Tools/lyn$(EXE)
+LYN := $(EA_DIR)/Tools/lyn
 
 # Other Tools
 
-EA_DEP := Tools/ea-dep$(EXE)
+EA_DEP := $(EA_DIR)/ea-dep
 ELF2REF := $(PYTHON3) Tools/Scripts/elf2ref.py
+ELF2SYM := $(PYTHON3) Tools/Scripts/elf2sym.py

@@ -1,7 +1,9 @@
 
-.cache_dir
+.*
+!.git*
 
 *.gba
+*.sym
 *.sav
 
 *.o

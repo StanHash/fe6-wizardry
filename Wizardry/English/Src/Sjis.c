@@ -1,4 +1,3 @@
-
 #include "text.h"
 
 /*
@@ -8,7 +7,7 @@
  * Now, the first 0x80 indices are used for ASCII characters, while the everything after that is indexed as before.
  */
 
-extern struct Glyph const* const* NuTextGlyphTable[];
+extern struct Glyph const* const* const NuTextGlyphTable[];
 
 static struct Glyph const* GetGlyph(u32 character)
 {
@@ -18,14 +17,14 @@ static struct Glyph const* GetGlyph(u32 character)
     if (character < 0x100)
         return NULL;
 
-    unsigned const byte1 = 0xFF & (character >> 8);
-    unsigned const byte2 = 0xFF & (character);
+    unsigned const byte_1 = 0xFF & (character >> 8);
+    unsigned const byte_2 = 0xFF & (character);
 
-    struct Glyph const* glyph = gActiveFont->glyphs[0x80 + (byte2 - 0x40)];
+    struct Glyph const* glyph = gActiveFont->glyphs[0x80 + (byte_2 - 0x40)];
 
     while (glyph)
     {
-        if (glyph->sjisByte1 == byte1)
+        if (glyph->sjis_byte_1 == byte_1)
             return glyph;
 
         glyph = glyph->next;
@@ -86,7 +85,7 @@ char const* Text_DrawCharacter(struct Text* text, char const* str)
     while (!(glyph = GetGlyph(character)))
         character = (character << 8) + *str++;
 
-    gActiveFont->drawGlyph(text, glyph);
+    gActiveFont->draw_glyph(text, glyph);
 
     return str;
 }

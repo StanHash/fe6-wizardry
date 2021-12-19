@@ -1,4 +1,3 @@
-
 # making sure devkitARM exists and is set up
 ifeq ($(strip $(DEVKITARM)),)
   $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
@@ -16,15 +15,12 @@ endif
 
 # EA
 
-EA_DIR := Tools/EventAssembler
-EA := $(EA_DIR)/ColorzCore
-
-# EA Tools
-
-LYN := $(EA_DIR)/Tools/lyn
+EA_DIR := tools/EventAssembler
+EA     := $(EA_DIR)/ColorzCore
+EA_DEP := $(EA_DIR)/ea-dep
+LYN    := $(EA_DIR)/Tools/lyn
 
 # Other Tools
 
-EA_DEP := $(EA_DIR)/ea-dep
-ELF2REF := $(PYTHON3) Tools/Scripts/elf2ref.py
-ELF2SYM := $(PYTHON3) Tools/Scripts/elf2sym.py
+ELF2REF := $(PYTHON3) tools/scripts/elf2ref.py
+ELF2SYM := $(PYTHON3) tools/scripts/elf2sym.py

@@ -1,3 +1,3 @@
-[submodule "Tools/fe6"]
-	path = Tools/fe6
+[submodule "tools/fe6"]
+	path = tools/fe6
 	url = https://github.com/StanHash/fe6.git

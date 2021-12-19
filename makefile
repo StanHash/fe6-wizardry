@@ -1,4 +1,3 @@
-
 CACHE_DIR := .cache_dir
 $(shell mkdir -p $(CACHE_DIR) > /dev/null)
 
@@ -12,7 +11,7 @@ include tools.mk
 # = DECOMP FILE DEFINITIONS =
 # ===========================
 
-FE6_DIR := Tools/fe6
+FE6_DIR := tools/fe6
 
 FE6_GBA := $(FE6_DIR)/fe6.gba
 FE6_ELF := $(FE6_DIR)/fe6.elf

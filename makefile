@@ -25,7 +25,7 @@ FE6_SYM := $(CACHE_DIR)/fe6.sym
 # ===============
 
 HACK_GBA := hack.gba
-MAIN_EVENT := Main.event
+MAIN_EVENT := main.event
 
 hack: $(HACK_GBA)
 base: $(FE6_GBA)

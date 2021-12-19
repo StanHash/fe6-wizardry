@@ -1,3 +1,0 @@
-
-ORG $7FF0A4
-    #include "Wizardry/Wizardry.event"

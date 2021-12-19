@@ -1,5 +1,5 @@
 
-#include "Data/AsciiSystemGlyphs.lyn.event"
+#include "data/ascii-glyphs-system.lyn.event"
 
 ALIGN 4
 NuSystemTextGlyphs:
@@ -302,7 +302,7 @@ NuSystemTextGlyphs:
     POIN 0
     POIN 0
 
-#include "Data/AsciiTalkGlyphs.lyn.event"
+#include "data/ascii-glyphs-talk.lyn.event"
 
 ALIGN 4
 NuTalkTextGlyphs:

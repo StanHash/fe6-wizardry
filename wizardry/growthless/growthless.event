@@ -1,0 +1,16 @@
+// I wanted to play 0% growths but I didn't want to change all growths manually
+// this simply prevents stat gains on level up
+// hack by stan
+
+PUSH
+
+    ORG $025104
+
+    #include "src/growthless.lyn.event"
+
+    ASSERT NuCheckBattleUnitLevelUp - $025105
+    ASSERT $025105 - NuCheckBattleUnitLevelUp
+
+    ASSERT $02529C - CURRENTOFFSET
+
+POP

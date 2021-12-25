@@ -1,0 +1,9 @@
+// transcodes Shift-JIS messages to UTF-8 for compatibility with the unicode hack
+// hack by stan
+
+ALIGN 4
+Utf8TranscoderMsgStringPtr:
+    WORD 0x08013B14
+
+#include "data/sjis2unicode.lyn.event"
+#include "src/sjis-to-utf-8.lyn.event"

@@ -17,7 +17,7 @@ LYN_REFERENCE := $(FE6_REFERENCE:.s=.o)
 # ========================
 
 # Setting C/ASM include directories up
-INCLUDE_DIRS := Wizardry/Include $(FE6_DIR)/include
+INCLUDE_DIRS := wizardry/include $(FE6_DIR)/include
 INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)")
 
 # setting up compilation flags

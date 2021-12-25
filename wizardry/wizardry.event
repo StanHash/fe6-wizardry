@@ -1,6 +1,9 @@
 #include "failscreen/failscreen.event"
 
-#include "english/english.event"
+// #include "english/english.event"
+#include "unicode/unicode.event"
+#include "unicode/unicode-transcoder.event"
+#include "unicode/unicode-strings.event"
 
 #include "misc/skip-intro.event"
 #include "no-time/no-time.event"

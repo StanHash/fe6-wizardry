@@ -1,0 +1,14 @@
+
+DummyString:
+    BYTE 0
+
+PUSH
+    ORG $68A2EC
+        POIN DummyString
+        POIN DummyString
+        POIN DummyString
+        POIN DummyString
+        POIN DummyString
+        POIN DummyString
+        POIN DummyString
+POP

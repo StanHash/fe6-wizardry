@@ -13,10 +13,12 @@ def iter_elf_symbols(f):
         return
 
     for sym in section.iter_symbols():
-        if sym.entry.st_info.bind != 'STB_GLOBAL':
+        name = sym.name
+
+        if (len(name) == 0) or ('$' in name) or ('.' in name):
             continue
 
-        yield (sym.entry.st_value, sym.name, sym.entry.st_info.type == 'STT_FUNC')
+        yield (sym.entry.st_value, name, sym.entry.st_info.type == 'STT_FUNC')
 
 def main(args):
     try:

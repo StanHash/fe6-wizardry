@@ -1,3 +1,4 @@
+#include "failscreen/failscreen.event"
 
 #include "english/english.event"
 

@@ -20,7 +20,7 @@ def iter_elf_symbols(f):
     for sym in section.iter_symbols():
         name = sym.name
 
-        if len(name) == 0 or name[0] in ('$', '.'):
+        if (len(name) == 0) or ('$' in name) or ('.' in name):
             continue
 
         yield SymInfo(name, sym.entry.st_value, sym.entry.st_info.type == 'STT_FUNC')

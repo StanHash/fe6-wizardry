@@ -2,54 +2,60 @@
 
 #include "stan-failscreen.h"
 
-struct UnicodePageInfo
+struct UnicodeGlyphEnt
 {
-    u32 beg, end;
-    struct Glyph const* const* glyph_lut;
+    u32 character;
+    struct Glyph const* glyph;
 };
 
-extern struct UnicodePageInfo const* const UnicodePageInfoTable[];
+struct UnicodeFontInfo
+{
+    struct UnicodeGlyphEnt const* beg;
+    struct UnicodeGlyphEnt const* end;
+};
+
+extern struct UnicodeFontInfo const UnicodeFontInfoTable[];
 
 u32 Utf8DecodeCharacter(char const** strptr)
 {
-    u32 b0, b1, b2, b3;
+    u32 byte_0, byte_1, byte_2, byte_3;
 
-    b0 = *(*strptr)++;
+    byte_0 = *(*strptr)++;
 
-    switch (b0 & 0xF0)
+    switch (byte_0 & 0xF0)
     {
         default:
-            return b0;
+            return byte_0;
 
         case 0x80: case 0x90: case 0xA0: case 0xB0:
             // continuation byte
             goto error;
 
         case 0xC0: case 0xD0:
-            b0 = 0x1F & b0;
-            b1 = 0x3F & *(*strptr)++;
+            byte_0 = 0x1F & byte_0;
+            byte_1 = 0x3F & *(*strptr)++;
 
-            return (b0 << 6) + (b1);
+            return (byte_0 << 6) + (byte_1);
 
         case 0xE0:
-            b0 = 0x0F & b0;
-            b1 = 0x3F & *(*strptr)++;
-            b2 = 0x3F & *(*strptr)++;
+            byte_0 = 0x0F & byte_0;
+            byte_1 = 0x3F & *(*strptr)++;
+            byte_2 = 0x3F & *(*strptr)++;
 
-            return (b0 << 12) + (b1 << 6) + (b2);
+            return (byte_0 << 12) + (byte_1 << 6) + (byte_2);
 
         case 0xF0:
-            if ((b0 & 0x08) != 0)
+            if ((byte_0 & 0x08) != 0)
             {
                 goto error;
             }
 
-            b0 = 0x07 & b0;
-            b1 = 0x3F & *(*strptr)++;
-            b2 = 0x3F & *(*strptr)++;
-            b3 = 0x3F & *(*strptr)++;
+            byte_0 = 0x07 & byte_0;
+            byte_1 = 0x3F & *(*strptr)++;
+            byte_2 = 0x3F & *(*strptr)++;
+            byte_3 = 0x3F & *(*strptr)++;
 
-            return (b0 << 18) + (b1 << 12) + (b2 << 6) + (b3);
+            return (byte_0 << 18) + (byte_1 << 12) + (byte_2 << 6) + (byte_3);
     }
 
 error:
@@ -58,7 +64,7 @@ error:
     DebugPrintStr("==============================\n");
     DebugPrintStr(" Failed to decode character\n");
     DebugPrintStr(" Bytes found: ");
-    DebugPrintNumberHex(b0, 2);
+    DebugPrintNumberHex(byte_0, 2);
     DebugPrintStr(" ");
     DebugPrintNumberHex(**strptr, 2);
     DebugPrintStr(" ...\n");
@@ -70,23 +76,50 @@ error:
 
 struct Glyph const* Utf8GetGlyph(u32 character)
 {
-    struct UnicodePageInfo const* unicode_page_info = (struct UnicodePageInfo const*) gActiveFont->glyphs;
+    struct UnicodeFontInfo const* unicode_font_info = (struct UnicodeFontInfo const*) gActiveFont->glyphs;
 
-    while (unicode_page_info->glyph_lut != NULL)
+    // binary search!
+
+    // with vanilla glyph sets, this seems to take a maximum of 10 iterations to find the correct glyph
+    // which is I think pretty good? a hash table may still be faster idk.
+
+    // int iterations = 0;
+
+    u32 l = 0;
+    u32 r = (unicode_font_info->end - unicode_font_info->beg) - 1;
+    struct UnicodeGlyphEnt const* a = unicode_font_info->beg;
+
+    while (l <= r)
     {
-        if (character >= unicode_page_info->beg && character <= unicode_page_info->end)
+        u32 m = (l + r) / 2;
+
+        if (a[m].character < character)
+    {
+            l = m + 1;
+        }
+        else if (a[m].character > character)
         {
-            return unicode_page_info->glyph_lut[character - unicode_page_info->beg];
+            r = m - 1;
+        }
+        else
+        {
+            // DebugPrintStr("Utf8GetGlyph iterations: ");
+            // DebugPrintNumber(iterations, 3);
+            // DebugPrintStr("\n");
+
+            return a[m].glyph;
         }
 
-        unicode_page_info++;
+        // iterations++;
     }
+
+    // failed to find character in sorted list
 
     DebugPrintStr("==============================\n");
     DebugPrintStr("=====  UTF-8 DRAW ERROR  =====\n");
     DebugPrintStr("==============================\n");
     DebugPrintStr(" Failed to draw character\n");
-    DebugPrintStr(" No valid glyph found\n");
+    DebugPrintStr(" No glyph found\n");
     DebugPrintStr(" Character: U+");
     DebugPrintNumberHex(character, (character < 0x100 ? 2 : (character < 0x1000 ? 3 : 4)));
     DebugPrintStr("\n");
@@ -96,7 +129,7 @@ struct Glyph const* Utf8GetGlyph(u32 character)
 // replaces
 void SetTextFontGlyphs(int glyph_set)
 {
-    gActiveFont->glyphs = (struct Glyph const* const*) UnicodePageInfoTable[glyph_set];
+    gActiveFont->glyphs = (struct Glyph const* const*) &UnicodeFontInfoTable[glyph_set];
 }
 
 // replaces

@@ -1,11 +1,11 @@
 // UTF-8 support
 // hack by stan
 
-#include "data/unicode-pages.lyn.event"
+#include "data/unicode-fonts.lyn.event"
 
 ALIGN 4
-UnicodePageInfoTable:
-    POIN SystemGlyphPages
-    POIN TalkGlyphPages
+UnicodeFontInfoTable:
+    POIN UnicodeSystemFont UnicodeSystemFontEnd
+    POIN UnicodeTalkFont UnicodeTalkFontEnd
 
 #include "src/utf-8.lyn.event"

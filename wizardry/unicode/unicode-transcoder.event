@@ -5,5 +5,5 @@ ALIGN 4
 Utf8TranscoderMsgStringPtr:
     WORD 0x08013B14
 
-#include "data/sjis2unicode.lyn.event"
+#include "data/unicode-transcoder-luts.lyn.event"
 #include "src/sjis-to-utf-8.lyn.event"

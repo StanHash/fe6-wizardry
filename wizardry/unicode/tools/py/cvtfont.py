@@ -69,7 +69,7 @@ UNICODE_PAGES = [
     (0x4E00, 0x9FFF, "CJK Unified Ideographs"),
     (0xFF00, 0xFFEF, "Halfwidth and Fullwidth Forms")]
 
-def print_font(font_glyphs, prefix):
+def print_font_old(font_glyphs, prefix):
     pages = []
 
     processed_keys = set()
@@ -135,6 +135,22 @@ def print_font(font_glyphs, prefix):
         if key not in processed_keys:
             print(f"@ ERROR: {key:04X} unmapped!")
 
+def print_font_new(font_glyphs, prefix):
+    keys = [k for k in font_glyphs]
+    keys.sort()
+
+    print(f"    .global Unicode{prefix}Font")
+    print(f"    .type Unicode{prefix}Font, object")
+    print(f"Unicode{prefix}Font:")
+
+    for key in keys:
+        print(f"    .4byte 0x{key:04X}, 0x{font_glyphs[key]:08X} @ '{chr(key)}'")
+
+    print(f"    .global Unicode{prefix}FontEnd")
+    print(f"    .type Unicode{prefix}FontEnd, object")
+    print(f"Unicode{prefix}FontEnd:")
+    print("")
+
 def main(args):
     try:
         cvt_txt = args[1]
@@ -148,10 +164,10 @@ def main(args):
 
     with open(fe6_gba, 'rb') as f:
         talk_font = decode_font(f, 0x085A82B0, byte_info_tab)
-        print_font(talk_font, "Talk")
+        print_font_new(talk_font, "Talk")
 
         system_font = decode_font(f, 0x0859027C, byte_info_tab)
-        print_font(system_font, "System")
+        print_font_new(system_font, "System")
 
 if __name__ == '__main__':
     main(sys.argv)

@@ -180,3 +180,37 @@ void Text_DrawString(struct Text* text, char const* str)
     while (*str > 1)
         str = Text_DrawCharacter(text, str);
 }
+
+// replaces
+void Text_DrawNumber(struct Text* text, int number)
+{
+    if (number == 0)
+    {
+        Text_DrawCharacter(text, "0");
+        return;
+    }
+
+    while (number != 0)
+    {
+        char buf = '0' + DivRem(number, 10);
+        number = Div(number, 10);
+
+        Text_DrawCharacter(text, &buf);
+
+        text->x -= 16;
+    }
+}
+
+// replaces
+void Text_DrawNumberOrBlank(struct Text* text, int number)
+{
+    if (number == 0xFF || number == -1)
+    {
+        Text_Skip(text, -8);
+        Text_DrawString(text, "ーー");
+
+        return;
+    }
+
+    Text_DrawNumber(text, number);
+}

@@ -1,14 +1,2 @@
-
-DummyString:
-    BYTE 0
-
-PUSH
-    ORG $68A2EC
-        POIN DummyString
-        POIN DummyString
-        POIN DummyString
-        POIN DummyString
-        POIN DummyString
-        POIN DummyString
-        POIN DummyString
-POP
+#include "data/fe6-strings.lyn.event"
+#include "data/fe6-strings-repoint.event"

@@ -123,16 +123,6 @@ static void Sjis2Utf8(char* buf, int len)
 
                 break;
 
-            case 0x81:
-                if (src[1] == 0x40)
-                {
-                    *dst++ = *src++;
-                    *dst++ = *src++;
-                    break;
-                }
-
-                // fallthrough
-
             default:
                 WriteUtf8(&dst, CvtSjis(&src));
                 continue;

@@ -94,7 +94,7 @@ struct Glyph const* Utf8GetGlyph(u32 character)
         u32 m = (l + r) / 2;
 
         if (a[m].character < character)
-    {
+        {
             l = m + 1;
         }
         else if (a[m].character > character)
@@ -168,9 +168,6 @@ int GetStringTextLen(char const* str)
 char const* Text_DrawCharacter(struct Text* text, char const* str)
 {
     u32 character = Utf8DecodeCharacter(&str);
-
-    if (character < 0x20)
-        return str;
 
     gActiveFont->draw_glyph(text, Utf8GetGlyph(character));
 

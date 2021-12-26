@@ -1,3 +1,5 @@
+    .section .rodata
+
     .global Utf8TranscoderSjisToUnicodeTable
     .type Utf8TranscoderSjisToUnicodeTable, object
 Utf8TranscoderSjisToUnicodeTable:

@@ -4,8 +4,6 @@
 
 #include <string.h>
 
-extern char* const* const Utf8TranscoderMsgStringPtr;
-
 struct SjisToUnicodeEnt
 {
     /* 00 */ u16 single_char;
@@ -17,18 +15,18 @@ extern struct SjisToUnicodeEnt const Utf8TranscoderSjisToUnicodeTable[];
 
 static u32 CvtSjis(char const** strptr)
 {
-    u32 b0 = *(*strptr)++;
+    u32 byte_0 = *(*strptr)++;
 
-    struct SjisToUnicodeEnt const* ent = &Utf8TranscoderSjisToUnicodeTable[b0];
+    struct SjisToUnicodeEnt const* ent = &Utf8TranscoderSjisToUnicodeTable[byte_0];
 
     if (ent->single_char != 0)
     {
         return ent->single_char;
     }
 
-    u32 b1 = *(*strptr)++;
+    u32 byte_1 = *(*strptr)++;
 
-    if (b1 < ent->byterange_beg || b1 > ent->byterange_end || ent->lut[b1] == 0)
+    if (byte_1 < ent->byterange_beg || byte_1 > ent->byterange_end || ent->lut[byte_1] == 0)
     {
         DebugPrintStr("==============================\n");
         DebugPrintStr("===  UTF-8 TRANSCODE ERROR ===\n");
@@ -36,9 +34,9 @@ static u32 CvtSjis(char const** strptr)
         DebugPrintStr(" Failed to convert character\n");
         DebugPrintStr(" No Unicode character mapped\n");
         DebugPrintStr(" Bytes found: ");
-        DebugPrintNumberHex(b0, 2);
+        DebugPrintNumberHex(byte_0, 2);
         DebugPrintStr(" ");
-        DebugPrintNumberHex(b1, 2);
+        DebugPrintNumberHex(byte_1, 2);
         DebugPrintStr(" ...\n");
         DebugPrintStr(" Address: ");
         DebugPrintNumberHex(((int) (*strptr)) - 2, 7);
@@ -46,7 +44,7 @@ static u32 CvtSjis(char const** strptr)
         FailScreen();
     }
 
-    return ent->lut[b1];
+    return ent->lut[byte_1];
 }
 
 static void WriteUtf8(char** dst, u32 character)
@@ -113,14 +111,7 @@ static void Sjis2Utf8(char* buf, int len)
 
             case 0x80:
                 *dst++ = *src++;
-
-                switch (*src)
-                {
-                    case 0x00 ... 0x11:
-                        *dst++ = *src++;
-                        break;
-                }
-
+                *dst++ = *src++;
                 break;
 
             default:
@@ -136,9 +127,5 @@ void DecodeStringRam(char const* src, char* dst)
     extern void(*DecodeStringRamFunc)(char const* src, char* dst);
 
     DecodeStringRamFunc(src, dst);
-
-    if (dst == *Utf8TranscoderMsgStringPtr)
-    {
-        Sjis2Utf8(dst, 0x1000);
-    }
+    Sjis2Utf8(dst, 0x1000);
 }

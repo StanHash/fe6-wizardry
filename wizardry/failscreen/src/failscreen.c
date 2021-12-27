@@ -24,8 +24,6 @@ void FailScreen(void)
     gDispIo.disp_ct.mode = 0;
     gDispIo.disp_ct.forcedBlank = 0;
     DebugInitBg(2, 0);
-    gPal[0] = 0;
-    EnablePalSync();
     RegisterVramFill(0, 0, 0x40);
     SetBgOffset(2, 0, 0);
     SetDispEnable(0, 0, 1, 0, 0);

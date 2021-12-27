@@ -43,6 +43,9 @@ def main(args):
     with open(str_txt, 'r') as f:
         string_locations = parse_string_locations(f)
 
+    print(f"    .section .rodata")
+    print(f"")
+
     with open(rom_gba, 'rb') as f:
         for str_addr in string_locations:
             str_name = string_locations[str_addr]

@@ -33,7 +33,7 @@ def parse_string_locations(f):
                 addr = int(m.group('addr'), base = 16)
                 name = m.group('name')
                 overwrite = m.group('overwrite')
-                names[addr] = f"String_{name}"
+                names[addr] = f"UString_{name}"
                 overwrites[addr] = overwrite
 
                 continue
@@ -43,7 +43,7 @@ def parse_string_locations(f):
         if m:
             addr = int(m.group('addr'), base = 16)
             name = m.group('name')
-            names[addr] = f"String_{name}"
+            names[addr] = f"UString_{name}"
 
     return (names, overwrites)
 

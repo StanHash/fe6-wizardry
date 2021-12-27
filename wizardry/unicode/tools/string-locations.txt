@@ -62,30 +62,30 @@
 08319610 PrepScreen_Label_Hp_Unused_Debug
 08319620 PrepScreen_Label_Strength_Unused
 0831961C PrepScreen_Label_Strength_Unused_Debug
-08319628 PrepScreen_Unk_8
-08319624 PrepScreen_Unk_9
-08319638 PrepScreen_Unk_10
-08319630 PrepScreen_Unk_11
-08319644 PrepScreen_Unk_12
-0831963C PrepScreen_Unk_13
-08319650 PrepScreen_Unk_14
-0831964C PrepScreen_Unk_15
-08319660 PrepScreen_Unk_16
-08319658 PrepScreen_Unk_17
-08319670 PrepScreen_Unk_18
-08319668 PrepScreen_Unk_19
-08319680 PrepScreen_Unk_20
-08319678 PrepScreen_Unk_21
-0831968C PrepScreen_Unk_22
-08319688 PrepScreen_Unk_23
-08319698 PrepScreen_Unk_24
-08319694 PrepScreen_Unk_25
-083196A8 PrepScreen_Unk_26
-083196A0 PrepScreen_Unk_27
-083196B8 PrepScreen_Unk_28
-083196B0 PrepScreen_Unk_29
-083196C4 PrepScreen_Unk_30
-083196C0 PrepScreen_Unk_31
+08319628 PrepScreen_Label_Magic_Unused
+08319624 PrepScreen_Label_Magic_Unused_Debug
+08319638 PrepScreen_Label_Skill "Skill"
+08319630 PrepScreen_Label_Skill_Debug
+08319644 PrepScreen_Label_Speed "Spd"
+0831963C PrepScreen_Label_Speed_Debug
+08319650 PrepScreen_Label_Defense "Def"
+0831964C PrepScreen_Label_Defense_Debug
+08319660 PrepScreen_Label_Resistance "Res"
+08319658 PrepScreen_Label_Resistance_Debug
+08319670 PrepScreen_Label_Luck "Luck"
+08319668 PrepScreen_Label_Luck_Debug
+08319680 PrepScreen_Label_Con "Con"
+08319678 PrepScreen_Label_Con_Debug
+0831968C PrepScreen_Label_Aid "Aid"
+08319688 PrepScreen_Label_Aid_Debug
+08319698 PrepScreen_Label_Move "Move"
+08319694 PrepScreen_Label_Move_Debug
+083196A8 PrepScreen_Label_Rescue "Trv"
+083196A0 PrepScreen_Label_Rescue_Debug
+083196B8 PrepScreen_Label_Affinity "Affin"
+083196B0 PrepScreen_Label_Affinity_Debug
+083196C4 PrepScreen_Label_Range "Rng"
+083196C0 PrepScreen_Label_Range_Debug
 083196D0 PrepScreen_Unk_32
 083196CC PrepScreen_Unk_33
 083196DC PrepScreen_Unk_34
@@ -144,14 +144,14 @@
 08319890 PrepScreen_Unk_88
 08319884 PrepScreen_Unk_89
 
-083195AC PrepScreen_Label_Magic
-083195B4 PrepScreen_Label_Strength
+083195AC PrepScreen_Label_Magic "Mag"
+083195B4 PrepScreen_Label_Strength "Str"
 
-08319894 PrepScreen_Unk_08319894
-0831989C PrepScreen_Unk_0831989C
-083198A4 PrepScreen_Unk_083198A4
-083198AC PrepScreen_Unk_083198AC
-083198B4 PrepScreen_Unk_083198B4
+08319894 PrepScreen_ItemHelp_Label_Range "Rng"
+0831989C PrepScreen_ItemHelp_Label_Weight "Wt"
+083198A4 PrepScreen_ItemHelp_Label_Might "Mt"
+083198AC PrepScreen_ItemHelp_Label_Hit "Hit"
+083198B4 PrepScreen_ItemHelp_Label_Crit "Crit"
 083198BC PrepScreen_Unk_083198BC
 083198C0 PrepScreen_Unk_083198C0
 083198C4 PrepScreen_Unk_083198C4
@@ -164,26 +164,26 @@
 08105848 StatusName_Berserk
 
 # affinity names array at 081059F0
-081059D0 AffinityName_0
-081059D4 AffinityName_1
-081059D8 AffinityName_2
-081059DC AffinityName_3
-081059E0 AffinityName_4
-081059E4 AffinityName_5
-081059E8 AffinityName_6
-081059EC AffinityName_7
+081059D0 AffinityName_0 ""
+081059D4 AffinityName_1 ""
+081059D8 AffinityName_2 ""
+081059DC AffinityName_3 ""
+081059E0 AffinityName_4 ""
+081059E4 AffinityName_5 ""
+081059E8 AffinityName_6 ""
+081059EC AffinityName_7 ""
 
 # item range names array at 08105788
-08105710 ItemRange_1ToMag
-0810571C ItemRange_1
-08105728 ItemRange_1To2
-08105734 ItemRange_1To3
-08105740 ItemRange_2
-0810574C ItemRange_2To3
-08105758 ItemRange_3To10
-08105764 ItemRange_3To15
-08105770 ItemRange_All
-0810577C ItemRange_None
+08105710 ItemRange_1ToMag "　1~Mag"
+0810571C ItemRange_1 "　　　1"
+08105728 ItemRange_1To2 "　 1~2"
+08105734 ItemRange_1To3 "　 1~3"
+08105740 ItemRange_2 "　　　2"
+0810574C ItemRange_2To3 "　 2~3"
+08105758 ItemRange_3To10 "　3~10"
+08105764 ItemRange_3To15 "　3~15"
+08105770 ItemRange_All "　　All"
+0810577C ItemRange_None "　　ーー"
 
 # item level names array at 081057CC
 081057B0 ItemLevel_None
@@ -195,17 +195,17 @@
 081057C8 ItemLevel_S
 
 # item kind names array at 0810581C
-081057F0 ItemKind_Sword
-081057F4 ItemKind_Lance
-081057F8 ItemKind_Axe
-081057FC ItemKind_Bow
-08105800 ItemKind_Staff
-08105804 ItemKind_Anima
-08105808 ItemKind_Light
-0810580C ItemKind_Elder
+081057F0 ItemKind_Sword "Sword"
+081057F4 ItemKind_Lance "Lance"
+081057F8 ItemKind_Axe "Axe"
+081057FC ItemKind_Bow "Bow"
+08105800 ItemKind_Staff "Staff"
+08105804 ItemKind_Anima "Anima"
+08105808 ItemKind_Light "Light"
+0810580C ItemKind_Elder "Elder"
 08105810 ItemKind_8
 08105814 ItemKind_9
-08105818 ItemKind_Dragon
+08105818 ItemKind_Dragon "Dragon"
 
 # menu item names
 08105A38 Menu_085C73C0_Entry_0
@@ -333,3 +333,7 @@
 08327168 UnitScreen_08327168
 0832716C UnitScreen_0832716C
 08327170 UnitScreen_08327170
+
+# TODO: fix this one
+081C9FEC Banim_LevelUp_Strength_081C9FEC
+081CA014 Banim_LevelUp_Magic_081CA014

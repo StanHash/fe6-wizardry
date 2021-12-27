@@ -197,7 +197,7 @@ void Text_DrawNumber(struct Text* text, int number)
 
         Text_DrawCharacter(text, &buf);
 
-        text->x -= 16;
+        text->x -= 15;
     }
 }
 

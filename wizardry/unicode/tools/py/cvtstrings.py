@@ -14,7 +14,8 @@ def read_sjis_string(f):
     return array
 
 def parse_string_locations(f):
-    result = {}
+    names = {}
+    overwrites = {}
 
     for line in f.readlines():
         line = line[:line.find("#")]
@@ -23,14 +24,28 @@ def parse_string_locations(f):
         if len(line) == 0:
             continue
 
+        if True:
+            # look for overwrite
+
+            m = re.match(r"(?P<addr>\w{8})\s+(?P<name>[a-zA-Z0-9_]+)\s+\"(?P<overwrite>.*)\"", line)
+
+            if m:
+                addr = int(m.group('addr'), base = 16)
+                name = m.group('name')
+                overwrite = m.group('overwrite')
+                names[addr] = f"String_{name}"
+                overwrites[addr] = overwrite
+
+                continue
+
         m = re.match(r"(?P<addr>\w{8})\s+(?P<name>[a-zA-Z0-9_]+)", line)
 
         if m:
             addr = int(m.group('addr'), base = 16)
             name = m.group('name')
-            result[addr] = f"String_{name}"
+            names[addr] = f"String_{name}"
 
-    return result
+    return (names, overwrites)
 
 def main(args):
     try:
@@ -41,7 +56,7 @@ def main(args):
         sys.exit(f"Usage: {args[0]} fe6.gba str.txt")
 
     with open(str_txt, 'r') as f:
-        string_locations = parse_string_locations(f)
+        string_locations, string_overwrites = parse_string_locations(f)
 
     print(f"    .section .rodata")
     print(f"")
@@ -51,11 +66,13 @@ def main(args):
             str_name = string_locations[str_addr]
 
             f.seek(str_addr & 0x1FFFFFF)
-            string = read_sjis_string(f).decode('cp932')
+            orig_string = read_sjis_string(f).decode('cp932')
+
+            string = string_overwrites[str_addr] if str_addr in string_overwrites else orig_string
 
             print(f"    .global {str_name}")
             print(f"    .type {str_name}, object")
-            print(f"{str_name}: @ '{string}'")
+            print(f"{str_name}: @ '{orig_string}'")
             print(f"    .asciz \"{string}\"")
             print(f"")
 

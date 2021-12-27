@@ -8,291 +8,291 @@ String_MainMenu_Blank: @ ''
     .global String_MainMenu_StartCancel
     .type String_MainMenu_StartCancel, object
 String_MainMenu_StartCancel: @ 'はじめる　やめる'
-    .asciz "はじめる　やめる"
+    .asciz "Start Cancel"
 
     .global String_MainMenu_CopyCancel
     .type String_MainMenu_CopyCancel, object
 String_MainMenu_CopyCancel: @ 'うつす　　やめる'
-    .asciz "うつす　　やめる"
+    .asciz "Copy Cancel"
 
     .global String_MainMenu_EraseCancel
     .type String_MainMenu_EraseCancel, object
 String_MainMenu_EraseCancel: @ '消す　　　やめる'
-    .asciz "消す　　　やめる"
+    .asciz "Erase Cancel"
 
     .global String_MainMenu_08336C7C
     .type String_MainMenu_08336C7C, object
 String_MainMenu_08336C7C: @ '記録　　　やめる'
-    .asciz "記録　　　やめる"
+    .asciz "<unknown>"
 
-    .global String_TerrainName_0
-    .type String_TerrainName_0, object
-String_TerrainName_0: @ 'ーー'
+    .global String_TerrainName_Blank
+    .type String_TerrainName_Blank, object
+String_TerrainName_Blank: @ 'ーー'
     .asciz "ーー"
 
-    .global String_TerrainName_1
-    .type String_TerrainName_1, object
-String_TerrainName_1: @ '平地'
-    .asciz "平地"
+    .global String_TerrainName_Plains
+    .type String_TerrainName_Plains, object
+String_TerrainName_Plains: @ '平地'
+    .asciz "Plains"
 
-    .global String_TerrainName_2
-    .type String_TerrainName_2, object
-String_TerrainName_2: @ '道'
-    .asciz "道"
+    .global String_TerrainName_Road
+    .type String_TerrainName_Road, object
+String_TerrainName_Road: @ '道'
+    .asciz "Road"
 
-    .global String_TerrainName_3
-    .type String_TerrainName_3, object
-String_TerrainName_3: @ '村'
-    .asciz "村"
+    .global String_TerrainName_Village
+    .type String_TerrainName_Village, object
+String_TerrainName_Village: @ '村'
+    .asciz "Village"
 
-    .global String_TerrainName_4
-    .type String_TerrainName_4, object
-String_TerrainName_4: @ '閉じ村'
-    .asciz "閉じ村"
+    .global String_TerrainName_Village_Closed
+    .type String_TerrainName_Village_Closed, object
+String_TerrainName_Village_Closed: @ '閉じ村'
+    .asciz "Village"
 
-    .global String_TerrainName_5
-    .type String_TerrainName_5, object
-String_TerrainName_5: @ '民家'
-    .asciz "民家"
+    .global String_TerrainName_House
+    .type String_TerrainName_House, object
+String_TerrainName_House: @ '民家'
+    .asciz "House"
 
-    .global String_TerrainName_6
-    .type String_TerrainName_6, object
-String_TerrainName_6: @ '武器屋'
-    .asciz "武器屋"
+    .global String_TerrainName_Armory
+    .type String_TerrainName_Armory, object
+String_TerrainName_Armory: @ '武器屋'
+    .asciz "Armory"
 
-    .global String_TerrainName_7
-    .type String_TerrainName_7, object
-String_TerrainName_7: @ '道具屋'
-    .asciz "道具屋"
+    .global String_TerrainName_Vendor
+    .type String_TerrainName_Vendor, object
+String_TerrainName_Vendor: @ '道具屋'
+    .asciz "Vendor"
 
-    .global String_TerrainName_8
-    .type String_TerrainName_8, object
-String_TerrainName_8: @ '闘技場'
-    .asciz "闘技場"
+    .global String_TerrainName_Arena
+    .type String_TerrainName_Arena, object
+String_TerrainName_Arena: @ '闘技場'
+    .asciz "Arena"
 
-    .global String_TerrainName_9
-    .type String_TerrainName_9, object
-String_TerrainName_9: @ '預り所'
-    .asciz "預り所"
+    .global String_TerrainName_Storage
+    .type String_TerrainName_Storage, object
+String_TerrainName_Storage: @ '預り所'
+    .asciz "Storage"
 
-    .global String_TerrainName_10
-    .type String_TerrainName_10, object
-String_TerrainName_10: @ '砦'
-    .asciz "砦"
+    .global String_TerrainName_Fort
+    .type String_TerrainName_Fort, object
+String_TerrainName_Fort: @ '砦'
+    .asciz "Fort"
 
-    .global String_TerrainName_11
-    .type String_TerrainName_11, object
-String_TerrainName_11: @ '城門'
-    .asciz "城門"
+    .global String_TerrainName_Gate
+    .type String_TerrainName_Gate, object
+String_TerrainName_Gate: @ '城門'
+    .asciz "Gate"
 
-    .global String_TerrainName_12
-    .type String_TerrainName_12, object
-String_TerrainName_12: @ '森'
-    .asciz "森"
+    .global String_TerrainName_Forest
+    .type String_TerrainName_Forest, object
+String_TerrainName_Forest: @ '森'
+    .asciz "Forest"
 
-    .global String_TerrainName_13
-    .type String_TerrainName_13, object
-String_TerrainName_13: @ '深い森'
-    .asciz "深い森"
+    .global String_TerrainName_Thicket
+    .type String_TerrainName_Thicket, object
+String_TerrainName_Thicket: @ '深い森'
+    .asciz "Thicket"
 
-    .global String_TerrainName_14
-    .type String_TerrainName_14, object
-String_TerrainName_14: @ '砂地'
-    .asciz "砂地"
+    .global String_TerrainName_Sand
+    .type String_TerrainName_Sand, object
+String_TerrainName_Sand: @ '砂地'
+    .asciz "Sand"
 
-    .global String_TerrainName_15
-    .type String_TerrainName_15, object
-String_TerrainName_15: @ '砂漠'
-    .asciz "砂漠"
+    .global String_TerrainName_Desert
+    .type String_TerrainName_Desert, object
+String_TerrainName_Desert: @ '砂漠'
+    .asciz "Desert"
 
-    .global String_TerrainName_16
-    .type String_TerrainName_16, object
-String_TerrainName_16: @ '川'
-    .asciz "川"
+    .global String_TerrainName_River
+    .type String_TerrainName_River, object
+String_TerrainName_River: @ '川'
+    .asciz "River"
 
-    .global String_TerrainName_17
-    .type String_TerrainName_17, object
-String_TerrainName_17: @ '山'
-    .asciz "山"
+    .global String_TerrainName_Mountain
+    .type String_TerrainName_Mountain, object
+String_TerrainName_Mountain: @ '山'
+    .asciz "Mntn"
 
-    .global String_TerrainName_18
-    .type String_TerrainName_18, object
-String_TerrainName_18: @ '高い山'
-    .asciz "高い山"
+    .global String_TerrainName_Peak
+    .type String_TerrainName_Peak, object
+String_TerrainName_Peak: @ '高い山'
+    .asciz "Peak"
 
-    .global String_TerrainName_19
-    .type String_TerrainName_19, object
-String_TerrainName_19: @ '橋'
-    .asciz "橋"
+    .global String_TerrainName_Bridge
+    .type String_TerrainName_Bridge, object
+String_TerrainName_Bridge: @ '橋'
+    .asciz "Bridge"
 
-    .global String_TerrainName_20
-    .type String_TerrainName_20, object
-String_TerrainName_20: @ 'はね橋'
-    .asciz "はね橋"
+    .global String_TerrainName_Drawbridge
+    .type String_TerrainName_Drawbridge, object
+String_TerrainName_Drawbridge: @ 'はね橋'
+    .asciz "Bridge"
 
-    .global String_TerrainName_21
-    .type String_TerrainName_21, object
-String_TerrainName_21: @ '海'
-    .asciz "海"
+    .global String_TerrainName_Sea
+    .type String_TerrainName_Sea, object
+String_TerrainName_Sea: @ '海'
+    .asciz "Sea"
 
-    .global String_TerrainName_22
-    .type String_TerrainName_22, object
-String_TerrainName_22: @ '湖'
-    .asciz "湖"
+    .global String_TerrainName_Lake
+    .type String_TerrainName_Lake, object
+String_TerrainName_Lake: @ '湖'
+    .asciz "Lake"
 
-    .global String_TerrainName_23
-    .type String_TerrainName_23, object
-String_TerrainName_23: @ '床'
-    .asciz "床"
+    .global String_TerrainName_Floor
+    .type String_TerrainName_Floor, object
+String_TerrainName_Floor: @ '床'
+    .asciz "Floor"
 
-    .global String_TerrainName_25
-    .type String_TerrainName_25, object
-String_TerrainName_25: @ '塀'
-    .asciz "塀"
+    .global String_TerrainName_Fence
+    .type String_TerrainName_Fence, object
+String_TerrainName_Fence: @ '塀'
+    .asciz "Fence"
 
-    .global String_TerrainName_26
-    .type String_TerrainName_26, object
-String_TerrainName_26: @ '壁'
-    .asciz "壁"
+    .global String_TerrainName_Wall
+    .type String_TerrainName_Wall, object
+String_TerrainName_Wall: @ '壁'
+    .asciz "Wall"
 
-    .global String_TerrainName_28
-    .type String_TerrainName_28, object
-String_TerrainName_28: @ '壊れた壁'
-    .asciz "壊れた壁"
+    .global String_TerrainName_Rubble
+    .type String_TerrainName_Rubble, object
+String_TerrainName_Rubble: @ '壊れた壁'
+    .asciz "Rubble"
 
-    .global String_TerrainName_29
-    .type String_TerrainName_29, object
-String_TerrainName_29: @ '柱'
-    .asciz "柱"
+    .global String_TerrainName_Pillar
+    .type String_TerrainName_Pillar, object
+String_TerrainName_Pillar: @ '柱'
+    .asciz "Pillar"
 
-    .global String_TerrainName_30
-    .type String_TerrainName_30, object
-String_TerrainName_30: @ '扉'
-    .asciz "扉"
+    .global String_TerrainName_Door
+    .type String_TerrainName_Door, object
+String_TerrainName_Door: @ '扉'
+    .asciz "Door"
 
-    .global String_TerrainName_31
-    .type String_TerrainName_31, object
-String_TerrainName_31: @ '玉座'
-    .asciz "玉座"
+    .global String_TerrainName_Throne
+    .type String_TerrainName_Throne, object
+String_TerrainName_Throne: @ '玉座'
+    .asciz "Throne"
 
-    .global String_TerrainName_32
-    .type String_TerrainName_32, object
-String_TerrainName_32: @ '空宝箱'
-    .asciz "空宝箱"
+    .global String_TerrainName_Chest_Opened
+    .type String_TerrainName_Chest_Opened, object
+String_TerrainName_Chest_Opened: @ '空宝箱'
+    .asciz "Chest"
 
-    .global String_TerrainName_33
-    .type String_TerrainName_33, object
-String_TerrainName_33: @ '宝箱'
-    .asciz "宝箱"
+    .global String_TerrainName_Chest
+    .type String_TerrainName_Chest, object
+String_TerrainName_Chest: @ '宝箱'
+    .asciz "Chest"
 
-    .global String_TerrainName_34
-    .type String_TerrainName_34, object
-String_TerrainName_34: @ '屋根'
-    .asciz "屋根"
+    .global String_TerrainName_Roof
+    .type String_TerrainName_Roof, object
+String_TerrainName_Roof: @ '屋根'
+    .asciz "Roof"
 
-    .global String_TerrainName_35
-    .type String_TerrainName_35, object
-String_TerrainName_35: @ '門'
-    .asciz "門"
+    .global String_TerrainName_DoorGate
+    .type String_TerrainName_DoorGate, object
+String_TerrainName_DoorGate: @ '門'
+    .asciz "Gate"
 
-    .global String_TerrainName_36
-    .type String_TerrainName_36, object
-String_TerrainName_36: @ '教会'
-    .asciz "教会"
+    .global String_TerrainName_Church
+    .type String_TerrainName_Church, object
+String_TerrainName_Church: @ '教会'
+    .asciz "Church"
 
-    .global String_TerrainName_37
-    .type String_TerrainName_37, object
-String_TerrainName_37: @ '廃墟'
-    .asciz "廃墟"
+    .global String_TerrainName_Ruins
+    .type String_TerrainName_Ruins, object
+String_TerrainName_Ruins: @ '廃墟'
+    .asciz "Ruins"
 
-    .global String_TerrainName_38
-    .type String_TerrainName_38, object
-String_TerrainName_38: @ 'がけ'
-    .asciz "がけ"
+    .global String_TerrainName_Cliff
+    .type String_TerrainName_Cliff, object
+String_TerrainName_Cliff: @ 'がけ'
+    .asciz "Cliff"
 
-    .global String_TerrainName_39
-    .type String_TerrainName_39, object
-String_TerrainName_39: @ 'アーチ'
-    .asciz "アーチ"
+    .global String_TerrainName_Ballista
+    .type String_TerrainName_Ballista, object
+String_TerrainName_Ballista: @ 'アーチ'
+    .asciz "Ballista"
 
-    .global String_TerrainName_40
-    .type String_TerrainName_40, object
-String_TerrainName_40: @ 'ロング'
-    .asciz "ロング"
+    .global String_TerrainName_LongBallista
+    .type String_TerrainName_LongBallista, object
+String_TerrainName_LongBallista: @ 'ロング'
+    .asciz "Long B"
 
-    .global String_TerrainName_41
-    .type String_TerrainName_41, object
-String_TerrainName_41: @ 'キラー'
-    .asciz "キラー"
+    .global String_TerrainName_KillerBallista
+    .type String_TerrainName_KillerBallista, object
+String_TerrainName_KillerBallista: @ 'キラー'
+    .asciz "Killer B"
 
-    .global String_TerrainName_42
-    .type String_TerrainName_42, object
-String_TerrainName_42: @ '荒地'
-    .asciz "荒地"
+    .global String_TerrainName_Flat
+    .type String_TerrainName_Flat, object
+String_TerrainName_Flat: @ '荒地'
+    .asciz "Flat"
 
-    .global String_TerrainName_43
-    .type String_TerrainName_43, object
-String_TerrainName_43: @ '壊れた家'
-    .asciz "壊れた家"
+    .global String_TerrainName_Wreck
+    .type String_TerrainName_Wreck, object
+String_TerrainName_Wreck: @ '壊れた家'
+    .asciz "Wreck"
 
-    .global String_TerrainName_45
-    .type String_TerrainName_45, object
-String_TerrainName_45: @ '階段'
-    .asciz "階段"
+    .global String_TerrainName_Stairs
+    .type String_TerrainName_Stairs, object
+String_TerrainName_Stairs: @ '階段'
+    .asciz "Stairs"
 
-    .global String_TerrainName_47
-    .type String_TerrainName_47, object
-String_TerrainName_47: @ '氷河'
-    .asciz "氷河"
+    .global String_TerrainName_Glacier
+    .type String_TerrainName_Glacier, object
+String_TerrainName_Glacier: @ '氷河'
+    .asciz "Glacier"
 
-    .global String_TerrainName_48
-    .type String_TerrainName_48, object
-String_TerrainName_48: @ '通信闘技'
-    .asciz "通信闘技"
+    .global String_TerrainName_LinkArena
+    .type String_TerrainName_LinkArena, object
+String_TerrainName_LinkArena: @ '通信闘技'
+    .asciz "Arena"
 
-    .global String_TerrainName_49
-    .type String_TerrainName_49, object
-String_TerrainName_49: @ '谷'
-    .asciz "谷"
+    .global String_TerrainName_Valley
+    .type String_TerrainName_Valley, object
+String_TerrainName_Valley: @ '谷'
+    .asciz "Valley"
 
-    .global String_PrepScreen_Unk_0
-    .type String_PrepScreen_Unk_0, object
-String_PrepScreen_Unk_0: @ 'ＬＶ'
+    .global String_PrepScreen_Label_Lv_Unused
+    .type String_PrepScreen_Label_Lv_Unused, object
+String_PrepScreen_Label_Lv_Unused: @ 'ＬＶ'
     .asciz "ＬＶ"
 
-    .global String_PrepScreen_Unk_1
-    .type String_PrepScreen_Unk_1, object
-String_PrepScreen_Unk_1: @ 'Lv'
+    .global String_PrepScreen_Label_Lv_Unused_Debug
+    .type String_PrepScreen_Label_Lv_Unused_Debug, object
+String_PrepScreen_Label_Lv_Unused_Debug: @ 'Lv'
     .asciz "Lv"
 
-    .global String_PrepScreen_Unk_2
-    .type String_PrepScreen_Unk_2, object
-String_PrepScreen_Unk_2: @ 'ＥＸ'
+    .global String_PrepScreen_Label_Exp_Unused
+    .type String_PrepScreen_Label_Exp_Unused, object
+String_PrepScreen_Label_Exp_Unused: @ 'ＥＸ'
     .asciz "ＥＸ"
 
-    .global String_PrepScreen_Unk_3
-    .type String_PrepScreen_Unk_3, object
-String_PrepScreen_Unk_3: @ 'Ex'
+    .global String_PrepScreen_Label_Exp_Unused_Debug
+    .type String_PrepScreen_Label_Exp_Unused_Debug, object
+String_PrepScreen_Label_Exp_Unused_Debug: @ 'Ex'
     .asciz "Ex"
 
-    .global String_PrepScreen_Unk_4
-    .type String_PrepScreen_Unk_4, object
-String_PrepScreen_Unk_4: @ 'ＨＰ'
+    .global String_PrepScreen_Label_Hp_Unused
+    .type String_PrepScreen_Label_Hp_Unused, object
+String_PrepScreen_Label_Hp_Unused: @ 'ＨＰ'
     .asciz "ＨＰ"
 
-    .global String_PrepScreen_Unk_5
-    .type String_PrepScreen_Unk_5, object
-String_PrepScreen_Unk_5: @ 'HP'
+    .global String_PrepScreen_Label_Hp_Unused_Debug
+    .type String_PrepScreen_Label_Hp_Unused_Debug, object
+String_PrepScreen_Label_Hp_Unused_Debug: @ 'HP'
     .asciz "HP"
 
-    .global String_PrepScreen_Unk_6
-    .type String_PrepScreen_Unk_6, object
-String_PrepScreen_Unk_6: @ '力'
+    .global String_PrepScreen_Label_Strength_Unused
+    .type String_PrepScreen_Label_Strength_Unused, object
+String_PrepScreen_Label_Strength_Unused: @ '力'
     .asciz "力"
 
-    .global String_PrepScreen_Unk_7
-    .type String_PrepScreen_Unk_7, object
-String_PrepScreen_Unk_7: @ 'str'
+    .global String_PrepScreen_Label_Strength_Unused_Debug
+    .type String_PrepScreen_Label_Strength_Unused_Debug, object
+String_PrepScreen_Label_Strength_Unused_Debug: @ 'str'
     .asciz "str"
 
     .global String_PrepScreen_Unk_8

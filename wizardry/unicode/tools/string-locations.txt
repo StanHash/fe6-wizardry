@@ -1,67 +1,67 @@
 # main menu related array at 0868A2EC
 08336CCC MainMenu_Blank
-08336CB8 MainMenu_StartCancel
-08336CA4 MainMenu_CopyCancel
-08336C90 MainMenu_EraseCancel
-08336C7C MainMenu_08336C7C
+08336CB8 MainMenu_StartCancel "Start Cancel"
+08336CA4 MainMenu_CopyCancel "Copy Cancel"
+08336C90 MainMenu_EraseCancel "Erase Cancel"
+08336C7C MainMenu_08336C7C "<unknown>"
 
 # terrain name table at 0860D00C
-08279E58 TerrainName_0
-08279E50 TerrainName_1
-08279E4C TerrainName_2
-08279E48 TerrainName_3
-08279E40 TerrainName_4
-08279E38 TerrainName_5
-08279E30 TerrainName_6
-08279E28 TerrainName_7
-08279E20 TerrainName_8
-08279E18 TerrainName_9
-08279E14 TerrainName_10
-08279E0C TerrainName_11
-08279E08 TerrainName_12
-08279E00 TerrainName_13
-08279DF8 TerrainName_14
-08279DF0 TerrainName_15
-08279DEC TerrainName_16
-08279DE8 TerrainName_17
-08279DE0 TerrainName_18
-08279DDC TerrainName_19
-08279DD4 TerrainName_20
-08279DD0 TerrainName_21
-08279DCC TerrainName_22
-08279DC8 TerrainName_23
-08279DC4 TerrainName_25
-08279DC0 TerrainName_26
-08279DB4 TerrainName_28
-08279DB0 TerrainName_29
-08279DAC TerrainName_30
-08279DA4 TerrainName_31
-08279D9C TerrainName_32
-08279D94 TerrainName_33
-08279D8C TerrainName_34
-08279D88 TerrainName_35
-08279D80 TerrainName_36
-08279D78 TerrainName_37
-08279D70 TerrainName_38
-08279D68 TerrainName_39
-08279D60 TerrainName_40
-08279D58 TerrainName_41
-08279D50 TerrainName_42
-08279D44 TerrainName_43
-08279D3C TerrainName_45
-08279D34 TerrainName_47
-08279D28 TerrainName_48
-08279D24 TerrainName_49
+08279E58 TerrainName_Blank
+08279E50 TerrainName_Plains "Plains"
+08279E4C TerrainName_Road "Road"
+08279E48 TerrainName_Village "Village"
+08279E40 TerrainName_Village_Closed "Village"
+08279E38 TerrainName_House "House"
+08279E30 TerrainName_Armory "Armory"
+08279E28 TerrainName_Vendor "Vendor"
+08279E20 TerrainName_Arena "Arena"
+08279E18 TerrainName_Storage "Storage"
+08279E14 TerrainName_Fort "Fort"
+08279E0C TerrainName_Gate "Gate"
+08279E08 TerrainName_Forest "Forest"
+08279E00 TerrainName_Thicket "Thicket"
+08279DF8 TerrainName_Sand "Sand"
+08279DF0 TerrainName_Desert "Desert"
+08279DEC TerrainName_River "River"
+08279DE8 TerrainName_Mountain "Mntn" # "Hills"?
+08279DE0 TerrainName_Peak "Peak"
+08279DDC TerrainName_Bridge "Bridge"
+08279DD4 TerrainName_Drawbridge "Bridge"
+08279DD0 TerrainName_Sea "Sea"
+08279DCC TerrainName_Lake "Lake"
+08279DC8 TerrainName_Floor "Floor"
+08279DC4 TerrainName_Fence "Fence"
+08279DC0 TerrainName_Wall "Wall"
+08279DB4 TerrainName_Rubble "Rubble"
+08279DB0 TerrainName_Pillar "Pillar"
+08279DAC TerrainName_Door "Door"
+08279DA4 TerrainName_Throne "Throne"
+08279D9C TerrainName_Chest_Opened "Chest"
+08279D94 TerrainName_Chest "Chest"
+08279D8C TerrainName_Roof "Roof"
+08279D88 TerrainName_DoorGate "Gate"
+08279D80 TerrainName_Church "Church"
+08279D78 TerrainName_Ruins "Ruins"
+08279D70 TerrainName_Cliff "Cliff"
+08279D68 TerrainName_Ballista "Ballista"
+08279D60 TerrainName_LongBallista "Long B"
+08279D58 TerrainName_KillerBallista "Killer B"
+08279D50 TerrainName_Flat "Flat" # wasteland?
+08279D44 TerrainName_Wreck "Wreck" # broken house?
+08279D3C TerrainName_Stairs "Stairs"
+08279D34 TerrainName_Glacier "Glacier"
+08279D28 TerrainName_LinkArena "Arena"
+08279D24 TerrainName_Valley "Valley"
 
 # prep screen related table at 08677DB8
-083195FC PrepScreen_Unk_0
-083195F8 PrepScreen_Unk_1
-08319608 PrepScreen_Unk_2
-08319604 PrepScreen_Unk_3
-08319614 PrepScreen_Unk_4
-08319610 PrepScreen_Unk_5
-08319620 PrepScreen_Unk_6
-0831961C PrepScreen_Unk_7
+083195FC PrepScreen_Label_Lv_Unused
+083195F8 PrepScreen_Label_Lv_Unused_Debug
+08319608 PrepScreen_Label_Exp_Unused
+08319604 PrepScreen_Label_Exp_Unused_Debug
+08319614 PrepScreen_Label_Hp_Unused
+08319610 PrepScreen_Label_Hp_Unused_Debug
+08319620 PrepScreen_Label_Strength_Unused
+0831961C PrepScreen_Label_Strength_Unused_Debug
 08319628 PrepScreen_Unk_8
 08319624 PrepScreen_Unk_9
 08319638 PrepScreen_Unk_10

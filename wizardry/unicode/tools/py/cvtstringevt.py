@@ -19,7 +19,7 @@ def main(args):
         sys.exit(f"Usage: {args[0]} fe6.gba str.txt")
 
     with open(str_txt, 'r') as f:
-        string_locations = cvtstrings.parse_string_locations(f)
+        string_locations, _ = cvtstrings.parse_string_locations(f)
 
     print(f"PUSH")
 

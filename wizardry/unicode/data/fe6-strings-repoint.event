@@ -22,9 +22,11 @@ PUSH
     ORG $02C030
     POIN UString_StaffOffensePanel_Label_Accuracy
     ORG $05D384
-    POIN UString_Banim_LevelUp_Strength_081C9FEC
+    POIN UString_Banim_LevelUp_Label_Physical_Hp
     ORG $05D4B8
-    POIN UString_Banim_LevelUp_Magic_081CA014
+    POIN UString_Banim_LevelUp_Label_Magical_Hp
+    ORG $05D4D8
+    POIN UString_Banim_LevelUp_Label_Lv
     ORG $06ED98
     POIN UString_PrepScreen_Label_Magic
     ORG $06EFD4
@@ -229,70 +231,70 @@ PUSH
     ORG $5C6EF8
     POIN UString_Menu_085C75DC_Entry_0
     ORG $5C6F40
-    POIN UString_Menu_085C7600_Entry_0
+    POIN UString_Menu_UnitAction_Entry_Seize
     ORG $5C6F64
-    POIN UString_Menu_085C7600_Entry_1
+    POIN UString_Menu_UnitAction_Entry_Attack
     ORG $5C6F88
-    POIN UString_Menu_085C7600_Entry_2
+    POIN UString_Menu_UnitAction_Entry_Staff
     ORG $5C6FAC
-    POIN UString_Menu_085C7600_Entry_3
+    POIN UString_Menu_UnitAction_Entry_Play
     ORG $5C6FD0
-    POIN UString_Menu_085C7600_Entry_4
+    POIN UString_Menu_UnitAction_Entry_Dance
     ORG $5C6FF4
-    POIN UString_Menu_085C7600_Entry_5
+    POIN UString_Menu_UnitAction_Entry_Steal
     ORG $5C7018
-    POIN UString_Menu_085C7600_Entry_6
+    POIN UString_Menu_UnitAction_Entry_Talk
     ORG $5C703C
-    POIN UString_Menu_085C7600_Entry_7
+    POIN UString_Menu_UnitAction_Entry_Support
     ORG $5C7060
-    POIN UString_Menu_085C7600_Entry_8
+    POIN UString_Menu_UnitAction_Entry_Visit
     ORG $5C7084
-    POIN UString_Menu_085C7600_Entry_9
+    POIN UString_Menu_UnitAction_Entry_Chest
     ORG $5C70A8
-    POIN UString_Menu_085C7600_Entry_10
+    POIN UString_Menu_UnitAction_Entry_Door
     ORG $5C70CC
-    POIN UString_Menu_085C7600_Entry_11
+    POIN UString_Menu_UnitAction_Entry_Armory
     ORG $5C70F0
-    POIN UString_Menu_085C7600_Entry_12
+    POIN UString_Menu_UnitAction_Entry_Vendor
     ORG $5C7114
-    POIN UString_Menu_085C7600_Entry_13
+    POIN UString_Menu_UnitAction_Entry_SecretShop
     ORG $5C7138
-    POIN UString_Menu_085C7600_Entry_14
+    POIN UString_Menu_UnitAction_Entry_Arena
     ORG $5C715C
-    POIN UString_Menu_085C7600_Entry_15
+    POIN UString_Menu_UnitAction_Entry_Rescue
     ORG $5C7180
-    POIN UString_Menu_085C7600_Entry_16
+    POIN UString_Menu_UnitAction_Entry_Drop
     ORG $5C71A4
-    POIN UString_Menu_085C7600_Entry_17
+    POIN UString_Menu_UnitAction_Entry_Take
     ORG $5C71C8
-    POIN UString_Menu_085C7600_Entry_18
+    POIN UString_Menu_UnitAction_Entry_Give
     ORG $5C71EC
-    POIN UString_Menu_085C7600_Entry_19
+    POIN UString_Menu_UnitAction_Entry_Item
     ORG $5C7210
-    POIN UString_Menu_085C7600_Entry_20
+    POIN UString_Menu_UnitAction_Entry_Trade
     ORG $5C7234
-    POIN UString_Menu_085C7600_Entry_21
+    POIN UString_Menu_UnitAction_Entry_Supply
     ORG $5C7258
-    POIN UString_Menu_085C7600_Entry_22
+    POIN UString_Menu_UnitAction_Entry_Wait
     ORG $5C72A0
     POIN UString_Menu_085C7624_Entry_0
     ORG $5C72E8
-    POIN UString_Menu_085C7648_Entry_0
+    POIN UString_Menu_Map_Entry_Unit
     ORG $5C730C
-    POIN UString_Menu_085C7648_Entry_1
+    POIN UString_Menu_Map_Entry_Status
     ORG $5C7330
-    POIN UString_Menu_085C7648_Entry_2
+    POIN UString_Menu_Map_Entry_Options
     ORG $5C7354
-    POIN UString_Menu_085C7648_Entry_3
+    POIN UString_Menu_Map_Entry_Suspend
     ORG $5C7378
-    POIN UString_Menu_085C7648_Entry_4
+    POIN UString_Menu_Map_Entry_End
     ORG $5C8388
-    POIN UString_BattlePreview_Label_0
-    POIN UString_BattlePreview_Label_1
-    POIN UString_BattlePreview_Label_2
-    POIN UString_BattlePreview_Label_3
-    POIN UString_BattlePreview_Label_4
-    POIN UString_BattlePreview_Label_5
+    POIN UString_BattlePreview_Label_Might
+    POIN UString_BattlePreview_Label_Hit
+    POIN UString_BattlePreview_Label_Crit
+    POIN UString_BattlePreview_Label_Atk
+    POIN UString_BattlePreview_Label_Def
+    POIN UString_BattlePreview_Label_Speed
     ORG $60D00C
     POIN UString_TerrainName_Blank
     POIN UString_TerrainName_Plains
@@ -346,96 +348,96 @@ PUSH
     POIN UString_TerrainName_Valley
     POIN UString_TerrainName_Fence
     ORG $677DB8
-    POIN UString_PrepScreen_Label_Lv_Unused
-    POIN UString_PrepScreen_Label_Lv_Unused_Debug
-    POIN UString_PrepScreen_Label_Exp_Unused
-    POIN UString_PrepScreen_Label_Exp_Unused_Debug
-    POIN UString_PrepScreen_Label_Hp_Unused
-    POIN UString_PrepScreen_Label_Hp_Unused_Debug
-    POIN UString_PrepScreen_Label_Strength_Unused
-    POIN UString_PrepScreen_Label_Strength_Unused_Debug
-    POIN UString_PrepScreen_Label_Magic_Unused
-    POIN UString_PrepScreen_Label_Magic_Unused_Debug
-    POIN UString_PrepScreen_Label_Skill
-    POIN UString_PrepScreen_Label_Skill_Debug
-    POIN UString_PrepScreen_Label_Speed
-    POIN UString_PrepScreen_Label_Speed_Debug
-    POIN UString_PrepScreen_Label_Defense
-    POIN UString_PrepScreen_Label_Defense_Debug
-    POIN UString_PrepScreen_Label_Resistance
-    POIN UString_PrepScreen_Label_Resistance_Debug
-    POIN UString_PrepScreen_Label_Luck
-    POIN UString_PrepScreen_Label_Luck_Debug
-    POIN UString_PrepScreen_Label_Con
-    POIN UString_PrepScreen_Label_Con_Debug
-    POIN UString_PrepScreen_Label_Aid
-    POIN UString_PrepScreen_Label_Aid_Debug
-    POIN UString_PrepScreen_Label_Move
-    POIN UString_PrepScreen_Label_Move_Debug
-    POIN UString_PrepScreen_Label_Rescue
-    POIN UString_PrepScreen_Label_Rescue_Debug
-    POIN UString_PrepScreen_Label_Affinity
-    POIN UString_PrepScreen_Label_Affinity_Debug
-    POIN UString_PrepScreen_Label_Range
-    POIN UString_PrepScreen_Label_Range_Debug
-    POIN UString_PrepScreen_Unk_32
-    POIN UString_PrepScreen_Unk_33
-    POIN UString_PrepScreen_Unk_34
-    POIN UString_PrepScreen_Unk_35
-    POIN UString_PrepScreen_Unk_36
-    POIN UString_PrepScreen_Unk_37
-    POIN UString_PrepScreen_Unk_38
-    POIN UString_PrepScreen_Unk_39
-    POIN UString_PrepScreen_Unk_40
-    POIN UString_PrepScreen_Unk_41
-    POIN UString_PrepScreen_Unk_42
-    POIN UString_PrepScreen_Unk_33
-    POIN UString_PrepScreen_Unk_44
-    POIN UString_PrepScreen_Unk_45
-    POIN UString_PrepScreen_Unk_46
-    POIN UString_PrepScreen_Unk_47
-    POIN UString_PrepScreen_Unk_48
-    POIN UString_PrepScreen_Unk_49
-    POIN UString_PrepScreen_Unk_50
-    POIN UString_PrepScreen_Unk_51
-    POIN UString_PrepScreen_Unk_52
-    POIN UString_PrepScreen_Unk_53
-    POIN UString_PrepScreen_Unk_54
-    POIN UString_PrepScreen_Unk_55
-    POIN UString_PrepScreen_Unk_56
-    POIN UString_PrepScreen_Unk_57
-    POIN UString_PrepScreen_Unk_58
-    POIN UString_PrepScreen_Unk_59
-    POIN UString_PrepScreen_Unk_60
-    POIN UString_PrepScreen_Unk_61
-    POIN UString_PrepScreen_Unk_62
-    POIN UString_PrepScreen_Unk_63
-    POIN UString_PrepScreen_Unk_64
-    POIN UString_PrepScreen_Unk_65
-    POIN UString_PrepScreen_Unk_66
-    POIN UString_PrepScreen_Unk_67
-    POIN UString_PrepScreen_Unk_68
-    POIN UString_PrepScreen_Unk_69
-    POIN UString_PrepScreen_Unk_70
-    POIN UString_PrepScreen_Unk_71
-    POIN UString_PrepScreen_Unk_72
-    POIN UString_PrepScreen_Unk_73
-    POIN UString_PrepScreen_Unk_74
-    POIN UString_PrepScreen_Unk_75
-    POIN UString_PrepScreen_Unk_76
-    POIN UString_PrepScreen_Unk_77
-    POIN UString_PrepScreen_Unk_78
-    POIN UString_PrepScreen_Unk_79
-    POIN UString_PrepScreen_Unk_80
-    POIN UString_PrepScreen_Unk_81
-    POIN UString_PrepScreen_Unk_82
-    POIN UString_PrepScreen_Unk_83
-    POIN UString_PrepScreen_Unk_84
-    POIN UString_PrepScreen_Unk_85
-    POIN UString_PrepScreen_Unk_86
-    POIN UString_PrepScreen_Unk_87
-    POIN UString_PrepScreen_Unk_88
-    POIN UString_PrepScreen_Unk_89
+    POIN UString_System_Label_Lv
+    POIN UString_System_Label_Lv_Debug
+    POIN UString_System_Label_Exp
+    POIN UString_System_Label_Exp_Debug
+    POIN UString_System_Label_Hp
+    POIN UString_System_Label_Hp_Debug
+    POIN UString_System_Label_Strength
+    POIN UString_System_Label_Strength_Debug
+    POIN UString_System_Label_Magic
+    POIN UString_System_Label_Magic_Debug
+    POIN UString_System_Label_Skill
+    POIN UString_System_Label_Skill_Debug
+    POIN UString_System_Label_Speed
+    POIN UString_System_Label_Speed_Debug
+    POIN UString_System_Label_Defense
+    POIN UString_System_Label_Defense_Debug
+    POIN UString_System_Label_Resistance
+    POIN UString_System_Label_Resistance_Debug
+    POIN UString_System_Label_Luck
+    POIN UString_System_Label_Luck_Debug
+    POIN UString_System_Label_Con
+    POIN UString_System_Label_Con_Debug
+    POIN UString_System_Label_Aid
+    POIN UString_System_Label_Aid_Debug
+    POIN UString_System_Label_Move
+    POIN UString_System_Label_Move_Debug
+    POIN UString_System_Label_Rescue
+    POIN UString_System_Label_Rescue_Debug
+    POIN UString_System_Label_Affinity
+    POIN UString_System_Label_Affinity_Debug
+    POIN UString_System_Label_Range
+    POIN UString_System_Label_Range_Debug
+    POIN UString_System_Label_Atk
+    POIN UString_System_Label_Atk_Debug
+    POIN UString_System_Label_Hit
+    POIN UString_System_Label_Hit_Debug
+    POIN UString_System_Label_Crit
+    POIN UString_System_Label_Crit_Debug
+    POIN UString_System_Label_Avoid
+    POIN UString_System_Label_Avoid_Debug
+    POIN UString_System_Label_Status
+    POIN UString_System_Label_Status_Debug
+    POIN UString_System_Label_Unk_08319714
+    POIN UString_System_Label_Atk_Debug
+    POIN UString_System_Label_Weight
+    POIN UString_System_Label_Weight_Debug
+    POIN UString_System_Label_Unk_08319730
+    POIN UString_System_Label_Unk_08319730_Debug
+    POIN UString_System_Label_Range_1ToMag
+    POIN UString_System_Label_Range_1ToMag_Debug
+    POIN UString_System_Label_Range_1
+    POIN UString_System_Label_Range_1_Debug
+    POIN UString_System_Label_Range_1To2
+    POIN UString_System_Label_Range_1To2_Debug
+    POIN UString_System_Label_Range_1To3
+    POIN UString_System_Label_Range_1To3_Debug
+    POIN UString_System_Label_Range_2
+    POIN UString_System_Label_Range_2_Debug
+    POIN UString_System_Label_Range_2To3
+    POIN UString_System_Label_Range_2To3_Debug
+    POIN UString_System_Label_Range_3To10
+    POIN UString_System_Label_Range_3To10_Debug
+    POIN UString_System_Label_Range_3To15
+    POIN UString_System_Label_Range_3To15_Debug
+    POIN UString_System_Unk_64
+    POIN UString_System_Unk_65
+    POIN UString_System_Unk_66
+    POIN UString_System_Unk_67
+    POIN UString_System_Unk_68
+    POIN UString_System_Unk_69
+    POIN UString_System_Unk_70
+    POIN UString_System_Unk_71
+    POIN UString_System_Unk_72
+    POIN UString_System_Unk_73
+    POIN UString_System_Unk_74
+    POIN UString_System_Unk_75
+    POIN UString_System_Unk_76
+    POIN UString_System_Unk_77
+    POIN UString_System_Unk_78
+    POIN UString_System_Unk_79
+    POIN UString_System_Unk_80
+    POIN UString_System_Unk_81
+    POIN UString_System_Unk_82
+    POIN UString_System_Unk_83
+    POIN UString_System_Unk_84
+    POIN UString_System_Unk_85
+    POIN UString_System_Unk_86
+    POIN UString_System_Unk_87
+    POIN UString_System_Unk_88
+    POIN UString_System_Unk_89
     ORG $678844
     POIN UString_UnitScreen_Label_0
     ORG $678854
@@ -613,5 +615,5 @@ PUSH
     POIN UString_MainMenu_EraseCancel
     POIN UString_MainMenu_StartCancel
     POIN UString_MainMenu_StartCancel
-    POIN UString_MainMenu_08336C7C
+    POIN UString_MainMenu_SaveCancel
 POP

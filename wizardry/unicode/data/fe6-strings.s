@@ -20,10 +20,10 @@ UString_MainMenu_CopyCancel: @ 'うつす　　やめる'
 UString_MainMenu_EraseCancel: @ '消す　　　やめる'
     .asciz "Erase Cancel"
 
-    .global UString_MainMenu_08336C7C
-    .type UString_MainMenu_08336C7C, object
-UString_MainMenu_08336C7C: @ '記録　　　やめる'
-    .asciz "<unknown>"
+    .global UString_MainMenu_SaveCancel
+    .type UString_MainMenu_SaveCancel, object
+UString_MainMenu_SaveCancel: @ '記録　　　やめる'
+    .asciz "Save Cancel"
 
     .global UString_TerrainName_Blank
     .type UString_TerrainName_Blank, object
@@ -255,449 +255,449 @@ UString_TerrainName_LinkArena: @ '通信闘技'
 UString_TerrainName_Valley: @ '谷'
     .asciz "Valley"
 
-    .global UString_PrepScreen_Label_Lv_Unused
-    .type UString_PrepScreen_Label_Lv_Unused, object
-UString_PrepScreen_Label_Lv_Unused: @ 'ＬＶ'
+    .global UString_System_Label_Lv
+    .type UString_System_Label_Lv, object
+UString_System_Label_Lv: @ 'ＬＶ'
     .asciz "ＬＶ"
 
-    .global UString_PrepScreen_Label_Lv_Unused_Debug
-    .type UString_PrepScreen_Label_Lv_Unused_Debug, object
-UString_PrepScreen_Label_Lv_Unused_Debug: @ 'Lv'
+    .global UString_System_Label_Lv_Debug
+    .type UString_System_Label_Lv_Debug, object
+UString_System_Label_Lv_Debug: @ 'Lv'
     .asciz "Lv"
 
-    .global UString_PrepScreen_Label_Exp_Unused
-    .type UString_PrepScreen_Label_Exp_Unused, object
-UString_PrepScreen_Label_Exp_Unused: @ 'ＥＸ'
-    .asciz "ＥＸ"
+    .global UString_System_Label_Exp
+    .type UString_System_Label_Exp, object
+UString_System_Label_Exp: @ 'ＥＸ'
+    .asciz "Exp"
 
-    .global UString_PrepScreen_Label_Exp_Unused_Debug
-    .type UString_PrepScreen_Label_Exp_Unused_Debug, object
-UString_PrepScreen_Label_Exp_Unused_Debug: @ 'Ex'
+    .global UString_System_Label_Exp_Debug
+    .type UString_System_Label_Exp_Debug, object
+UString_System_Label_Exp_Debug: @ 'Ex'
     .asciz "Ex"
 
-    .global UString_PrepScreen_Label_Hp_Unused
-    .type UString_PrepScreen_Label_Hp_Unused, object
-UString_PrepScreen_Label_Hp_Unused: @ 'ＨＰ'
-    .asciz "ＨＰ"
-
-    .global UString_PrepScreen_Label_Hp_Unused_Debug
-    .type UString_PrepScreen_Label_Hp_Unused_Debug, object
-UString_PrepScreen_Label_Hp_Unused_Debug: @ 'HP'
+    .global UString_System_Label_Hp
+    .type UString_System_Label_Hp, object
+UString_System_Label_Hp: @ 'ＨＰ'
     .asciz "HP"
 
-    .global UString_PrepScreen_Label_Strength_Unused
-    .type UString_PrepScreen_Label_Strength_Unused, object
-UString_PrepScreen_Label_Strength_Unused: @ '力'
-    .asciz "力"
+    .global UString_System_Label_Hp_Debug
+    .type UString_System_Label_Hp_Debug, object
+UString_System_Label_Hp_Debug: @ 'HP'
+    .asciz "HP"
 
-    .global UString_PrepScreen_Label_Strength_Unused_Debug
-    .type UString_PrepScreen_Label_Strength_Unused_Debug, object
-UString_PrepScreen_Label_Strength_Unused_Debug: @ 'str'
+    .global UString_System_Label_Strength
+    .type UString_System_Label_Strength, object
+UString_System_Label_Strength: @ '力'
+    .asciz "Str"
+
+    .global UString_System_Label_Strength_Debug
+    .type UString_System_Label_Strength_Debug, object
+UString_System_Label_Strength_Debug: @ 'str'
     .asciz "str"
 
-    .global UString_PrepScreen_Label_Magic_Unused
-    .type UString_PrepScreen_Label_Magic_Unused, object
-UString_PrepScreen_Label_Magic_Unused: @ '魔力'
-    .asciz "魔力"
+    .global UString_System_Label_Magic
+    .type UString_System_Label_Magic, object
+UString_System_Label_Magic: @ '魔力'
+    .asciz "Mag"
 
-    .global UString_PrepScreen_Label_Magic_Unused_Debug
-    .type UString_PrepScreen_Label_Magic_Unused_Debug, object
-UString_PrepScreen_Label_Magic_Unused_Debug: @ 'mag'
+    .global UString_System_Label_Magic_Debug
+    .type UString_System_Label_Magic_Debug, object
+UString_System_Label_Magic_Debug: @ 'mag'
     .asciz "mag"
 
-    .global UString_PrepScreen_Label_Skill
-    .type UString_PrepScreen_Label_Skill, object
-UString_PrepScreen_Label_Skill: @ '技'
+    .global UString_System_Label_Skill
+    .type UString_System_Label_Skill, object
+UString_System_Label_Skill: @ '技'
     .asciz "Skill"
 
-    .global UString_PrepScreen_Label_Skill_Debug
-    .type UString_PrepScreen_Label_Skill_Debug, object
-UString_PrepScreen_Label_Skill_Debug: @ 'tech'
+    .global UString_System_Label_Skill_Debug
+    .type UString_System_Label_Skill_Debug, object
+UString_System_Label_Skill_Debug: @ 'tech'
     .asciz "tech"
 
-    .global UString_PrepScreen_Label_Speed
-    .type UString_PrepScreen_Label_Speed, object
-UString_PrepScreen_Label_Speed: @ '速さ'
+    .global UString_System_Label_Speed
+    .type UString_System_Label_Speed, object
+UString_System_Label_Speed: @ '速さ'
     .asciz "Spd"
 
-    .global UString_PrepScreen_Label_Speed_Debug
-    .type UString_PrepScreen_Label_Speed_Debug, object
-UString_PrepScreen_Label_Speed_Debug: @ 'quick'
+    .global UString_System_Label_Speed_Debug
+    .type UString_System_Label_Speed_Debug, object
+UString_System_Label_Speed_Debug: @ 'quick'
     .asciz "quick"
 
-    .global UString_PrepScreen_Label_Defense
-    .type UString_PrepScreen_Label_Defense, object
-UString_PrepScreen_Label_Defense: @ '守備'
+    .global UString_System_Label_Defense
+    .type UString_System_Label_Defense, object
+UString_System_Label_Defense: @ '守備'
     .asciz "Def"
 
-    .global UString_PrepScreen_Label_Defense_Debug
-    .type UString_PrepScreen_Label_Defense_Debug, object
-UString_PrepScreen_Label_Defense_Debug: @ 'def'
+    .global UString_System_Label_Defense_Debug
+    .type UString_System_Label_Defense_Debug, object
+UString_System_Label_Defense_Debug: @ 'def'
     .asciz "def"
 
-    .global UString_PrepScreen_Label_Resistance
-    .type UString_PrepScreen_Label_Resistance, object
-UString_PrepScreen_Label_Resistance: @ '魔防'
+    .global UString_System_Label_Resistance
+    .type UString_System_Label_Resistance, object
+UString_System_Label_Resistance: @ '魔防'
     .asciz "Res"
 
-    .global UString_PrepScreen_Label_Resistance_Debug
-    .type UString_PrepScreen_Label_Resistance_Debug, object
-UString_PrepScreen_Label_Resistance_Debug: @ 'mdef'
+    .global UString_System_Label_Resistance_Debug
+    .type UString_System_Label_Resistance_Debug, object
+UString_System_Label_Resistance_Debug: @ 'mdef'
     .asciz "mdef"
 
-    .global UString_PrepScreen_Label_Luck
-    .type UString_PrepScreen_Label_Luck, object
-UString_PrepScreen_Label_Luck: @ '幸運'
+    .global UString_System_Label_Luck
+    .type UString_System_Label_Luck, object
+UString_System_Label_Luck: @ '幸運'
     .asciz "Luck"
 
-    .global UString_PrepScreen_Label_Luck_Debug
-    .type UString_PrepScreen_Label_Luck_Debug, object
-UString_PrepScreen_Label_Luck_Debug: @ 'luck'
+    .global UString_System_Label_Luck_Debug
+    .type UString_System_Label_Luck_Debug, object
+UString_System_Label_Luck_Debug: @ 'luck'
     .asciz "luck"
 
-    .global UString_PrepScreen_Label_Con
-    .type UString_PrepScreen_Label_Con, object
-UString_PrepScreen_Label_Con: @ '体格'
+    .global UString_System_Label_Con
+    .type UString_System_Label_Con, object
+UString_System_Label_Con: @ '体格'
     .asciz "Con"
 
-    .global UString_PrepScreen_Label_Con_Debug
-    .type UString_PrepScreen_Label_Con_Debug, object
-UString_PrepScreen_Label_Con_Debug: @ 'build'
+    .global UString_System_Label_Con_Debug
+    .type UString_System_Label_Con_Debug, object
+UString_System_Label_Con_Debug: @ 'build'
     .asciz "build"
 
-    .global UString_PrepScreen_Label_Aid
-    .type UString_PrepScreen_Label_Aid, object
-UString_PrepScreen_Label_Aid: @ '救出'
+    .global UString_System_Label_Aid
+    .type UString_System_Label_Aid, object
+UString_System_Label_Aid: @ '救出'
     .asciz "Aid"
 
-    .global UString_PrepScreen_Label_Aid_Debug
-    .type UString_PrepScreen_Label_Aid_Debug, object
-UString_PrepScreen_Label_Aid_Debug: @ 'res'
+    .global UString_System_Label_Aid_Debug
+    .type UString_System_Label_Aid_Debug, object
+UString_System_Label_Aid_Debug: @ 'res'
     .asciz "res"
 
-    .global UString_PrepScreen_Label_Move
-    .type UString_PrepScreen_Label_Move, object
-UString_PrepScreen_Label_Move: @ '移動'
+    .global UString_System_Label_Move
+    .type UString_System_Label_Move, object
+UString_System_Label_Move: @ '移動'
     .asciz "Move"
 
-    .global UString_PrepScreen_Label_Move_Debug
-    .type UString_PrepScreen_Label_Move_Debug, object
-UString_PrepScreen_Label_Move_Debug: @ 'mob'
+    .global UString_System_Label_Move_Debug
+    .type UString_System_Label_Move_Debug, object
+UString_System_Label_Move_Debug: @ 'mob'
     .asciz "mob"
 
-    .global UString_PrepScreen_Label_Rescue
-    .type UString_PrepScreen_Label_Rescue, object
-UString_PrepScreen_Label_Rescue: @ '同行'
+    .global UString_System_Label_Rescue
+    .type UString_System_Label_Rescue, object
+UString_System_Label_Rescue: @ '同行'
     .asciz "Trv"
 
-    .global UString_PrepScreen_Label_Rescue_Debug
-    .type UString_PrepScreen_Label_Rescue_Debug, object
-UString_PrepScreen_Label_Rescue_Debug: @ 'save'
+    .global UString_System_Label_Rescue_Debug
+    .type UString_System_Label_Rescue_Debug, object
+UString_System_Label_Rescue_Debug: @ 'save'
     .asciz "save"
 
-    .global UString_PrepScreen_Label_Affinity
-    .type UString_PrepScreen_Label_Affinity, object
-UString_PrepScreen_Label_Affinity: @ '属性'
+    .global UString_System_Label_Affinity
+    .type UString_System_Label_Affinity, object
+UString_System_Label_Affinity: @ '属性'
     .asciz "Affin"
 
-    .global UString_PrepScreen_Label_Affinity_Debug
-    .type UString_PrepScreen_Label_Affinity_Debug, object
-UString_PrepScreen_Label_Affinity_Debug: @ 'attr'
+    .global UString_System_Label_Affinity_Debug
+    .type UString_System_Label_Affinity_Debug, object
+UString_System_Label_Affinity_Debug: @ 'attr'
     .asciz "attr"
 
-    .global UString_PrepScreen_Label_Range
-    .type UString_PrepScreen_Label_Range, object
-UString_PrepScreen_Label_Range: @ '射程'
+    .global UString_System_Label_Range
+    .type UString_System_Label_Range, object
+UString_System_Label_Range: @ '射程'
     .asciz "Rng"
 
-    .global UString_PrepScreen_Label_Range_Debug
-    .type UString_PrepScreen_Label_Range_Debug, object
-UString_PrepScreen_Label_Range_Debug: @ 'rng'
+    .global UString_System_Label_Range_Debug
+    .type UString_System_Label_Range_Debug, object
+UString_System_Label_Range_Debug: @ 'rng'
     .asciz "rng"
 
-    .global UString_PrepScreen_Unk_32
-    .type UString_PrepScreen_Unk_32, object
-UString_PrepScreen_Unk_32: @ '攻撃'
-    .asciz "攻撃"
+    .global UString_System_Label_Atk
+    .type UString_System_Label_Atk, object
+UString_System_Label_Atk: @ '攻撃'
+    .asciz "Atk"
 
-    .global UString_PrepScreen_Unk_33
-    .type UString_PrepScreen_Unk_33, object
-UString_PrepScreen_Unk_33: @ 'pow'
+    .global UString_System_Label_Atk_Debug
+    .type UString_System_Label_Atk_Debug, object
+UString_System_Label_Atk_Debug: @ 'pow'
     .asciz "pow"
 
-    .global UString_PrepScreen_Unk_34
-    .type UString_PrepScreen_Unk_34, object
-UString_PrepScreen_Unk_34: @ '命中'
-    .asciz "命中"
+    .global UString_System_Label_Hit
+    .type UString_System_Label_Hit, object
+UString_System_Label_Hit: @ '命中'
+    .asciz "Hit"
 
-    .global UString_PrepScreen_Unk_35
-    .type UString_PrepScreen_Unk_35, object
-UString_PrepScreen_Unk_35: @ 'hit'
+    .global UString_System_Label_Hit_Debug
+    .type UString_System_Label_Hit_Debug, object
+UString_System_Label_Hit_Debug: @ 'hit'
     .asciz "hit"
 
-    .global UString_PrepScreen_Unk_36
-    .type UString_PrepScreen_Unk_36, object
-UString_PrepScreen_Unk_36: @ '必殺'
-    .asciz "必殺"
+    .global UString_System_Label_Crit
+    .type UString_System_Label_Crit, object
+UString_System_Label_Crit: @ '必殺'
+    .asciz "Crit"
 
-    .global UString_PrepScreen_Unk_37
-    .type UString_PrepScreen_Unk_37, object
-UString_PrepScreen_Unk_37: @ 'crit'
+    .global UString_System_Label_Crit_Debug
+    .type UString_System_Label_Crit_Debug, object
+UString_System_Label_Crit_Debug: @ 'crit'
     .asciz "crit"
 
-    .global UString_PrepScreen_Unk_38
-    .type UString_PrepScreen_Unk_38, object
-UString_PrepScreen_Unk_38: @ '回避'
-    .asciz "回避"
+    .global UString_System_Label_Avoid
+    .type UString_System_Label_Avoid, object
+UString_System_Label_Avoid: @ '回避'
+    .asciz "Avoid"
 
-    .global UString_PrepScreen_Unk_39
-    .type UString_PrepScreen_Unk_39, object
-UString_PrepScreen_Unk_39: @ 'avoid'
+    .global UString_System_Label_Avoid_Debug
+    .type UString_System_Label_Avoid_Debug, object
+UString_System_Label_Avoid_Debug: @ 'avoid'
     .asciz "avoid"
 
-    .global UString_PrepScreen_Unk_40
-    .type UString_PrepScreen_Unk_40, object
-UString_PrepScreen_Unk_40: @ '状態'
-    .asciz "状態"
+    .global UString_System_Label_Status
+    .type UString_System_Label_Status, object
+UString_System_Label_Status: @ '状態'
+    .asciz "Cond"
 
-    .global UString_PrepScreen_Unk_41
-    .type UString_PrepScreen_Unk_41, object
-UString_PrepScreen_Unk_41: @ 'cond'
+    .global UString_System_Label_Status_Debug
+    .type UString_System_Label_Status_Debug, object
+UString_System_Label_Status_Debug: @ 'cond'
     .asciz "cond"
 
-    .global UString_PrepScreen_Unk_42
-    .type UString_PrepScreen_Unk_42, object
-UString_PrepScreen_Unk_42: @ '威力'
+    .global UString_System_Label_Unk_08319714
+    .type UString_System_Label_Unk_08319714, object
+UString_System_Label_Unk_08319714: @ '威力'
     .asciz "威力"
 
-    .global UString_PrepScreen_Unk_44
-    .type UString_PrepScreen_Unk_44, object
-UString_PrepScreen_Unk_44: @ '重さ'
-    .asciz "重さ"
+    .global UString_System_Label_Weight
+    .type UString_System_Label_Weight, object
+UString_System_Label_Weight: @ '重さ'
+    .asciz "Wgt"
 
-    .global UString_PrepScreen_Unk_45
-    .type UString_PrepScreen_Unk_45, object
-UString_PrepScreen_Unk_45: @ 'wgt'
+    .global UString_System_Label_Weight_Debug
+    .type UString_System_Label_Weight_Debug, object
+UString_System_Label_Weight_Debug: @ 'wgt'
     .asciz "wgt"
 
-    .global UString_PrepScreen_Unk_46
-    .type UString_PrepScreen_Unk_46, object
-UString_PrepScreen_Unk_46: @ '　　異常'
+    .global UString_System_Label_Unk_08319730
+    .type UString_System_Label_Unk_08319730, object
+UString_System_Label_Unk_08319730: @ '　　異常'
     .asciz "　　異常"
 
-    .global UString_PrepScreen_Unk_47
-    .type UString_PrepScreen_Unk_47, object
-UString_PrepScreen_Unk_47: @ 'illegal'
+    .global UString_System_Label_Unk_08319730_Debug
+    .type UString_System_Label_Unk_08319730_Debug, object
+UString_System_Label_Unk_08319730_Debug: @ 'illegal'
     .asciz "illegal"
 
-    .global UString_PrepScreen_Unk_48
-    .type UString_PrepScreen_Unk_48, object
-UString_PrepScreen_Unk_48: @ '１－魔力'
-    .asciz "１－魔力"
+    .global UString_System_Label_Range_1ToMag
+    .type UString_System_Label_Range_1ToMag, object
+UString_System_Label_Range_1ToMag: @ '１－魔力'
+    .asciz "　1~Mag"
 
-    .global UString_PrepScreen_Unk_49
-    .type UString_PrepScreen_Unk_49, object
-UString_PrepScreen_Unk_49: @ '1-M.Pow'
+    .global UString_System_Label_Range_1ToMag_Debug
+    .type UString_System_Label_Range_1ToMag_Debug, object
+UString_System_Label_Range_1ToMag_Debug: @ '1-M.Pow'
     .asciz "1-M.Pow"
 
-    .global UString_PrepScreen_Unk_50
-    .type UString_PrepScreen_Unk_50, object
-UString_PrepScreen_Unk_50: @ '　　　１'
-    .asciz "　　　１"
+    .global UString_System_Label_Range_1
+    .type UString_System_Label_Range_1, object
+UString_System_Label_Range_1: @ '　　　１'
+    .asciz "　　　1"
 
-    .global UString_PrepScreen_Unk_51
-    .type UString_PrepScreen_Unk_51, object
-UString_PrepScreen_Unk_51: @ '   1'
+    .global UString_System_Label_Range_1_Debug
+    .type UString_System_Label_Range_1_Debug, object
+UString_System_Label_Range_1_Debug: @ '   1'
     .asciz "   1"
 
-    .global UString_PrepScreen_Unk_52
-    .type UString_PrepScreen_Unk_52, object
-UString_PrepScreen_Unk_52: @ '　１－２'
-    .asciz "　１－２"
+    .global UString_System_Label_Range_1To2
+    .type UString_System_Label_Range_1To2, object
+UString_System_Label_Range_1To2: @ '　１－２'
+    .asciz "　 1~2"
 
-    .global UString_PrepScreen_Unk_53
-    .type UString_PrepScreen_Unk_53, object
-UString_PrepScreen_Unk_53: @ ' 1-2'
+    .global UString_System_Label_Range_1To2_Debug
+    .type UString_System_Label_Range_1To2_Debug, object
+UString_System_Label_Range_1To2_Debug: @ ' 1-2'
     .asciz " 1-2"
 
-    .global UString_PrepScreen_Unk_54
-    .type UString_PrepScreen_Unk_54, object
-UString_PrepScreen_Unk_54: @ '　１－３'
-    .asciz "　１－３"
+    .global UString_System_Label_Range_1To3
+    .type UString_System_Label_Range_1To3, object
+UString_System_Label_Range_1To3: @ '　１－３'
+    .asciz "　 1~3"
 
-    .global UString_PrepScreen_Unk_55
-    .type UString_PrepScreen_Unk_55, object
-UString_PrepScreen_Unk_55: @ ' 1-3'
+    .global UString_System_Label_Range_1To3_Debug
+    .type UString_System_Label_Range_1To3_Debug, object
+UString_System_Label_Range_1To3_Debug: @ ' 1-3'
     .asciz " 1-3"
 
-    .global UString_PrepScreen_Unk_56
-    .type UString_PrepScreen_Unk_56, object
-UString_PrepScreen_Unk_56: @ '　　　２'
-    .asciz "　　　２"
+    .global UString_System_Label_Range_2
+    .type UString_System_Label_Range_2, object
+UString_System_Label_Range_2: @ '　　　２'
+    .asciz "　　　2"
 
-    .global UString_PrepScreen_Unk_57
-    .type UString_PrepScreen_Unk_57, object
-UString_PrepScreen_Unk_57: @ '   2'
+    .global UString_System_Label_Range_2_Debug
+    .type UString_System_Label_Range_2_Debug, object
+UString_System_Label_Range_2_Debug: @ '   2'
     .asciz "   2"
 
-    .global UString_PrepScreen_Unk_58
-    .type UString_PrepScreen_Unk_58, object
-UString_PrepScreen_Unk_58: @ '　２－３'
-    .asciz "　２－３"
+    .global UString_System_Label_Range_2To3
+    .type UString_System_Label_Range_2To3, object
+UString_System_Label_Range_2To3: @ '　２－３'
+    .asciz "　 2~3"
 
-    .global UString_PrepScreen_Unk_59
-    .type UString_PrepScreen_Unk_59, object
-UString_PrepScreen_Unk_59: @ ' 2-3'
+    .global UString_System_Label_Range_2To3_Debug
+    .type UString_System_Label_Range_2To3_Debug, object
+UString_System_Label_Range_2To3_Debug: @ ' 2-3'
     .asciz " 2-3"
 
-    .global UString_PrepScreen_Unk_60
-    .type UString_PrepScreen_Unk_60, object
-UString_PrepScreen_Unk_60: @ '３－１０'
-    .asciz "３－１０"
+    .global UString_System_Label_Range_3To10
+    .type UString_System_Label_Range_3To10, object
+UString_System_Label_Range_3To10: @ '３－１０'
+    .asciz "　3~10"
 
-    .global UString_PrepScreen_Unk_61
-    .type UString_PrepScreen_Unk_61, object
-UString_PrepScreen_Unk_61: @ '3-10'
+    .global UString_System_Label_Range_3To10_Debug
+    .type UString_System_Label_Range_3To10_Debug, object
+UString_System_Label_Range_3To10_Debug: @ '3-10'
     .asciz "3-10"
 
-    .global UString_PrepScreen_Unk_62
-    .type UString_PrepScreen_Unk_62, object
-UString_PrepScreen_Unk_62: @ '３－１５'
-    .asciz "３－１５"
+    .global UString_System_Label_Range_3To15
+    .type UString_System_Label_Range_3To15, object
+UString_System_Label_Range_3To15: @ '３－１５'
+    .asciz "　3~15"
 
-    .global UString_PrepScreen_Unk_63
-    .type UString_PrepScreen_Unk_63, object
-UString_PrepScreen_Unk_63: @ '3-15'
+    .global UString_System_Label_Range_3To15_Debug
+    .type UString_System_Label_Range_3To15_Debug, object
+UString_System_Label_Range_3To15_Debug: @ '3-15'
     .asciz "3-15"
 
-    .global UString_PrepScreen_Unk_64
-    .type UString_PrepScreen_Unk_64, object
-UString_PrepScreen_Unk_64: @ 'ーーー'
+    .global UString_System_Unk_64
+    .type UString_System_Unk_64, object
+UString_System_Unk_64: @ 'ーーー'
     .asciz "ーーー"
 
-    .global UString_PrepScreen_Unk_65
-    .type UString_PrepScreen_Unk_65, object
-UString_PrepScreen_Unk_65: @ '---'
+    .global UString_System_Unk_65
+    .type UString_System_Unk_65, object
+UString_System_Unk_65: @ '---'
     .asciz "---"
 
-    .global UString_PrepScreen_Unk_66
-    .type UString_PrepScreen_Unk_66, object
-UString_PrepScreen_Unk_66: @ 'どく'
+    .global UString_System_Unk_66
+    .type UString_System_Unk_66, object
+UString_System_Unk_66: @ 'どく'
     .asciz "どく"
 
-    .global UString_PrepScreen_Unk_67
-    .type UString_PrepScreen_Unk_67, object
-UString_PrepScreen_Unk_67: @ 'Poison'
+    .global UString_System_Unk_67
+    .type UString_System_Unk_67, object
+UString_System_Unk_67: @ 'Poison'
     .asciz "Poison"
 
-    .global UString_PrepScreen_Unk_68
-    .type UString_PrepScreen_Unk_68, object
-UString_PrepScreen_Unk_68: @ 'すいみん'
+    .global UString_System_Unk_68
+    .type UString_System_Unk_68, object
+UString_System_Unk_68: @ 'すいみん'
     .asciz "すいみん"
 
-    .global UString_PrepScreen_Unk_69
-    .type UString_PrepScreen_Unk_69, object
-UString_PrepScreen_Unk_69: @ 'Sleep'
+    .global UString_System_Unk_69
+    .type UString_System_Unk_69, object
+UString_System_Unk_69: @ 'Sleep'
     .asciz "Sleep"
 
-    .global UString_PrepScreen_Unk_70
-    .type UString_PrepScreen_Unk_70, object
-UString_PrepScreen_Unk_70: @ 'ちんもく'
+    .global UString_System_Unk_70
+    .type UString_System_Unk_70, object
+UString_System_Unk_70: @ 'ちんもく'
     .asciz "ちんもく"
 
-    .global UString_PrepScreen_Unk_71
-    .type UString_PrepScreen_Unk_71, object
-UString_PrepScreen_Unk_71: @ 'Silence'
+    .global UString_System_Unk_71
+    .type UString_System_Unk_71, object
+UString_System_Unk_71: @ 'Silence'
     .asciz "Silence"
 
-    .global UString_PrepScreen_Unk_72
-    .type UString_PrepScreen_Unk_72, object
-UString_PrepScreen_Unk_72: @ 'はっきょう'
+    .global UString_System_Unk_72
+    .type UString_System_Unk_72, object
+UString_System_Unk_72: @ 'はっきょう'
     .asciz "はっきょう"
 
-    .global UString_PrepScreen_Unk_73
-    .type UString_PrepScreen_Unk_73, object
-UString_PrepScreen_Unk_73: @ 'Berserk'
+    .global UString_System_Unk_73
+    .type UString_System_Unk_73, object
+UString_System_Unk_73: @ 'Berserk'
     .asciz "Berserk"
 
-    .global UString_PrepScreen_Unk_74
-    .type UString_PrepScreen_Unk_74, object
-UString_PrepScreen_Unk_74: @ '剣'
+    .global UString_System_Unk_74
+    .type UString_System_Unk_74, object
+UString_System_Unk_74: @ '剣'
     .asciz "剣"
 
-    .global UString_PrepScreen_Unk_75
-    .type UString_PrepScreen_Unk_75, object
-UString_PrepScreen_Unk_75: @ 'Sword'
+    .global UString_System_Unk_75
+    .type UString_System_Unk_75, object
+UString_System_Unk_75: @ 'Sword'
     .asciz "Sword"
 
-    .global UString_PrepScreen_Unk_76
-    .type UString_PrepScreen_Unk_76, object
-UString_PrepScreen_Unk_76: @ '槍'
+    .global UString_System_Unk_76
+    .type UString_System_Unk_76, object
+UString_System_Unk_76: @ '槍'
     .asciz "槍"
 
-    .global UString_PrepScreen_Unk_77
-    .type UString_PrepScreen_Unk_77, object
-UString_PrepScreen_Unk_77: @ 'Lance'
+    .global UString_System_Unk_77
+    .type UString_System_Unk_77, object
+UString_System_Unk_77: @ 'Lance'
     .asciz "Lance"
 
-    .global UString_PrepScreen_Unk_78
-    .type UString_PrepScreen_Unk_78, object
-UString_PrepScreen_Unk_78: @ '斧'
+    .global UString_System_Unk_78
+    .type UString_System_Unk_78, object
+UString_System_Unk_78: @ '斧'
     .asciz "斧"
 
-    .global UString_PrepScreen_Unk_79
-    .type UString_PrepScreen_Unk_79, object
-UString_PrepScreen_Unk_79: @ 'Axe'
+    .global UString_System_Unk_79
+    .type UString_System_Unk_79, object
+UString_System_Unk_79: @ 'Axe'
     .asciz "Axe"
 
-    .global UString_PrepScreen_Unk_80
-    .type UString_PrepScreen_Unk_80, object
-UString_PrepScreen_Unk_80: @ '弓'
+    .global UString_System_Unk_80
+    .type UString_System_Unk_80, object
+UString_System_Unk_80: @ '弓'
     .asciz "弓"
 
-    .global UString_PrepScreen_Unk_81
-    .type UString_PrepScreen_Unk_81, object
-UString_PrepScreen_Unk_81: @ 'Bow'
+    .global UString_System_Unk_81
+    .type UString_System_Unk_81, object
+UString_System_Unk_81: @ 'Bow'
     .asciz "Bow"
 
-    .global UString_PrepScreen_Unk_82
-    .type UString_PrepScreen_Unk_82, object
-UString_PrepScreen_Unk_82: @ '杖'
+    .global UString_System_Unk_82
+    .type UString_System_Unk_82, object
+UString_System_Unk_82: @ '杖'
     .asciz "杖"
 
-    .global UString_PrepScreen_Unk_83
-    .type UString_PrepScreen_Unk_83, object
-UString_PrepScreen_Unk_83: @ 'Wand'
+    .global UString_System_Unk_83
+    .type UString_System_Unk_83, object
+UString_System_Unk_83: @ 'Wand'
     .asciz "Wand"
 
-    .global UString_PrepScreen_Unk_84
-    .type UString_PrepScreen_Unk_84, object
-UString_PrepScreen_Unk_84: @ '理'
+    .global UString_System_Unk_84
+    .type UString_System_Unk_84, object
+UString_System_Unk_84: @ '理'
     .asciz "理"
 
-    .global UString_PrepScreen_Unk_85
-    .type UString_PrepScreen_Unk_85, object
-UString_PrepScreen_Unk_85: @ 'Magic'
+    .global UString_System_Unk_85
+    .type UString_System_Unk_85, object
+UString_System_Unk_85: @ 'Magic'
     .asciz "Magic"
 
-    .global UString_PrepScreen_Unk_86
-    .type UString_PrepScreen_Unk_86, object
-UString_PrepScreen_Unk_86: @ '光'
+    .global UString_System_Unk_86
+    .type UString_System_Unk_86, object
+UString_System_Unk_86: @ '光'
     .asciz "光"
 
-    .global UString_PrepScreen_Unk_87
-    .type UString_PrepScreen_Unk_87, object
-UString_PrepScreen_Unk_87: @ 'Lightning'
+    .global UString_System_Unk_87
+    .type UString_System_Unk_87, object
+UString_System_Unk_87: @ 'Lightning'
     .asciz "Lightning"
 
-    .global UString_PrepScreen_Unk_88
-    .type UString_PrepScreen_Unk_88, object
-UString_PrepScreen_Unk_88: @ '闇'
+    .global UString_System_Unk_88
+    .type UString_System_Unk_88, object
+UString_System_Unk_88: @ '闇'
     .asciz "闇"
 
-    .global UString_PrepScreen_Unk_89
-    .type UString_PrepScreen_Unk_89, object
-UString_PrepScreen_Unk_89: @ 'Darkness'
+    .global UString_System_Unk_89
+    .type UString_System_Unk_89, object
+UString_System_Unk_89: @ 'Darkness'
     .asciz "Darkness"
 
     .global UString_PrepScreen_Label_Magic
@@ -1090,150 +1090,150 @@ UString_Menu_085C754C_Entry_2: @ '交換'
 UString_Menu_085C754C_Entry_3: @ '捨てる'
     .asciz "捨てる"
 
-    .global UString_Menu_085C7600_Entry_0
-    .type UString_Menu_085C7600_Entry_0, object
-UString_Menu_085C7600_Entry_0: @ '　制圧'
-    .asciz "　制圧"
+    .global UString_Menu_UnitAction_Entry_Seize
+    .type UString_Menu_UnitAction_Entry_Seize, object
+UString_Menu_UnitAction_Entry_Seize: @ '　制圧'
+    .asciz " Seize"
 
-    .global UString_Menu_085C7600_Entry_1
-    .type UString_Menu_085C7600_Entry_1, object
-UString_Menu_085C7600_Entry_1: @ '　攻撃'
-    .asciz "　攻撃"
+    .global UString_Menu_UnitAction_Entry_Attack
+    .type UString_Menu_UnitAction_Entry_Attack, object
+UString_Menu_UnitAction_Entry_Attack: @ '　攻撃'
+    .asciz " Attack"
 
-    .global UString_Menu_085C7600_Entry_2
-    .type UString_Menu_085C7600_Entry_2, object
-UString_Menu_085C7600_Entry_2: @ '　杖'
-    .asciz "　杖"
+    .global UString_Menu_UnitAction_Entry_Staff
+    .type UString_Menu_UnitAction_Entry_Staff, object
+UString_Menu_UnitAction_Entry_Staff: @ '　杖'
+    .asciz " Staff"
 
-    .global UString_Menu_085C7600_Entry_3
-    .type UString_Menu_085C7600_Entry_3, object
-UString_Menu_085C7600_Entry_3: @ '　奏でる'
-    .asciz "　奏でる"
+    .global UString_Menu_UnitAction_Entry_Play
+    .type UString_Menu_UnitAction_Entry_Play, object
+UString_Menu_UnitAction_Entry_Play: @ '　奏でる'
+    .asciz " Play"
 
-    .global UString_Menu_085C7600_Entry_4
-    .type UString_Menu_085C7600_Entry_4, object
-UString_Menu_085C7600_Entry_4: @ '　踊る'
-    .asciz "　踊る"
+    .global UString_Menu_UnitAction_Entry_Dance
+    .type UString_Menu_UnitAction_Entry_Dance, object
+UString_Menu_UnitAction_Entry_Dance: @ '　踊る'
+    .asciz " Dance"
 
-    .global UString_Menu_085C7600_Entry_5
-    .type UString_Menu_085C7600_Entry_5, object
-UString_Menu_085C7600_Entry_5: @ '　盗む'
-    .asciz "　盗む"
+    .global UString_Menu_UnitAction_Entry_Steal
+    .type UString_Menu_UnitAction_Entry_Steal, object
+UString_Menu_UnitAction_Entry_Steal: @ '　盗む'
+    .asciz " Steal"
 
-    .global UString_Menu_085C7600_Entry_6
-    .type UString_Menu_085C7600_Entry_6, object
-UString_Menu_085C7600_Entry_6: @ '　話す'
-    .asciz "　話す"
+    .global UString_Menu_UnitAction_Entry_Talk
+    .type UString_Menu_UnitAction_Entry_Talk, object
+UString_Menu_UnitAction_Entry_Talk: @ '　話す'
+    .asciz " Talk"
 
-    .global UString_Menu_085C7600_Entry_7
-    .type UString_Menu_085C7600_Entry_7, object
-UString_Menu_085C7600_Entry_7: @ '　支援'
-    .asciz "　支援"
+    .global UString_Menu_UnitAction_Entry_Support
+    .type UString_Menu_UnitAction_Entry_Support, object
+UString_Menu_UnitAction_Entry_Support: @ '　支援'
+    .asciz " Support"
 
-    .global UString_Menu_085C7600_Entry_8
-    .type UString_Menu_085C7600_Entry_8, object
-UString_Menu_085C7600_Entry_8: @ '　訪問'
-    .asciz "　訪問"
+    .global UString_Menu_UnitAction_Entry_Visit
+    .type UString_Menu_UnitAction_Entry_Visit, object
+UString_Menu_UnitAction_Entry_Visit: @ '　訪問'
+    .asciz " Visit"
 
-    .global UString_Menu_085C7600_Entry_9
-    .type UString_Menu_085C7600_Entry_9, object
-UString_Menu_085C7600_Entry_9: @ '　宝箱'
-    .asciz "　宝箱"
+    .global UString_Menu_UnitAction_Entry_Chest
+    .type UString_Menu_UnitAction_Entry_Chest, object
+UString_Menu_UnitAction_Entry_Chest: @ '　宝箱'
+    .asciz " Chest"
 
-    .global UString_Menu_085C7600_Entry_10
-    .type UString_Menu_085C7600_Entry_10, object
-UString_Menu_085C7600_Entry_10: @ '　扉'
-    .asciz "　扉"
+    .global UString_Menu_UnitAction_Entry_Door
+    .type UString_Menu_UnitAction_Entry_Door, object
+UString_Menu_UnitAction_Entry_Door: @ '　扉'
+    .asciz " Door"
 
-    .global UString_Menu_085C7600_Entry_11
-    .type UString_Menu_085C7600_Entry_11, object
-UString_Menu_085C7600_Entry_11: @ '　武器屋'
-    .asciz "　武器屋"
+    .global UString_Menu_UnitAction_Entry_Armory
+    .type UString_Menu_UnitAction_Entry_Armory, object
+UString_Menu_UnitAction_Entry_Armory: @ '　武器屋'
+    .asciz " Armory"
 
-    .global UString_Menu_085C7600_Entry_12
-    .type UString_Menu_085C7600_Entry_12, object
-UString_Menu_085C7600_Entry_12: @ '　道具屋'
-    .asciz "　道具屋"
+    .global UString_Menu_UnitAction_Entry_Vendor
+    .type UString_Menu_UnitAction_Entry_Vendor, object
+UString_Menu_UnitAction_Entry_Vendor: @ '　道具屋'
+    .asciz " Vendor"
 
-    .global UString_Menu_085C7600_Entry_13
-    .type UString_Menu_085C7600_Entry_13, object
-UString_Menu_085C7600_Entry_13: @ '　秘密店'
-    .asciz "　秘密店"
+    .global UString_Menu_UnitAction_Entry_SecretShop
+    .type UString_Menu_UnitAction_Entry_SecretShop, object
+UString_Menu_UnitAction_Entry_SecretShop: @ '　秘密店'
+    .asciz " Secret"
 
-    .global UString_Menu_085C7600_Entry_14
-    .type UString_Menu_085C7600_Entry_14, object
-UString_Menu_085C7600_Entry_14: @ '　闘技場'
-    .asciz "　闘技場"
+    .global UString_Menu_UnitAction_Entry_Arena
+    .type UString_Menu_UnitAction_Entry_Arena, object
+UString_Menu_UnitAction_Entry_Arena: @ '　闘技場'
+    .asciz " Arena"
 
-    .global UString_Menu_085C7600_Entry_15
-    .type UString_Menu_085C7600_Entry_15, object
-UString_Menu_085C7600_Entry_15: @ '　救出'
-    .asciz "　救出"
+    .global UString_Menu_UnitAction_Entry_Rescue
+    .type UString_Menu_UnitAction_Entry_Rescue, object
+UString_Menu_UnitAction_Entry_Rescue: @ '　救出'
+    .asciz " Rescue"
 
-    .global UString_Menu_085C7600_Entry_16
-    .type UString_Menu_085C7600_Entry_16, object
-UString_Menu_085C7600_Entry_16: @ '　降ろす'
-    .asciz "　降ろす"
+    .global UString_Menu_UnitAction_Entry_Drop
+    .type UString_Menu_UnitAction_Entry_Drop, object
+UString_Menu_UnitAction_Entry_Drop: @ '　降ろす'
+    .asciz " Drop"
 
-    .global UString_Menu_085C7600_Entry_17
-    .type UString_Menu_085C7600_Entry_17, object
-UString_Menu_085C7600_Entry_17: @ '　引受け'
-    .asciz "　引受け"
+    .global UString_Menu_UnitAction_Entry_Take
+    .type UString_Menu_UnitAction_Entry_Take, object
+UString_Menu_UnitAction_Entry_Take: @ '　引受け'
+    .asciz " Take"
 
-    .global UString_Menu_085C7600_Entry_18
-    .type UString_Menu_085C7600_Entry_18, object
-UString_Menu_085C7600_Entry_18: @ '　引渡し'
-    .asciz "　引渡し"
+    .global UString_Menu_UnitAction_Entry_Give
+    .type UString_Menu_UnitAction_Entry_Give, object
+UString_Menu_UnitAction_Entry_Give: @ '　引渡し'
+    .asciz " Give"
 
-    .global UString_Menu_085C7600_Entry_19
-    .type UString_Menu_085C7600_Entry_19, object
-UString_Menu_085C7600_Entry_19: @ '　持ち物'
-    .asciz "　持ち物"
+    .global UString_Menu_UnitAction_Entry_Item
+    .type UString_Menu_UnitAction_Entry_Item, object
+UString_Menu_UnitAction_Entry_Item: @ '　持ち物'
+    .asciz " Item"
 
-    .global UString_Menu_085C7600_Entry_20
-    .type UString_Menu_085C7600_Entry_20, object
-UString_Menu_085C7600_Entry_20: @ '　交換'
-    .asciz "　交換"
+    .global UString_Menu_UnitAction_Entry_Trade
+    .type UString_Menu_UnitAction_Entry_Trade, object
+UString_Menu_UnitAction_Entry_Trade: @ '　交換'
+    .asciz " Trade"
 
-    .global UString_Menu_085C7600_Entry_21
-    .type UString_Menu_085C7600_Entry_21, object
-UString_Menu_085C7600_Entry_21: @ '　輸送隊'
-    .asciz "　輸送隊"
+    .global UString_Menu_UnitAction_Entry_Supply
+    .type UString_Menu_UnitAction_Entry_Supply, object
+UString_Menu_UnitAction_Entry_Supply: @ '　輸送隊'
+    .asciz " Supply"
 
-    .global UString_Menu_085C7600_Entry_22
-    .type UString_Menu_085C7600_Entry_22, object
-UString_Menu_085C7600_Entry_22: @ '　待機'
-    .asciz "　待機"
+    .global UString_Menu_UnitAction_Entry_Wait
+    .type UString_Menu_UnitAction_Entry_Wait, object
+UString_Menu_UnitAction_Entry_Wait: @ '　待機'
+    .asciz " Wait"
 
     .global UString_Menu_085C7624_Entry_0
     .type UString_Menu_085C7624_Entry_0, object
 UString_Menu_085C7624_Entry_0: @ '　進撃準備へ'
     .asciz "　進撃準備へ"
 
-    .global UString_Menu_085C7648_Entry_0
-    .type UString_Menu_085C7648_Entry_0, object
-UString_Menu_085C7648_Entry_0: @ '　部隊'
-    .asciz "　部隊"
+    .global UString_Menu_Map_Entry_Unit
+    .type UString_Menu_Map_Entry_Unit, object
+UString_Menu_Map_Entry_Unit: @ '　部隊'
+    .asciz " Unit"
 
-    .global UString_Menu_085C7648_Entry_1
-    .type UString_Menu_085C7648_Entry_1, object
-UString_Menu_085C7648_Entry_1: @ '　状況'
-    .asciz "　状況"
+    .global UString_Menu_Map_Entry_Status
+    .type UString_Menu_Map_Entry_Status, object
+UString_Menu_Map_Entry_Status: @ '　状況'
+    .asciz " Status"
 
-    .global UString_Menu_085C7648_Entry_2
-    .type UString_Menu_085C7648_Entry_2, object
-UString_Menu_085C7648_Entry_2: @ '　設定'
-    .asciz "　設定"
+    .global UString_Menu_Map_Entry_Options
+    .type UString_Menu_Map_Entry_Options, object
+UString_Menu_Map_Entry_Options: @ '　設定'
+    .asciz " Options"
 
-    .global UString_Menu_085C7648_Entry_3
-    .type UString_Menu_085C7648_Entry_3, object
-UString_Menu_085C7648_Entry_3: @ '　中断'
-    .asciz "　中断"
+    .global UString_Menu_Map_Entry_Suspend
+    .type UString_Menu_Map_Entry_Suspend, object
+UString_Menu_Map_Entry_Suspend: @ '　中断'
+    .asciz " Suspend"
 
-    .global UString_Menu_085C7648_Entry_4
-    .type UString_Menu_085C7648_Entry_4, object
-UString_Menu_085C7648_Entry_4: @ '　終了'
-    .asciz "　終了"
+    .global UString_Menu_Map_Entry_End
+    .type UString_Menu_Map_Entry_End, object
+UString_Menu_Map_Entry_End: @ '　終了'
+    .asciz " End"
 
     .global UString_EquipInfoWindow_0810599C
     .type UString_EquipInfoWindow_0810599C, object
@@ -1260,35 +1260,35 @@ UString_EquipInfoWindow_081059B4: @ '必殺'
 UString_EquipInfoWindow_081059BC: @ '回避'
     .asciz "回避"
 
-    .global UString_BattlePreview_Label_0
-    .type UString_BattlePreview_Label_0, object
-UString_BattlePreview_Label_0: @ '威力'
-    .asciz "威力"
+    .global UString_BattlePreview_Label_Might
+    .type UString_BattlePreview_Label_Might, object
+UString_BattlePreview_Label_Might: @ '威力'
+    .asciz "Mt"
 
-    .global UString_BattlePreview_Label_1
-    .type UString_BattlePreview_Label_1, object
-UString_BattlePreview_Label_1: @ '命中'
-    .asciz "命中"
+    .global UString_BattlePreview_Label_Hit
+    .type UString_BattlePreview_Label_Hit, object
+UString_BattlePreview_Label_Hit: @ '命中'
+    .asciz "Hit"
 
-    .global UString_BattlePreview_Label_2
-    .type UString_BattlePreview_Label_2, object
-UString_BattlePreview_Label_2: @ '必殺'
-    .asciz "必殺"
+    .global UString_BattlePreview_Label_Crit
+    .type UString_BattlePreview_Label_Crit, object
+UString_BattlePreview_Label_Crit: @ '必殺'
+    .asciz "Crit"
 
-    .global UString_BattlePreview_Label_3
-    .type UString_BattlePreview_Label_3, object
-UString_BattlePreview_Label_3: @ '攻撃'
-    .asciz "攻撃"
+    .global UString_BattlePreview_Label_Atk
+    .type UString_BattlePreview_Label_Atk, object
+UString_BattlePreview_Label_Atk: @ '攻撃'
+    .asciz "Atk"
 
-    .global UString_BattlePreview_Label_4
-    .type UString_BattlePreview_Label_4, object
-UString_BattlePreview_Label_4: @ '守備'
-    .asciz "守備"
+    .global UString_BattlePreview_Label_Def
+    .type UString_BattlePreview_Label_Def, object
+UString_BattlePreview_Label_Def: @ '守備'
+    .asciz "Def"
 
-    .global UString_BattlePreview_Label_5
-    .type UString_BattlePreview_Label_5, object
-UString_BattlePreview_Label_5: @ '攻速'
-    .asciz "攻速"
+    .global UString_BattlePreview_Label_Speed
+    .type UString_BattlePreview_Label_Speed, object
+UString_BattlePreview_Label_Speed: @ '攻速'
+    .asciz "AS"
 
     .global UString_UnitPanel_Label_Hp
     .type UString_UnitPanel_Label_Hp, object
@@ -1485,13 +1485,88 @@ UString_UnitScreen_0832716C: @ '２'
 UString_UnitScreen_08327170: @ 'ーーー'
     .asciz "ーーー"
 
-    .global UString_Banim_LevelUp_Strength_081C9FEC
-    .type UString_Banim_LevelUp_Strength_081C9FEC, object
-UString_Banim_LevelUp_Strength_081C9FEC: @ 'ＨＰ'
-    .asciz "ＨＰ"
+    .global UString_Banim_LevelUp_Label_Physical_Hp
+    .type UString_Banim_LevelUp_Label_Physical_Hp, object
+UString_Banim_LevelUp_Label_Physical_Hp: @ 'ＨＰ'
+    .asciz "HP"
 
-    .global UString_Banim_LevelUp_Magic_081CA014
-    .type UString_Banim_LevelUp_Magic_081CA014, object
-UString_Banim_LevelUp_Magic_081CA014: @ 'ＨＰ'
-    .asciz "ＨＰ"
+    .global UString_Banim_LevelUp_Label_Physical_Strength
+    .type UString_Banim_LevelUp_Label_Physical_Strength, object
+UString_Banim_LevelUp_Label_Physical_Strength: @ '力'
+    .asciz "Str"
+
+    .global UString_Banim_LevelUp_Label_Physical_Skill
+    .type UString_Banim_LevelUp_Label_Physical_Skill, object
+UString_Banim_LevelUp_Label_Physical_Skill: @ '技'
+    .asciz "Skill"
+
+    .global UString_Banim_LevelUp_Label_Physical_Speed
+    .type UString_Banim_LevelUp_Label_Physical_Speed, object
+UString_Banim_LevelUp_Label_Physical_Speed: @ '速さ'
+    .asciz "Spd"
+
+    .global UString_Banim_LevelUp_Label_Physical_Luck
+    .type UString_Banim_LevelUp_Label_Physical_Luck, object
+UString_Banim_LevelUp_Label_Physical_Luck: @ '幸運'
+    .asciz "Luck"
+
+    .global UString_Banim_LevelUp_Label_Physical_Defense
+    .type UString_Banim_LevelUp_Label_Physical_Defense, object
+UString_Banim_LevelUp_Label_Physical_Defense: @ '守備'
+    .asciz "Def"
+
+    .global UString_Banim_LevelUp_Label_Physical_Resistance
+    .type UString_Banim_LevelUp_Label_Physical_Resistance, object
+UString_Banim_LevelUp_Label_Physical_Resistance: @ '魔防'
+    .asciz "Res"
+
+    .global UString_Banim_LevelUp_Label_Physical_Con
+    .type UString_Banim_LevelUp_Label_Physical_Con, object
+UString_Banim_LevelUp_Label_Physical_Con: @ '体格'
+    .asciz "Con"
+
+    .global UString_Banim_LevelUp_Label_Magical_Hp
+    .type UString_Banim_LevelUp_Label_Magical_Hp, object
+UString_Banim_LevelUp_Label_Magical_Hp: @ 'ＨＰ'
+    .asciz "HP"
+
+    .global UString_Banim_LevelUp_Label_Magical_Magic
+    .type UString_Banim_LevelUp_Label_Magical_Magic, object
+UString_Banim_LevelUp_Label_Magical_Magic: @ '魔力'
+    .asciz "Mag"
+
+    .global UString_Banim_LevelUp_Label_Magical_Skill
+    .type UString_Banim_LevelUp_Label_Magical_Skill, object
+UString_Banim_LevelUp_Label_Magical_Skill: @ '技'
+    .asciz "Skill"
+
+    .global UString_Banim_LevelUp_Label_Magical_Speed
+    .type UString_Banim_LevelUp_Label_Magical_Speed, object
+UString_Banim_LevelUp_Label_Magical_Speed: @ '速さ'
+    .asciz "Spd"
+
+    .global UString_Banim_LevelUp_Label_Magical_Luck
+    .type UString_Banim_LevelUp_Label_Magical_Luck, object
+UString_Banim_LevelUp_Label_Magical_Luck: @ '幸運'
+    .asciz "Luck"
+
+    .global UString_Banim_LevelUp_Label_Magical_Defense
+    .type UString_Banim_LevelUp_Label_Magical_Defense, object
+UString_Banim_LevelUp_Label_Magical_Defense: @ '守備'
+    .asciz "Def"
+
+    .global UString_Banim_LevelUp_Label_Magical_Resistance
+    .type UString_Banim_LevelUp_Label_Magical_Resistance, object
+UString_Banim_LevelUp_Label_Magical_Resistance: @ '魔防'
+    .asciz "Res"
+
+    .global UString_Banim_LevelUp_Label_Magical_Con
+    .type UString_Banim_LevelUp_Label_Magical_Con, object
+UString_Banim_LevelUp_Label_Magical_Con: @ '体格'
+    .asciz "Con"
+
+    .global UString_Banim_LevelUp_Label_Lv
+    .type UString_Banim_LevelUp_Label_Lv, object
+UString_Banim_LevelUp_Label_Lv: @ 'ＬＶ'
+    .asciz "ＬＶ"
 

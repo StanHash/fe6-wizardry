@@ -3,7 +3,7 @@
 08336CB8 MainMenu_StartCancel "Start Cancel"
 08336CA4 MainMenu_CopyCancel "Copy Cancel"
 08336C90 MainMenu_EraseCancel "Erase Cancel"
-08336C7C MainMenu_08336C7C "<unknown>"
+08336C7C MainMenu_SaveCancel "Save Cancel"
 
 # terrain name table at 0860D00C
 08279E58 TerrainName_Blank
@@ -54,95 +54,95 @@
 08279D24 TerrainName_Valley "Valley"
 
 # prep screen related table at 08677DB8
-083195FC PrepScreen_Label_Lv_Unused
-083195F8 PrepScreen_Label_Lv_Unused_Debug
-08319608 PrepScreen_Label_Exp_Unused
-08319604 PrepScreen_Label_Exp_Unused_Debug
-08319614 PrepScreen_Label_Hp_Unused
-08319610 PrepScreen_Label_Hp_Unused_Debug
-08319620 PrepScreen_Label_Strength_Unused
-0831961C PrepScreen_Label_Strength_Unused_Debug
-08319628 PrepScreen_Label_Magic_Unused
-08319624 PrepScreen_Label_Magic_Unused_Debug
-08319638 PrepScreen_Label_Skill "Skill"
-08319630 PrepScreen_Label_Skill_Debug
-08319644 PrepScreen_Label_Speed "Spd"
-0831963C PrepScreen_Label_Speed_Debug
-08319650 PrepScreen_Label_Defense "Def"
-0831964C PrepScreen_Label_Defense_Debug
-08319660 PrepScreen_Label_Resistance "Res"
-08319658 PrepScreen_Label_Resistance_Debug
-08319670 PrepScreen_Label_Luck "Luck"
-08319668 PrepScreen_Label_Luck_Debug
-08319680 PrepScreen_Label_Con "Con"
-08319678 PrepScreen_Label_Con_Debug
-0831968C PrepScreen_Label_Aid "Aid"
-08319688 PrepScreen_Label_Aid_Debug
-08319698 PrepScreen_Label_Move "Move"
-08319694 PrepScreen_Label_Move_Debug
-083196A8 PrepScreen_Label_Rescue "Trv"
-083196A0 PrepScreen_Label_Rescue_Debug
-083196B8 PrepScreen_Label_Affinity "Affin"
-083196B0 PrepScreen_Label_Affinity_Debug
-083196C4 PrepScreen_Label_Range "Rng"
-083196C0 PrepScreen_Label_Range_Debug
-083196D0 PrepScreen_Unk_32
-083196CC PrepScreen_Unk_33
-083196DC PrepScreen_Unk_34
-083196D8 PrepScreen_Unk_35
-083196EC PrepScreen_Unk_36
-083196E4 PrepScreen_Unk_37
-083196FC PrepScreen_Unk_38
-083196F4 PrepScreen_Unk_39
-0831970C PrepScreen_Unk_40
-08319704 PrepScreen_Unk_41
-08319714 PrepScreen_Unk_42
-08319720 PrepScreen_Unk_44
-0831971C PrepScreen_Unk_45
-08319730 PrepScreen_Unk_46
-08319728 PrepScreen_Unk_47
-08319744 PrepScreen_Unk_48
-0831973C PrepScreen_Unk_49
-08319758 PrepScreen_Unk_50
-08319750 PrepScreen_Unk_51
-0831976C PrepScreen_Unk_52
-08319764 PrepScreen_Unk_53
-08319780 PrepScreen_Unk_54
-08319778 PrepScreen_Unk_55
-08319794 PrepScreen_Unk_56
-0831978C PrepScreen_Unk_57
-083197A8 PrepScreen_Unk_58
-083197A0 PrepScreen_Unk_59
-083197BC PrepScreen_Unk_60
-083197B4 PrepScreen_Unk_61
-083197D0 PrepScreen_Unk_62
-083197C8 PrepScreen_Unk_63
-083197E0 PrepScreen_Unk_64
-083197DC PrepScreen_Unk_65
-083197F0 PrepScreen_Unk_66
-083197E8 PrepScreen_Unk_67
-08319800 PrepScreen_Unk_68
-083197F8 PrepScreen_Unk_69
-08319814 PrepScreen_Unk_70
-0831980C PrepScreen_Unk_71
-08319828 PrepScreen_Unk_72
-08319820 PrepScreen_Unk_73
-0831983C PrepScreen_Unk_74
-08319834 PrepScreen_Unk_75
-08319848 PrepScreen_Unk_76
-08319840 PrepScreen_Unk_77
-08319850 PrepScreen_Unk_78
-0831984C PrepScreen_Unk_79
-08319858 PrepScreen_Unk_80
-08319854 PrepScreen_Unk_81
-08319864 PrepScreen_Unk_82
-0831985C PrepScreen_Unk_83
-08319870 PrepScreen_Unk_84
-08319868 PrepScreen_Unk_85
-08319880 PrepScreen_Unk_86
-08319874 PrepScreen_Unk_87
-08319890 PrepScreen_Unk_88
-08319884 PrepScreen_Unk_89
+083195FC System_Label_Lv
+083195F8 System_Label_Lv_Debug
+08319608 System_Label_Exp "Exp"
+08319604 System_Label_Exp_Debug
+08319614 System_Label_Hp "HP"
+08319610 System_Label_Hp_Debug
+08319620 System_Label_Strength "Str"
+0831961C System_Label_Strength_Debug
+08319628 System_Label_Magic "Mag"
+08319624 System_Label_Magic_Debug
+08319638 System_Label_Skill "Skill"
+08319630 System_Label_Skill_Debug
+08319644 System_Label_Speed "Spd"
+0831963C System_Label_Speed_Debug
+08319650 System_Label_Defense "Def"
+0831964C System_Label_Defense_Debug
+08319660 System_Label_Resistance "Res"
+08319658 System_Label_Resistance_Debug
+08319670 System_Label_Luck "Luck"
+08319668 System_Label_Luck_Debug
+08319680 System_Label_Con "Con"
+08319678 System_Label_Con_Debug
+0831968C System_Label_Aid "Aid"
+08319688 System_Label_Aid_Debug
+08319698 System_Label_Move "Move"
+08319694 System_Label_Move_Debug
+083196A8 System_Label_Rescue "Trv"
+083196A0 System_Label_Rescue_Debug
+083196B8 System_Label_Affinity "Affin"
+083196B0 System_Label_Affinity_Debug
+083196C4 System_Label_Range "Rng"
+083196C0 System_Label_Range_Debug
+083196D0 System_Label_Atk "Atk"
+083196CC System_Label_Atk_Debug
+083196DC System_Label_Hit "Hit"
+083196D8 System_Label_Hit_Debug
+083196EC System_Label_Crit "Crit"
+083196E4 System_Label_Crit_Debug
+083196FC System_Label_Avoid "Avoid"
+083196F4 System_Label_Avoid_Debug
+0831970C System_Label_Status "Cond"
+08319704 System_Label_Status_Debug
+08319714 System_Label_Unk_08319714
+08319720 System_Label_Weight "Wgt"
+0831971C System_Label_Weight_Debug
+08319730 System_Label_Unk_08319730
+08319728 System_Label_Unk_08319730_Debug
+08319744 System_Label_Range_1ToMag "　1~Mag"
+0831973C System_Label_Range_1ToMag_Debug
+08319758 System_Label_Range_1 "　　　1"
+08319750 System_Label_Range_1_Debug
+0831976C System_Label_Range_1To2 "　 1~2"
+08319764 System_Label_Range_1To2_Debug
+08319780 System_Label_Range_1To3 "　 1~3"
+08319778 System_Label_Range_1To3_Debug
+08319794 System_Label_Range_2 "　　　2"
+0831978C System_Label_Range_2_Debug
+083197A8 System_Label_Range_2To3 "　 2~3"
+083197A0 System_Label_Range_2To3_Debug
+083197BC System_Label_Range_3To10 "　3~10"
+083197B4 System_Label_Range_3To10_Debug
+083197D0 System_Label_Range_3To15 "　3~15"
+083197C8 System_Label_Range_3To15_Debug
+083197E0 System_Unk_64
+083197DC System_Unk_65
+083197F0 System_Unk_66
+083197E8 System_Unk_67
+08319800 System_Unk_68
+083197F8 System_Unk_69
+08319814 System_Unk_70
+0831980C System_Unk_71
+08319828 System_Unk_72
+08319820 System_Unk_73
+0831983C System_Unk_74
+08319834 System_Unk_75
+08319848 System_Unk_76
+08319840 System_Unk_77
+08319850 System_Unk_78
+0831984C System_Unk_79
+08319858 System_Unk_80
+08319854 System_Unk_81
+08319864 System_Unk_82
+0831985C System_Unk_83
+08319870 System_Unk_84
+08319868 System_Unk_85
+08319880 System_Unk_86
+08319874 System_Unk_87
+08319890 System_Unk_88
+08319884 System_Unk_89
 
 083195AC PrepScreen_Label_Magic "Mag"
 083195B4 PrepScreen_Label_Strength "Str"
@@ -244,35 +244,38 @@
 08105AC0 Menu_085C7594_Entry_0
 08105AC0 Menu_085C75B8_Entry_0
 08105AC0 Menu_085C75DC_Entry_0
-08105C7C Menu_085C7600_Entry_0
-08105C74 Menu_085C7600_Entry_1
-08105C6C Menu_085C7600_Entry_2
-08105C60 Menu_085C7600_Entry_3
-08105C58 Menu_085C7600_Entry_4
-08105C50 Menu_085C7600_Entry_5
-08105C48 Menu_085C7600_Entry_6
-08105C40 Menu_085C7600_Entry_7
-08105C38 Menu_085C7600_Entry_8
-08105C30 Menu_085C7600_Entry_9
-08105C28 Menu_085C7600_Entry_10
-08105C1C Menu_085C7600_Entry_11
-08105C10 Menu_085C7600_Entry_12
-08105C04 Menu_085C7600_Entry_13
-08105BF8 Menu_085C7600_Entry_14
-08105BF0 Menu_085C7600_Entry_15
-08105BE4 Menu_085C7600_Entry_16
-08105BD8 Menu_085C7600_Entry_17
-08105BCC Menu_085C7600_Entry_18
-08105BC0 Menu_085C7600_Entry_19
-08105BB8 Menu_085C7600_Entry_20
-08105BAC Menu_085C7600_Entry_21
-08105BA4 Menu_085C7600_Entry_22
+
+08105C7C Menu_UnitAction_Entry_Seize " Seize"
+08105C74 Menu_UnitAction_Entry_Attack " Attack"
+08105C6C Menu_UnitAction_Entry_Staff " Staff"
+08105C60 Menu_UnitAction_Entry_Play " Play"
+08105C58 Menu_UnitAction_Entry_Dance " Dance"
+08105C50 Menu_UnitAction_Entry_Steal " Steal"
+08105C48 Menu_UnitAction_Entry_Talk " Talk"
+08105C40 Menu_UnitAction_Entry_Support " Support"
+08105C38 Menu_UnitAction_Entry_Visit " Visit"
+08105C30 Menu_UnitAction_Entry_Chest " Chest"
+08105C28 Menu_UnitAction_Entry_Door " Door"
+08105C1C Menu_UnitAction_Entry_Armory " Armory"
+08105C10 Menu_UnitAction_Entry_Vendor " Vendor"
+08105C04 Menu_UnitAction_Entry_SecretShop " Secret"
+08105BF8 Menu_UnitAction_Entry_Arena " Arena"
+08105BF0 Menu_UnitAction_Entry_Rescue " Rescue"
+08105BE4 Menu_UnitAction_Entry_Drop " Drop"
+08105BD8 Menu_UnitAction_Entry_Take " Take"
+08105BCC Menu_UnitAction_Entry_Give " Give"
+08105BC0 Menu_UnitAction_Entry_Item " Item"
+08105BB8 Menu_UnitAction_Entry_Trade " Trade"
+08105BAC Menu_UnitAction_Entry_Supply " Supply"
+08105BA4 Menu_UnitAction_Entry_Wait " Wait"
+
 08105C84 Menu_085C7624_Entry_0
-08105CB4 Menu_085C7648_Entry_0
-08105CAC Menu_085C7648_Entry_1
-08105CA4 Menu_085C7648_Entry_2
-08105C9C Menu_085C7648_Entry_3
-08105C94 Menu_085C7648_Entry_4
+
+08105CB4 Menu_Map_Entry_Unit " Unit"
+08105CAC Menu_Map_Entry_Status " Status"
+08105CA4 Menu_Map_Entry_Options " Options"
+08105C9C Menu_Map_Entry_Suspend " Suspend"
+08105C94 Menu_Map_Entry_End " End"
 
 # equip info window strings
 0810599C EquipInfoWindow_0810599C
@@ -282,12 +285,12 @@
 081059BC EquipInfoWindow_081059BC
 
 # battle preview labels table at 085C8388
-08105DC8 BattlePreview_Label_0
-08105DC0 BattlePreview_Label_1
-08105DB8 BattlePreview_Label_2
-08105DB0 BattlePreview_Label_3
-08105DA8 BattlePreview_Label_4
-08105DA0 BattlePreview_Label_5
+08105DC8 BattlePreview_Label_Might "Mt"
+08105DC0 BattlePreview_Label_Hit "Hit"
+08105DB8 BattlePreview_Label_Crit "Crit"
+08105DB0 BattlePreview_Label_Atk "Atk"
+08105DA8 BattlePreview_Label_Def "Def"
+08105DA0 BattlePreview_Label_Speed "AS"
 
 # unit panel labels
 08105D58 UnitPanel_Label_Hp
@@ -334,6 +337,23 @@
 0832716C UnitScreen_0832716C
 08327170 UnitScreen_08327170
 
-# TODO: fix this one
-081C9FEC Banim_LevelUp_Strength_081C9FEC
-081CA014 Banim_LevelUp_Magic_081CA014
+# NOTE: function + pointers to these have to be manually fixed
+# see data/fe6-strings-fixes.event
+081C9FEC Banim_LevelUp_Label_Physical_Hp "HP"
+081C9FF1 Banim_LevelUp_Label_Physical_Strength "Str"
+081C9FF6 Banim_LevelUp_Label_Physical_Skill "Skill"
+081C9FFB Banim_LevelUp_Label_Physical_Speed "Spd"
+081CA000 Banim_LevelUp_Label_Physical_Luck "Luck"
+081CA005 Banim_LevelUp_Label_Physical_Defense "Def"
+081CA00A Banim_LevelUp_Label_Physical_Resistance "Res"
+081CA00F Banim_LevelUp_Label_Physical_Con "Con"
+081CA014 Banim_LevelUp_Label_Magical_Hp "HP"
+081CA019 Banim_LevelUp_Label_Magical_Magic "Mag"
+081CA01E Banim_LevelUp_Label_Magical_Skill "Skill"
+081CA023 Banim_LevelUp_Label_Magical_Speed "Spd"
+081CA028 Banim_LevelUp_Label_Magical_Luck "Luck"
+081CA02D Banim_LevelUp_Label_Magical_Defense "Def"
+081CA032 Banim_LevelUp_Label_Magical_Resistance "Res"
+081CA037 Banim_LevelUp_Label_Magical_Con "Con"
+
+081CA04C Banim_LevelUp_Label_Lv

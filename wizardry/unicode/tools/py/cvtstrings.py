@@ -1,4 +1,5 @@
 import sys, re
+from datetime import date
 
 def read_sjis_string(f):
     array = bytearray(b'')
@@ -75,6 +76,12 @@ def main(args):
             print(f"{str_name}: @ '{orig_string}'")
             print(f"    .asciz \"{string}\"")
             print(f"")
+
+    print(f"    .global DateCvtStringsBuilt")
+    print(f"    .type DateCvtStringsBuilt, object")
+    print(f"DateCvtStringsBuilt:")
+    print(f"    .asciz \"{date.today()}\"")
+    print(f"")
 
 if __name__ == '__main__':
     main(sys.argv)

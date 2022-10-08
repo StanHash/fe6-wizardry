@@ -1,10 +1,10 @@
 PUSH
     ORG $01CD38
-    POIN UString_EquipInfoWindow_0810599C
-    POIN UString_EquipInfoWindow_081059A4
-    POIN UString_EquipInfoWindow_081059AC
-    POIN UString_EquipInfoWindow_081059B4
-    POIN UString_EquipInfoWindow_081059BC
+    POIN UString_EquipInfoWindow_Label_Kind
+    POIN UString_EquipInfoWindow_Label_Attack
+    POIN UString_EquipInfoWindow_Label_Hit
+    POIN UString_EquipInfoWindow_Label_Crit
+    POIN UString_EquipInfoWindow_Label_Avoid
     ORG $02BE98
     POIN UString_UnitPanel_Label_Hp
     POIN UString_UnitPanel_Label_HpSep
@@ -100,6 +100,13 @@ PUSH
     POIN UString_AffinityName_5
     POIN UString_AffinityName_6
     POIN UString_AffinityName_7
+    ORG $35C80C
+    POIN UString_ClassReel_Label_Hp
+    POIN UString_ClassReel_Label_Strength
+    POIN UString_ClassReel_Label_Skill
+    POIN UString_ClassReel_Label_Speed
+    POIN UString_ClassReel_Label_Defense
+    POIN UString_ClassReel_Label_Resistance
     ORG $5C526C
     POIN UString_StatusName_None
     POIN UString_StatusName_Poison
@@ -107,9 +114,9 @@ PUSH
     POIN UString_StatusName_Silence
     POIN UString_StatusName_Berserk
     ORG $5C6448
-    POIN UString_Menu_085C73C0_Entry_0
+    POIN UString_Menu_TutorialInterrupt_Entry_Continue
     ORG $5C646C
-    POIN UString_Menu_085C73C0_Entry_1
+    POIN UString_Menu_TutorialInterrupt_Entry_Quit
     ORG $5C64B4
     POIN UString_Menu_085C73E4_Entry_0
     ORG $5C64D8
@@ -121,115 +128,115 @@ PUSH
     ORG $5C6544
     POIN UString_Menu_085C73E4_Entry_4
     ORG $5C658C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C65B0
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C65F8
-    POIN UString_Menu_085C742C_Entry_0
+    POIN UString_Menu_Debug_085C742C_Entry_0
     ORG $5C661C
-    POIN UString_Menu_085C742C_Entry_1
+    POIN UString_Menu_Debug_085C742C_Entry_1
     ORG $5C6640
-    POIN UString_Menu_085C7450_Entry_1
+    POIN UString_Menu_Debug_085C742C_Entry_2
     ORG $5C6688
-    POIN UString_Menu_085C7450_Entry_0
+    POIN UString_Menu_Debug_085C7450_Entry_0
     ORG $5C66AC
-    POIN UString_Menu_085C7450_Entry_1
+    POIN UString_Menu_Debug_085C742C_Entry_2
     ORG $5C66F4
-    POIN UString_Menu_085C7474_Entry_0
+    POIN UString_Menu_Debug_085C7474_Entry_0
     ORG $5C6718
-    POIN UString_Menu_085C7474_Entry_1
+    POIN UString_Menu_Debug_085C7474_Entry_1
     ORG $5C673C
-    POIN UString_Menu_085C7474_Entry_2
+    POIN UString_Menu_Debug_085C7474_Entry_2
     ORG $5C6760
-    POIN UString_Menu_085C7474_Entry_3
+    POIN UString_Menu_Debug_085C7474_Entry_3
     ORG $5C6784
-    POIN UString_Menu_085C7474_Entry_4
+    POIN UString_Menu_Debug_085C7474_Entry_4
     ORG $5C67A8
-    POIN UString_Menu_085C7474_Entry_5
+    POIN UString_Menu_Debug_085C7474_Entry_5
     ORG $5C67CC
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C67F0
-    POIN UString_Menu_085C7474_Entry_7
+    POIN UString_Menu_Debug_085C7474_Entry_7
     ORG $5C6838
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C685C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6880
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C68A4
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C68C8
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6910
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6934
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6958
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C697C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C69A0
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C69E8
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6A0C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6A30
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6A54
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6A78
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6A9C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6AE4
     POIN UString_Menu_085C7504_Entry_0
     ORG $5C6B08
     POIN UString_Menu_085C7504_Entry_1
     ORG $5C6B50
-    POIN UString_Menu_085C7528_Entry_0
+    POIN UString_Menu_UnitItemDiscardPrompt_Entry_Yes
     ORG $5C6B74
-    POIN UString_Menu_085C7528_Entry_1
+    POIN UString_Menu_UnitItemDiscardPrompt_Entry_No
     ORG $5C6BBC
-    POIN UString_Menu_085C754C_Entry_0
+    POIN UString_Menu_UnitItemAction_Entry_Use
     ORG $5C6BE0
-    POIN UString_Menu_085C754C_Entry_1
+    POIN UString_Menu_UnitItemAction_Entry_Equip
     ORG $5C6C04
-    POIN UString_Menu_085C754C_Entry_2
+    POIN UString_Menu_UnitItemAction_Entry_Trade
     ORG $5C6C28
-    POIN UString_Menu_085C754C_Entry_3
+    POIN UString_Menu_UnitItemAction_Entry_Discard
     ORG $5C6C70
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6C94
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6CB8
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6CDC
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6D00
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6D48
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6D6C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6D90
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6DB4
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6DD8
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6E20
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6E68
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6E8C
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6EB0
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6ED4
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6EF8
-    POIN UString_Menu_085C75DC_Entry_0
+    POIN UString_Menu_Entry_Empty
     ORG $5C6F40
     POIN UString_Menu_UnitAction_Entry_Seize
     ORG $5C6F64
@@ -277,7 +284,7 @@ PUSH
     ORG $5C7258
     POIN UString_Menu_UnitAction_Entry_Wait
     ORG $5C72A0
-    POIN UString_Menu_085C7624_Entry_0
+    POIN UString_Menu_PrepMap_Entry
     ORG $5C72E8
     POIN UString_Menu_Map_Entry_Unit
     ORG $5C730C

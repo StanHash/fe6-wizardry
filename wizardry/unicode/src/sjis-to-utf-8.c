@@ -1,6 +1,8 @@
 #include "msg.h"
+#include "ramfunc.h"
 
-#include "stan-failscreen.h"
+#include "nat-macros.h"
+#include "nat-failscreen.h"
 
 #include <string.h>
 
@@ -8,16 +10,16 @@ struct SjisToUnicodeEnt
 {
     /* 00 */ u16 single_char;
     /* 02 */ u8 byterange_beg, byterange_end;
-    /* 04 */ u16 const* lut;
+    /* 04 */ u16 const * lut;
 };
 
 extern struct SjisToUnicodeEnt const Utf8TranscoderSjisToUnicodeTable[];
 
-static u32 CvtSjis(char const** strptr)
+u32 Sjis2Utf8CvtSjis(char const * * strptr)
 {
     u32 byte_0 = *(*strptr)++;
 
-    struct SjisToUnicodeEnt const* ent = &Utf8TranscoderSjisToUnicodeTable[byte_0];
+    struct SjisToUnicodeEnt const * ent = &Utf8TranscoderSjisToUnicodeTable[byte_0];
 
     if (ent->single_char != 0)
     {
@@ -47,7 +49,7 @@ static u32 CvtSjis(char const** strptr)
     return ent->lut[byte_1];
 }
 
-static void WriteUtf8(char** dst, u32 character)
+void Sjis2Utf8WriteUtf8(char * * dst, u32 character)
 {
     switch (character)
     {
@@ -75,15 +77,21 @@ static void WriteUtf8(char** dst, u32 character)
     }
 }
 
-static void Sjis2Utf8(char* buf, int len)
+static u32 my_strlen(char * str)
 {
-    // int orig_len = strlen(buf) + 1;
-    int orig_len = 0;
-    while (buf[orig_len] != '\0')
+    u32 len = 0;
+
+    while (str[len] != '\0')
     {
-        orig_len += 1;
+        len += 1;
     }
-    orig_len += 1;
+
+    return len;
+}
+
+void Sjis2Utf8(char * buf, int len)
+{
+    int orig_len = my_strlen(buf) + 1;
 
     // memmove(buf + len - orig_len, buf, orig_len);
     for (int i = orig_len - 1; i >= 0; i--)
@@ -91,8 +99,8 @@ static void Sjis2Utf8(char* buf, int len)
         buf[len - orig_len + i] = buf[i];
     }
 
-    char* dst = buf;
-    char const* src = buf + len - orig_len;
+    char * dst = buf;
+    char const * src = buf + len - orig_len;
 
     while (src != buf + len)
     {
@@ -115,17 +123,25 @@ static void Sjis2Utf8(char* buf, int len)
                 break;
 
             default:
-                WriteUtf8(&dst, CvtSjis(&src));
+                Sjis2Utf8WriteUtf8(&dst, Sjis2Utf8CvtSjis(&src));
                 continue;
         }
     }
 }
 
 // replaces
-void DecodeStringRam(char const* src, char* dst)
+LYN_REPLACE_CHECK(DecodeStringRam);
+void DecodeStringRam(char const * src, char * dst)
 {
-    extern void(*DecodeStringRamFunc)(char const* src, char* dst);
+    if ((((u32) src) & 0x80000000) != 0)
+    {
+        strcpy(dst, (char const *) (((u32) src) & 0x7FFFFFFF));
+    }
+    else
+    {
+        extern void (* DecodeStringRamFunc)(char const * src, char * dst);
 
-    DecodeStringRamFunc(src, dst);
-    Sjis2Utf8(dst, 0x1000);
+        DecodeStringRamFunc(src, dst);
+        Sjis2Utf8(dst, 0x1000); // NOTE: assumes dst len is 0x1000
+    }
 }

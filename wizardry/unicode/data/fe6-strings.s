@@ -955,15 +955,15 @@ UString_ItemKind_9: @ 'ア'
 UString_ItemKind_Dragon: @ '竜'
     .asciz "Dragon"
 
-    .global UString_Menu_085C73C0_Entry_0
-    .type UString_Menu_085C73C0_Entry_0, object
-UString_Menu_085C73C0_Entry_0: @ '　チュートリアルを続ける'
-    .asciz "　チュートリアルを続ける"
+    .global UString_Menu_TutorialInterrupt_Entry_Continue
+    .type UString_Menu_TutorialInterrupt_Entry_Continue, object
+UString_Menu_TutorialInterrupt_Entry_Continue: @ '　チュートリアルを続ける'
+    .asciz " Continue Tutorial"
 
-    .global UString_Menu_085C73C0_Entry_1
-    .type UString_Menu_085C73C0_Entry_1, object
-UString_Menu_085C73C0_Entry_1: @ '　チュートリアルをやめる'
-    .asciz "　チュートリアルをやめる"
+    .global UString_Menu_TutorialInterrupt_Entry_Quit
+    .type UString_Menu_TutorialInterrupt_Entry_Quit, object
+UString_Menu_TutorialInterrupt_Entry_Quit: @ '　チュートリアルをやめる'
+    .asciz " Quit Tutorial"
 
     .global UString_Menu_085C73E4_Entry_0
     .type UString_Menu_085C73E4_Entry_0, object
@@ -990,64 +990,64 @@ UString_Menu_085C73E4_Entry_3: @ '以後プレイできません'
 UString_Menu_085C73E4_Entry_4: @ '　　　　　　　　　了解'
     .asciz "　　　　　　　　　了解"
 
-    .global UString_Menu_085C75DC_Entry_0
-    .type UString_Menu_085C75DC_Entry_0, object
-UString_Menu_085C75DC_Entry_0: @ ''
+    .global UString_Menu_Entry_Empty
+    .type UString_Menu_Entry_Empty, object
+UString_Menu_Entry_Empty: @ ''
     .asciz ""
 
-    .global UString_Menu_085C742C_Entry_0
-    .type UString_Menu_085C742C_Entry_0, object
-UString_Menu_085C742C_Entry_0: @ '　リリースエントリ'
+    .global UString_Menu_Debug_085C742C_Entry_0
+    .type UString_Menu_Debug_085C742C_Entry_0, object
+UString_Menu_Debug_085C742C_Entry_0: @ '　リリースエントリ'
     .asciz "　リリースエントリ"
 
-    .global UString_Menu_085C742C_Entry_1
-    .type UString_Menu_085C742C_Entry_1, object
-UString_Menu_085C742C_Entry_1: @ '　どこでも再開'
+    .global UString_Menu_Debug_085C742C_Entry_1
+    .type UString_Menu_Debug_085C742C_Entry_1, object
+UString_Menu_Debug_085C742C_Entry_1: @ '　どこでも再開'
     .asciz "　どこでも再開"
 
-    .global UString_Menu_085C7450_Entry_1
-    .type UString_Menu_085C7450_Entry_1, object
-UString_Menu_085C7450_Entry_1: @ '　手再開'
+    .global UString_Menu_Debug_085C742C_Entry_2
+    .type UString_Menu_Debug_085C742C_Entry_2, object
+UString_Menu_Debug_085C742C_Entry_2: @ '　手再開'
     .asciz "　手再開"
 
-    .global UString_Menu_085C7450_Entry_0
-    .type UString_Menu_085C7450_Entry_0, object
-UString_Menu_085C7450_Entry_0: @ '　手中断'
+    .global UString_Menu_Debug_085C7450_Entry_0
+    .type UString_Menu_Debug_085C7450_Entry_0, object
+UString_Menu_Debug_085C7450_Entry_0: @ '　手中断'
     .asciz "　手中断"
 
-    .global UString_Menu_085C7474_Entry_0
-    .type UString_Menu_085C7474_Entry_0, object
-UString_Menu_085C7474_Entry_0: @ '　マップ'
+    .global UString_Menu_Debug_085C7474_Entry_0
+    .type UString_Menu_Debug_085C7474_Entry_0, object
+UString_Menu_Debug_085C7474_Entry_0: @ '　マップ'
     .asciz "　マップ"
 
-    .global UString_Menu_085C7474_Entry_1
-    .type UString_Menu_085C7474_Entry_1, object
-UString_Menu_085C7474_Entry_1: @ '　デブ情報'
+    .global UString_Menu_Debug_085C7474_Entry_1
+    .type UString_Menu_Debug_085C7474_Entry_1, object
+UString_Menu_Debug_085C7474_Entry_1: @ '　デブ情報'
     .asciz "　デブ情報"
 
-    .global UString_Menu_085C7474_Entry_2
-    .type UString_Menu_085C7474_Entry_2, object
-UString_Menu_085C7474_Entry_2: @ '　天気'
+    .global UString_Menu_Debug_085C7474_Entry_2
+    .type UString_Menu_Debug_085C7474_Entry_2, object
+UString_Menu_Debug_085C7474_Entry_2: @ '　天気'
     .asciz "　天気"
 
-    .global UString_Menu_085C7474_Entry_3
-    .type UString_Menu_085C7474_Entry_3, object
-UString_Menu_085C7474_Entry_3: @ '　索敵'
+    .global UString_Menu_Debug_085C7474_Entry_3
+    .type UString_Menu_Debug_085C7474_Entry_3, object
+UString_Menu_Debug_085C7474_Entry_3: @ '　索敵'
     .asciz "　索敵"
 
-    .global UString_Menu_085C7474_Entry_4
-    .type UString_Menu_085C7474_Entry_4, object
-UString_Menu_085C7474_Entry_4: @ '　周回数'
+    .global UString_Menu_Debug_085C7474_Entry_4
+    .type UString_Menu_Debug_085C7474_Entry_4, object
+UString_Menu_Debug_085C7474_Entry_4: @ '　周回数'
     .asciz "　周回数"
 
-    .global UString_Menu_085C7474_Entry_5
-    .type UString_Menu_085C7474_Entry_5, object
-UString_Menu_085C7474_Entry_5: @ '　クリアずみ'
+    .global UString_Menu_Debug_085C7474_Entry_5
+    .type UString_Menu_Debug_085C7474_Entry_5, object
+UString_Menu_Debug_085C7474_Entry_5: @ '　クリアずみ'
     .asciz "　クリアずみ"
 
-    .global UString_Menu_085C7474_Entry_7
-    .type UString_Menu_085C7474_Entry_7, object
-UString_Menu_085C7474_Entry_7: @ '　おやすみなさい'
+    .global UString_Menu_Debug_085C7474_Entry_7
+    .type UString_Menu_Debug_085C7474_Entry_7, object
+UString_Menu_Debug_085C7474_Entry_7: @ '　おやすみなさい'
     .asciz "　おやすみなさい"
 
     .global UString_Menu_085C7504_Entry_0
@@ -1060,35 +1060,35 @@ UString_Menu_085C7504_Entry_0: @ '　アーチ攻撃'
 UString_Menu_085C7504_Entry_1: @ '　通常攻撃'
     .asciz "　通常攻撃"
 
-    .global UString_Menu_085C7528_Entry_0
-    .type UString_Menu_085C7528_Entry_0, object
-UString_Menu_085C7528_Entry_0: @ 'はい'
-    .asciz "はい"
+    .global UString_Menu_UnitItemDiscardPrompt_Entry_Yes
+    .type UString_Menu_UnitItemDiscardPrompt_Entry_Yes, object
+UString_Menu_UnitItemDiscardPrompt_Entry_Yes: @ 'はい'
+    .asciz "Yes"
 
-    .global UString_Menu_085C7528_Entry_1
-    .type UString_Menu_085C7528_Entry_1, object
-UString_Menu_085C7528_Entry_1: @ 'いいえ'
-    .asciz "いいえ"
+    .global UString_Menu_UnitItemDiscardPrompt_Entry_No
+    .type UString_Menu_UnitItemDiscardPrompt_Entry_No, object
+UString_Menu_UnitItemDiscardPrompt_Entry_No: @ 'いいえ'
+    .asciz "No"
 
-    .global UString_Menu_085C754C_Entry_0
-    .type UString_Menu_085C754C_Entry_0, object
-UString_Menu_085C754C_Entry_0: @ '使う'
-    .asciz "使う"
+    .global UString_Menu_UnitItemAction_Entry_Use
+    .type UString_Menu_UnitItemAction_Entry_Use, object
+UString_Menu_UnitItemAction_Entry_Use: @ '使う'
+    .asciz "Use"
 
-    .global UString_Menu_085C754C_Entry_1
-    .type UString_Menu_085C754C_Entry_1, object
-UString_Menu_085C754C_Entry_1: @ '装備'
-    .asciz "装備"
+    .global UString_Menu_UnitItemAction_Entry_Equip
+    .type UString_Menu_UnitItemAction_Entry_Equip, object
+UString_Menu_UnitItemAction_Entry_Equip: @ '装備'
+    .asciz "Equip"
 
-    .global UString_Menu_085C754C_Entry_2
-    .type UString_Menu_085C754C_Entry_2, object
-UString_Menu_085C754C_Entry_2: @ '交換'
-    .asciz "交換"
+    .global UString_Menu_UnitItemAction_Entry_Trade
+    .type UString_Menu_UnitItemAction_Entry_Trade, object
+UString_Menu_UnitItemAction_Entry_Trade: @ '交換'
+    .asciz "Trade"
 
-    .global UString_Menu_085C754C_Entry_3
-    .type UString_Menu_085C754C_Entry_3, object
-UString_Menu_085C754C_Entry_3: @ '捨てる'
-    .asciz "捨てる"
+    .global UString_Menu_UnitItemAction_Entry_Discard
+    .type UString_Menu_UnitItemAction_Entry_Discard, object
+UString_Menu_UnitItemAction_Entry_Discard: @ '捨てる'
+    .asciz "Discard"
 
     .global UString_Menu_UnitAction_Entry_Seize
     .type UString_Menu_UnitAction_Entry_Seize, object
@@ -1205,10 +1205,10 @@ UString_Menu_UnitAction_Entry_Supply: @ '　輸送隊'
 UString_Menu_UnitAction_Entry_Wait: @ '　待機'
     .asciz " Wait"
 
-    .global UString_Menu_085C7624_Entry_0
-    .type UString_Menu_085C7624_Entry_0, object
-UString_Menu_085C7624_Entry_0: @ '　進撃準備へ'
-    .asciz "　進撃準備へ"
+    .global UString_Menu_PrepMap_Entry
+    .type UString_Menu_PrepMap_Entry, object
+UString_Menu_PrepMap_Entry: @ '　進撃準備へ'
+    .asciz " Ready"
 
     .global UString_Menu_Map_Entry_Unit
     .type UString_Menu_Map_Entry_Unit, object
@@ -1235,30 +1235,30 @@ UString_Menu_Map_Entry_Suspend: @ '　中断'
 UString_Menu_Map_Entry_End: @ '　終了'
     .asciz " End"
 
-    .global UString_EquipInfoWindow_0810599C
-    .type UString_EquipInfoWindow_0810599C, object
-UString_EquipInfoWindow_0810599C: @ '属性'
-    .asciz "属性"
+    .global UString_EquipInfoWindow_Label_Kind
+    .type UString_EquipInfoWindow_Label_Kind, object
+UString_EquipInfoWindow_Label_Kind: @ '属性'
+    .asciz "Kind"
 
-    .global UString_EquipInfoWindow_081059A4
-    .type UString_EquipInfoWindow_081059A4, object
-UString_EquipInfoWindow_081059A4: @ '攻撃'
-    .asciz "攻撃"
+    .global UString_EquipInfoWindow_Label_Attack
+    .type UString_EquipInfoWindow_Label_Attack, object
+UString_EquipInfoWindow_Label_Attack: @ '攻撃'
+    .asciz "Atk"
 
-    .global UString_EquipInfoWindow_081059AC
-    .type UString_EquipInfoWindow_081059AC, object
-UString_EquipInfoWindow_081059AC: @ '命中'
-    .asciz "命中"
+    .global UString_EquipInfoWindow_Label_Hit
+    .type UString_EquipInfoWindow_Label_Hit, object
+UString_EquipInfoWindow_Label_Hit: @ '命中'
+    .asciz "Hit"
 
-    .global UString_EquipInfoWindow_081059B4
-    .type UString_EquipInfoWindow_081059B4, object
-UString_EquipInfoWindow_081059B4: @ '必殺'
-    .asciz "必殺"
+    .global UString_EquipInfoWindow_Label_Crit
+    .type UString_EquipInfoWindow_Label_Crit, object
+UString_EquipInfoWindow_Label_Crit: @ '必殺'
+    .asciz "Crit"
 
-    .global UString_EquipInfoWindow_081059BC
-    .type UString_EquipInfoWindow_081059BC, object
-UString_EquipInfoWindow_081059BC: @ '回避'
-    .asciz "回避"
+    .global UString_EquipInfoWindow_Label_Avoid
+    .type UString_EquipInfoWindow_Label_Avoid, object
+UString_EquipInfoWindow_Label_Avoid: @ '回避'
+    .asciz "Avo"
 
     .global UString_BattlePreview_Label_Might
     .type UString_BattlePreview_Label_Might, object
@@ -1569,4 +1569,39 @@ UString_Banim_LevelUp_Label_Magical_Con: @ '体格'
     .type UString_Banim_LevelUp_Label_Lv, object
 UString_Banim_LevelUp_Label_Lv: @ 'ＬＶ'
     .asciz "ＬＶ"
+
+    .global UString_ClassReel_Label_Hp
+    .type UString_ClassReel_Label_Hp, object
+UString_ClassReel_Label_Hp: @ 'ＨＰ'
+    .asciz "ＨＰ"
+
+    .global UString_ClassReel_Label_Strength
+    .type UString_ClassReel_Label_Strength, object
+UString_ClassReel_Label_Strength: @ '力'
+    .asciz "Str"
+
+    .global UString_ClassReel_Label_Skill
+    .type UString_ClassReel_Label_Skill, object
+UString_ClassReel_Label_Skill: @ '技'
+    .asciz "Skill"
+
+    .global UString_ClassReel_Label_Speed
+    .type UString_ClassReel_Label_Speed, object
+UString_ClassReel_Label_Speed: @ '速さ'
+    .asciz "Spd"
+
+    .global UString_ClassReel_Label_Defense
+    .type UString_ClassReel_Label_Defense, object
+UString_ClassReel_Label_Defense: @ '守備'
+    .asciz "Def"
+
+    .global UString_ClassReel_Label_Resistance
+    .type UString_ClassReel_Label_Resistance, object
+UString_ClassReel_Label_Resistance: @ '魔防'
+    .asciz "Res"
+
+    .global DateCvtStringsBuilt
+    .type DateCvtStringsBuilt, object
+DateCvtStringsBuilt:
+    .asciz "2022-10-08"
 

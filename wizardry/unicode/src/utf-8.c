@@ -1,22 +1,25 @@
 #include "text.h"
+#include "util.h"
 
-#include "stan-failscreen.h"
+#include "nat-macros.h"
+#include "nat-failscreen.h"
 
 struct UnicodeGlyphEnt
 {
     u32 character;
-    struct Glyph const* glyph;
+    struct Glyph const * glyph;
 };
 
 struct UnicodeFontInfo
 {
-    struct UnicodeGlyphEnt const* beg;
-    struct UnicodeGlyphEnt const* end;
+    struct UnicodeGlyphEnt const * beg;
+    struct UnicodeGlyphEnt const * end;
 };
 
 extern struct UnicodeFontInfo const UnicodeFontInfoTable[];
+extern char const DateCvtStringsBuilt[];
 
-u32 Utf8DecodeCharacter(char const** strptr)
+u32 Utf8DecodeCharacter(char const * * strptr)
 {
     u32 byte_0, byte_1, byte_2, byte_3;
 
@@ -71,12 +74,15 @@ error:
     DebugPrintStr(" Address: ");
     DebugPrintNumberHex(((int) (*strptr)) - 1, 7);
     DebugPrintStr("\n");
+    DebugPrintStr(" Strings built ");
+    DebugPrintStr(DateCvtStringsBuilt);
+    DebugPrintStr("\n");
     FailScreen();
 }
 
-struct Glyph const* Utf8GetGlyph(u32 character)
+struct Glyph const * Utf8GetGlyph(u32 character)
 {
-    struct UnicodeFontInfo const* unicode_font_info = (struct UnicodeFontInfo const*) gActiveFont->glyphs;
+    struct UnicodeFontInfo const * unicode_font_info = (struct UnicodeFontInfo const *) gActiveFont->glyphs;
 
     // binary search!
 
@@ -87,7 +93,7 @@ struct Glyph const* Utf8GetGlyph(u32 character)
 
     u32 l = 0;
     u32 r = (unicode_font_info->end - unicode_font_info->beg) - 1;
-    struct UnicodeGlyphEnt const* a = unicode_font_info->beg;
+    struct UnicodeGlyphEnt const * a = unicode_font_info->beg;
 
     while (l <= r)
     {
@@ -127,13 +133,15 @@ struct Glyph const* Utf8GetGlyph(u32 character)
 }
 
 // replaces
+LYN_REPLACE_CHECK(SetTextFontGlyphs);
 void SetTextFontGlyphs(int glyph_set)
 {
-    gActiveFont->glyphs = (struct Glyph const* const*) &UnicodeFontInfoTable[glyph_set];
+    gActiveFont->glyphs = (struct Glyph const * const *) &UnicodeFontInfoTable[glyph_set];
 }
 
 // replaces
-char const* GetCharTextLen(char const* str, int* out_width)
+LYN_REPLACE_CHECK(GetCharTextLen);
+char const * GetCharTextLen(char const * str, int * out_width)
 {
     u32 character = Utf8DecodeCharacter(&str);
 
@@ -149,7 +157,8 @@ char const* GetCharTextLen(char const* str, int* out_width)
 }
 
 // replaces
-int GetStringTextLen(char const* str)
+LYN_REPLACE_CHECK(GetStringTextLen);
+int GetStringTextLen(char const * str)
 {
     int result = 0;
 
@@ -165,7 +174,20 @@ int GetStringTextLen(char const* str)
 }
 
 // replaces
-char const* Text_DrawCharacter(struct Text* text, char const* str)
+LYN_REPLACE_CHECK(GetStringLineEnd);
+char const * GetStringLineEnd(char const * str)
+{
+    while (*str > 1)
+    {
+        Utf8DecodeCharacter(&str);
+    }
+
+    return str;
+}
+
+// replaces
+LYN_REPLACE_CHECK(Text_DrawCharacter);
+char const* Text_DrawCharacter(struct Text * text, char const * str)
 {
     u32 character = Utf8DecodeCharacter(&str);
 
@@ -175,14 +197,16 @@ char const* Text_DrawCharacter(struct Text* text, char const* str)
 }
 
 // replaces
-void Text_DrawString(struct Text* text, char const* str)
+LYN_REPLACE_CHECK(Text_DrawString);
+void Text_DrawString(struct Text * text, char const * str)
 {
     while (*str > 1)
         str = Text_DrawCharacter(text, str);
 }
 
 // replaces
-void Text_DrawNumber(struct Text* text, int number)
+LYN_REPLACE_CHECK(Text_DrawNumber);
+void Text_DrawNumber(struct Text * text, int number)
 {
     if (number == 0)
     {
@@ -202,7 +226,8 @@ void Text_DrawNumber(struct Text* text, int number)
 }
 
 // replaces
-void Text_DrawNumberOrBlank(struct Text* text, int number)
+LYN_REPLACE_CHECK(Text_DrawNumberOrBlank);
+void Text_DrawNumberOrBlank(struct Text * text, int number)
 {
     if (number == 0xFF || number == -1)
     {
@@ -215,7 +240,7 @@ void Text_DrawNumberOrBlank(struct Text* text, int number)
     Text_DrawNumber(text, number);
 }
 
-static u32 log10(u32 number)
+static u32 my_log10(u32 number)
 {
     if (number >= 100000000) return 9;
     if (number >= 10000000) return 8;
@@ -230,7 +255,8 @@ static u32 log10(u32 number)
 }
 
 // replaces
-int NumberToString(int number, char* buf)
+LYN_REPLACE_CHECK(NumberToString);
+int NumberToString(int number, char * buf)
 {
     u32 off, beg;
 
@@ -249,7 +275,7 @@ int NumberToString(int number, char* buf)
         number = -number;
     }
 
-    off += log10(number);
+    off += my_log10(number);
     beg = off;
 
     while (number > 0)

@@ -1,4 +1,4 @@
-#include "stan-failscreen.h"
+#include "nat-failscreen.h"
 
 #include "hardware.h"
 #include "move.h"
@@ -22,7 +22,7 @@ void FailScreen(void)
 {
     SetOnVBlank(FailScreenOnVBlank);
     gDispIo.disp_ct.mode = 0;
-    gDispIo.disp_ct.forcedBlank = 0;
+    gDispIo.disp_ct.forced_blank = 0;
     DebugInitBg(2, 0);
     RegisterVramFill(0, 0, 0x40);
     SetBgOffset(2, 0, 0);

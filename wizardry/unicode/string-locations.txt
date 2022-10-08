@@ -1,3 +1,7 @@
+# format:
+# <addr(08X)> <identifier> ["translation"]
+# any sjis string needs to be listed, even if they don't need to be translated
+
 # main menu related array at 0868A2EC
 08336CCC MainMenu_Blank
 08336CB8 MainMenu_StartCancel "Start Cancel"
@@ -208,42 +212,41 @@
 08105818 ItemKind_Dragon "Dragon"
 
 # menu item names
-08105A38 Menu_085C73C0_Entry_0
-08105A1C Menu_085C73C0_Entry_1
+08105A38 Menu_TutorialInterrupt_Entry_Continue " Continue Tutorial"
+08105A1C Menu_TutorialInterrupt_Entry_Quit " Quit Tutorial"
+
 08105AA8 Menu_085C73E4_Entry_0
 08105A9C Menu_085C73E4_Entry_1
 08105A84 Menu_085C73E4_Entry_2
 08105A6C Menu_085C73E4_Entry_3
 08105A54 Menu_085C73E4_Entry_4
-08105AC0 Menu_085C7408_Entry_0
-08105AE0 Menu_085C742C_Entry_0
-08105AD0 Menu_085C742C_Entry_1
-08105AC4 Menu_085C742C_Entry_2
-08105AF4 Menu_085C7450_Entry_0
-08105AC4 Menu_085C7450_Entry_1
-08105B4C Menu_085C7474_Entry_0
-08105B40 Menu_085C7474_Entry_1
-08105B38 Menu_085C7474_Entry_2
-08105B30 Menu_085C7474_Entry_3
-08105B24 Menu_085C7474_Entry_4
-08105B14 Menu_085C7474_Entry_5
-08105AC0 Menu_085C7474_Entry_6
-08105B00 Menu_085C7474_Entry_7
-08105AC0 Menu_085C7498_Entry_0
-08105AC0 Menu_085C74BC_Entry_0
-08105AC0 Menu_085C74E0_Entry_0
+
+08105AC0 Menu_Entry_Empty
+
+08105AE0 Menu_Debug_085C742C_Entry_0
+08105AD0 Menu_Debug_085C742C_Entry_1
+08105AC4 Menu_Debug_085C742C_Entry_2
+
+08105AF4 Menu_Debug_085C7450_Entry_0
+
+08105B4C Menu_Debug_085C7474_Entry_0
+08105B40 Menu_Debug_085C7474_Entry_1
+08105B38 Menu_Debug_085C7474_Entry_2
+08105B30 Menu_Debug_085C7474_Entry_3
+08105B24 Menu_Debug_085C7474_Entry_4
+08105B14 Menu_Debug_085C7474_Entry_5
+08105B00 Menu_Debug_085C7474_Entry_7
+
 08105B64 Menu_085C7504_Entry_0
 08105B58 Menu_085C7504_Entry_1
-08105B7C Menu_085C7528_Entry_0
-08105B74 Menu_085C7528_Entry_1
-08105B9C Menu_085C754C_Entry_0
-08105B94 Menu_085C754C_Entry_1
-08105B8C Menu_085C754C_Entry_2
-08105B84 Menu_085C754C_Entry_3
-08105AC0 Menu_085C7570_Entry_0
-08105AC0 Menu_085C7594_Entry_0
-08105AC0 Menu_085C75B8_Entry_0
-08105AC0 Menu_085C75DC_Entry_0
+
+08105B7C Menu_UnitItemDiscardPrompt_Entry_Yes "Yes"
+08105B74 Menu_UnitItemDiscardPrompt_Entry_No "No"
+
+08105B9C Menu_UnitItemAction_Entry_Use "Use"
+08105B94 Menu_UnitItemAction_Entry_Equip "Equip"
+08105B8C Menu_UnitItemAction_Entry_Trade "Trade"
+08105B84 Menu_UnitItemAction_Entry_Discard "Discard"
 
 08105C7C Menu_UnitAction_Entry_Seize " Seize"
 08105C74 Menu_UnitAction_Entry_Attack " Attack"
@@ -269,7 +272,7 @@
 08105BAC Menu_UnitAction_Entry_Supply " Supply"
 08105BA4 Menu_UnitAction_Entry_Wait " Wait"
 
-08105C84 Menu_085C7624_Entry_0
+08105C84 Menu_PrepMap_Entry " Ready"
 
 08105CB4 Menu_Map_Entry_Unit " Unit"
 08105CAC Menu_Map_Entry_Status " Status"
@@ -278,11 +281,11 @@
 08105C94 Menu_Map_Entry_End " End"
 
 # equip info window strings
-0810599C EquipInfoWindow_0810599C
-081059A4 EquipInfoWindow_081059A4
-081059AC EquipInfoWindow_081059AC
-081059B4 EquipInfoWindow_081059B4
-081059BC EquipInfoWindow_081059BC
+0810599C EquipInfoWindow_Label_Kind "Kind"
+081059A4 EquipInfoWindow_Label_Attack "Atk"
+081059AC EquipInfoWindow_Label_Hit "Hit"
+081059B4 EquipInfoWindow_Label_Crit "Crit"
+081059BC EquipInfoWindow_Label_Avoid "Avo"
 
 # battle preview labels table at 085C8388
 08105DC8 BattlePreview_Label_Might "Mt"
@@ -357,3 +360,10 @@
 081CA037 Banim_LevelUp_Label_Magical_Con "Con"
 
 081CA04C Banim_LevelUp_Label_Lv
+
+0835C7E4 ClassReel_Label_Hp
+0835C7EC ClassReel_Label_Strength "Str"
+0835C7F0 ClassReel_Label_Skill "Skill"
+0835C7F4 ClassReel_Label_Speed "Spd"
+0835C7FC ClassReel_Label_Defense "Def"
+0835C804 ClassReel_Label_Resistance "Res"

@@ -1,8 +1,8 @@
 #include "msg.h"
 #include "ramfunc.h"
 
-#include "nat-macros.h"
 #include "nat-failscreen.h"
+#include "nat-macros.h"
 
 #include <string.h>
 
@@ -15,7 +15,7 @@ struct SjisToUnicodeEnt
 
 extern struct SjisToUnicodeEnt const Utf8TranscoderSjisToUnicodeTable[];
 
-u32 Sjis2Utf8CvtSjis(char const * * strptr)
+u32 Sjis2Utf8CvtSjis(char const ** strptr)
 {
     u32 byte_0 = *(*strptr)++;
 
@@ -41,7 +41,7 @@ u32 Sjis2Utf8CvtSjis(char const * * strptr)
         DebugPrintNumberHex(byte_1, 2);
         DebugPrintStr(" ...\n");
         DebugPrintStr(" Address: ");
-        DebugPrintNumberHex(((int) (*strptr)) - 2, 7);
+        DebugPrintNumberHex(((int)(*strptr)) - 2, 7);
         DebugPrintStr("\n");
         FailScreen();
     }
@@ -49,7 +49,7 @@ u32 Sjis2Utf8CvtSjis(char const * * strptr)
     return ent->lut[byte_1];
 }
 
-void Sjis2Utf8WriteUtf8(char * * dst, u32 character)
+void Sjis2Utf8WriteUtf8(char ** dst, u32 character)
 {
     switch (character)
     {
@@ -58,21 +58,21 @@ void Sjis2Utf8WriteUtf8(char * * dst, u32 character)
             return;
 
         case 0x80 ... 0x7FF:
-            *(*dst)++ = 0xC0 + ((character) >> 6);
-            *(*dst)++ = 0x80 + ((character) & 0x3F);
+            *(*dst)++ = 0xC0 + ((character >> 6));
+            *(*dst)++ = 0x80 + ((character >> 0) & 0x3F);
             return;
 
         case 0x800 ... 0xFFFF:
             *(*dst)++ = 0xE0 + ((character >> 12));
             *(*dst)++ = 0x80 + ((character >> 6) & 0x3F);
-            *(*dst)++ = 0x80 + ((character) & 0x3F);
+            *(*dst)++ = 0x80 + ((character >> 0) & 0x3F);
             return;
 
         default:
             *(*dst)++ = 0xF0 + ((character >> 18));
             *(*dst)++ = 0x80 + ((character >> 12) & 0x3F);
             *(*dst)++ = 0x80 + ((character >> 6) & 0x3F);
-            *(*dst)++ = 0x80 + ((character) & 0x3F);
+            *(*dst)++ = 0x80 + ((character >> 0) & 0x3F);
             return;
     }
 }
@@ -133,13 +133,13 @@ void Sjis2Utf8(char * buf, int len)
 LYN_REPLACE_CHECK(DecodeStringRam);
 void DecodeStringRam(char const * src, char * dst)
 {
-    if ((((u32) src) & 0x80000000) != 0)
+    if ((((u32)src) & 0x80000000) != 0)
     {
-        strcpy(dst, (char const *) (((u32) src) & 0x7FFFFFFF));
+        strcpy(dst, (char const *)(((u32)src) & 0x7FFFFFFF));
     }
     else
     {
-        extern void (* DecodeStringRamFunc)(char const * src, char * dst);
+        extern void (*DecodeStringRamFunc)(char const * src, char * dst);
 
         DecodeStringRamFunc(src, dst);
         Sjis2Utf8(dst, 0x1000); // NOTE: assumes dst len is 0x1000

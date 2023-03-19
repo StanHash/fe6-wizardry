@@ -1,11 +1,10 @@
 #include "nat-failscreen.h"
 
+#include "debugtext.h"
 #include "hardware.h"
-#include "move.h"
-#include "debug-text.h"
 #include "m4a.h"
+#include "move.h"
 
-static
 void FailScreenOnVBlank(void)
 {
     INTR_CHECK = INTR_FLAG_VBLANK;
@@ -17,8 +16,7 @@ void FailScreenOnVBlank(void)
     m4aSoundMain();
 }
 
-noreturn
-void FailScreen(void)
+noreturn void FailScreen(void)
 {
     SetOnVBlank(FailScreenOnVBlank);
     gDispIo.disp_ct.mode = 0;

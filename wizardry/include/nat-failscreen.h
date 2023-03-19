@@ -1,6 +1,6 @@
 #pragma once
 
-#include "debug-text.h"
+#include "debugtext.h"
 
 #include <stdnoreturn.h>
 

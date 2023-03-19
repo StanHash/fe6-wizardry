@@ -1600,8 +1600,23 @@ UString_ClassReel_Label_Defense: @ '守備'
 UString_ClassReel_Label_Resistance: @ '魔防'
     .asciz "Res"
 
+    .global UString_PrepMenuUnit_Label_Remaining
+    .type UString_PrepMenuUnit_Label_Remaining, object
+UString_PrepMenuUnit_Label_Remaining: @ '残り'
+    .asciz "Left"
+
+    .global UString_PrepMenuUnit_Separator
+    .type UString_PrepMenuUnit_Separator, object
+UString_PrepMenuUnit_Separator: @ '人'
+    .asciz "/"
+
+    .global UString_PrepMenuUnit_Label_Total
+    .type UString_PrepMenuUnit_Label_Total, object
+UString_PrepMenuUnit_Label_Total: @ '／'
+    .asciz ""
+
     .global DateCvtStringsBuilt
     .type DateCvtStringsBuilt, object
 DateCvtStringsBuilt:
-    .asciz "2022-10-08"
+    .asciz "2023-03-19"
 

@@ -367,3 +367,10 @@
 0835C7F4 ClassReel_Label_Speed "Spd"
 0835C7FC ClassReel_Label_Defense "Def"
 0835C804 ClassReel_Label_Resistance "Res"
+
+# unit prep menu labels (found by Mokha)
+# in english translation, we don't display the second label to make room for the first label
+# see data/fe6-strings-english-fixes.event
+08327254 PrepMenuUnit_Label_Remaining "Left"
+0832725C PrepMenuUnit_Separator "/"
+08327260 PrepMenuUnit_Label_Total ""

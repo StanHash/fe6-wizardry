@@ -1,8 +1,8 @@
 #include "text.h"
 #include "util.h"
 
-#include "nat-macros.h"
 #include "nat-failscreen.h"
+#include "nat-macros.h"
 
 struct UnicodeGlyphEnt
 {
@@ -19,7 +19,7 @@ struct UnicodeFontInfo
 extern struct UnicodeFontInfo const UnicodeFontInfoTable[];
 extern char const DateCvtStringsBuilt[];
 
-u32 Utf8DecodeCharacter(char const * * strptr)
+u32 Utf8DecodeCharacter(char const ** strptr)
 {
     u32 byte_0, byte_1, byte_2, byte_3;
 
@@ -30,11 +30,15 @@ u32 Utf8DecodeCharacter(char const * * strptr)
         default:
             return byte_0;
 
-        case 0x80: case 0x90: case 0xA0: case 0xB0:
+        case 0x80:
+        case 0x90:
+        case 0xA0:
+        case 0xB0:
             // continuation byte
             goto error;
 
-        case 0xC0: case 0xD0:
+        case 0xC0:
+        case 0xD0:
             byte_0 = 0x1F & byte_0;
             byte_1 = 0x3F & *(*strptr)++;
 
@@ -72,7 +76,7 @@ error:
     DebugPrintNumberHex(**strptr, 2);
     DebugPrintStr(" ...\n");
     DebugPrintStr(" Address: ");
-    DebugPrintNumberHex(((int) (*strptr)) - 1, 7);
+    DebugPrintNumberHex(((int)(*strptr)) - 1, 7);
     DebugPrintStr("\n");
     DebugPrintStr(" Strings built ");
     DebugPrintStr(DateCvtStringsBuilt);
@@ -82,7 +86,7 @@ error:
 
 struct Glyph const * Utf8GetGlyph(u32 character)
 {
-    struct UnicodeFontInfo const * unicode_font_info = (struct UnicodeFontInfo const *) gActiveFont->glyphs;
+    struct UnicodeFontInfo const * unicode_font_info = (struct UnicodeFontInfo const *)gActiveFont->glyphs;
 
     // binary search!
 
@@ -136,7 +140,7 @@ struct Glyph const * Utf8GetGlyph(u32 character)
 LYN_REPLACE_CHECK(SetTextFontGlyphs);
 void SetTextFontGlyphs(int glyph_set)
 {
-    gActiveFont->glyphs = (struct Glyph const * const *) &UnicodeFontInfoTable[glyph_set];
+    gActiveFont->glyphs = (struct Glyph const * const *)&UnicodeFontInfoTable[glyph_set];
 }
 
 // replaces
@@ -187,7 +191,7 @@ char const * GetStringLineEnd(char const * str)
 
 // replaces
 LYN_REPLACE_CHECK(Text_DrawCharacter);
-char const* Text_DrawCharacter(struct Text * text, char const * str)
+char const * Text_DrawCharacter(struct Text * text, char const * str)
 {
     u32 character = Utf8DecodeCharacter(&str);
 
@@ -242,15 +246,24 @@ void Text_DrawNumberOrBlank(struct Text * text, int number)
 
 static u32 my_log10(u32 number)
 {
-    if (number >= 100000000) return 9;
-    if (number >= 10000000) return 8;
-    if (number >= 1000000) return 7;
-    if (number >= 100000) return 6;
-    if (number >= 10000) return 5;
-    if (number >= 1000) return 4;
-    if (number >= 100) return 3;
-    if (number >= 10) return 2;
-    if (number >= 1) return 1;
+    if (number >= 100000000)
+        return 9;
+    if (number >= 10000000)
+        return 8;
+    if (number >= 1000000)
+        return 7;
+    if (number >= 100000)
+        return 6;
+    if (number >= 10000)
+        return 5;
+    if (number >= 1000)
+        return 4;
+    if (number >= 100)
+        return 3;
+    if (number >= 10)
+        return 2;
+    if (number >= 1)
+        return 1;
     return 0;
 }
 
@@ -280,10 +293,10 @@ int NumberToString(int number, char * buf)
 
     while (number > 0)
     {
-        buf[off--] = '0' + DivRem(number, 10);
+        buf[--off] = '0' + DivRem(number, 10);
         number = Div(number, 10);
     }
 
-    buf[beg + 1] = '\0';
-    return beg + 1;
+    buf[beg] = '\0';
+    return beg;
 }

@@ -1,10 +1,12 @@
 
 .*
 !.git*
+!.clang-format
 
 *.gba
 *.sym
 *.sav
+*.ss*
 
 *.o
 *.lyn.event

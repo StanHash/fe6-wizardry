@@ -1,5 +1,5 @@
+#include "armfunc.h"
 #include "msg.h"
-#include "ramfunc.h"
 
 #include "nat-failscreen.h"
 #include "nat-macros.h"

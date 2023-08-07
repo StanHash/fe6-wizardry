@@ -7,6 +7,7 @@ IndentCaseLabels: true
 Cpp11BracedListStyle: false
 SpaceBeforeCpp11BracedList: true
 AlignAfterOpenBracket: AlwaysBreak
+AllowShortFunctionsOnASingleLine: None
 AlignOperands: DontAlign
 ColumnLimit: 120
 ...

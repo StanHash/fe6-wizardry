@@ -1,0 +1,4 @@
+// this hacks populates saved global stats with everything
+// basically removing any restrictions locking content behind first completion
+
+#include "no_ngp.lyn.event"

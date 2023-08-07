@@ -1615,8 +1615,13 @@ UString_PrepMenuUnit_Separator: @ '人'
 UString_PrepMenuUnit_Label_Total: @ '／'
     .asciz ""
 
+    .global UString_SaveMenu_NormalHardLabel
+    .type UString_SaveMenu_NormalHardLabel, object
+UString_SaveMenu_NormalHardLabel: @ 'ノーマル　ハード'
+    .asciz "Normal    Hard"
+
     .global DateCvtStringsBuilt
     .type DateCvtStringsBuilt, object
 DateCvtStringsBuilt:
-    .asciz "2023-03-19"
+    .asciz "2023-08-07"
 

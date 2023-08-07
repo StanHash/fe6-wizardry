@@ -64,6 +64,8 @@ PUSH
     POIN UString_PrepMenuUnit_Label_Remaining
     POIN UString_PrepMenuUnit_Separator
     POIN UString_PrepMenuUnit_Label_Total
+    ORG $08878C
+    POIN UString_SaveMenu_NormalHardLabel
     ORG $105788
     POIN UString_ItemRange_1ToMag
     POIN UString_ItemRange_1

@@ -374,3 +374,6 @@
 08327254 PrepMenuUnit_Label_Remaining "Left"
 0832725C PrepMenuUnit_Separator "/"
 08327260 PrepMenuUnit_Label_Total ""
+
+# savemenu
+08336C60 SaveMenu_NormalHardLabel "Normal    Hard"

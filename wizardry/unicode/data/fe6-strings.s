@@ -8,22 +8,27 @@ UString_MainMenu_Blank: @ ''
     .global UString_MainMenu_StartCancel
     .type UString_MainMenu_StartCancel, object
 UString_MainMenu_StartCancel: @ 'はじめる　やめる'
-    .asciz "Start Cancel"
+    .asciz "Start   Cancel"
 
     .global UString_MainMenu_CopyCancel
     .type UString_MainMenu_CopyCancel, object
 UString_MainMenu_CopyCancel: @ 'うつす　　やめる'
-    .asciz "Copy Cancel"
+    .asciz "Copy    Cancel"
 
     .global UString_MainMenu_EraseCancel
     .type UString_MainMenu_EraseCancel, object
 UString_MainMenu_EraseCancel: @ '消す　　　やめる'
-    .asciz "Erase Cancel"
+    .asciz "Erase     Cancel"
 
     .global UString_MainMenu_SaveCancel
     .type UString_MainMenu_SaveCancel, object
 UString_MainMenu_SaveCancel: @ '記録　　　やめる'
-    .asciz "Save Cancel"
+    .asciz "Save     Cancel"
+
+    .global UString_MainMenu_NormalHard
+    .type UString_MainMenu_NormalHard, object
+UString_MainMenu_NormalHard: @ 'ノーマル　ハード'
+    .asciz "Normal    Hard"
 
     .global UString_TerrainName_Blank
     .type UString_TerrainName_Blank, object
@@ -1615,13 +1620,23 @@ UString_PrepMenuUnit_Separator: @ '人'
 UString_PrepMenuUnit_Label_Total: @ '／'
     .asciz ""
 
-    .global UString_SaveMenu_NormalHardLabel
-    .type UString_SaveMenu_NormalHardLabel, object
-UString_SaveMenu_NormalHardLabel: @ 'ノーマル　ハード'
-    .asciz "Normal    Hard"
+    .global UString_SoundRoom_08336D3C
+    .type UString_SoundRoom_08336D3C, object
+UString_SoundRoom_08336D3C: @ 'ＢＧＭ再生'
+    .asciz "ＢＧＭ再生"
+
+    .global UString_SoundRoom_08336D48
+    .type UString_SoundRoom_08336D48, object
+UString_SoundRoom_08336D48: @ 'ＢＧＭ停止'
+    .asciz "ＢＧＭ停止"
+
+    .global UString_SoundRoom_08336D54
+    .type UString_SoundRoom_08336D54, object
+UString_SoundRoom_08336D54: @ '終わる'
+    .asciz "終わる"
 
     .global DateCvtStringsBuilt
     .type DateCvtStringsBuilt, object
 DateCvtStringsBuilt:
-    .asciz "2023-08-07"
+    .asciz "2023-08-08"
 

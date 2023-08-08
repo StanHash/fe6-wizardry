@@ -24,7 +24,7 @@ enum
 
 #define hp_bar_info _pad_0x0A[0]
 
-#define OBCHR_HPBARS 12
+#define OBCHR_HPBARS 18
 
 extern u8 const Img_HpBars[];
 
@@ -42,10 +42,11 @@ void ApplySystemObjectsGraphics(void)
 
     ApplyPalettes(Pal_SystemObjects, 0x10 + OBJPAL_SYSTEM_OBJECTS, 2);
 
-    if (gBmSt.lock_display == 0)
-    {
+    // NOTE: if cloud weather, don't load hp bars graphics
+    // because weather graphics take up all of the space
+
+    if (gBmSt.lock_display == 0 && gPlaySt.weather != WEATHER_CLOUDS)
         ApplyHpBarsGraphics();
-    }
 }
 
 LYN_REPLACE_CHECK(RefreshUnitSprites);
@@ -86,7 +87,7 @@ void RefreshUnitSprites(void)
         map_sprite->y = unit->y * 16;
         map_sprite->x = unit->x * 16;
         map_sprite->oam2 = UseUnitSprite(GetUnitMapSprite(unit)) + OAM2_PAL(GetUnitDisplayedSpritePalette(unit));
-        map_sprite->hp_bar_info = 0x0C - Div(unit->hp * 0x0C, unit->max_hp);
+        map_sprite->hp_bar_info = gPlaySt.weather != WEATHER_CLOUDS ? 0x0C - Div(unit->hp * 0x0C, unit->max_hp) : 0;
         map_sprite->config = GetUnitSpriteInfo(GetUnitMapSprite(unit)).size;
 
         if ((unit->flags & UNIT_FLAG_SEEN) != 0)
@@ -146,6 +147,9 @@ void PutUnitSpritesOam(void)
 
     for (; it != NULL; it = it->next)
     {
+        if ((it->config & 0x80) != 0)
+            continue;
+
         int x = it->x - gBmSt.camera.x;
         int y = it->y - gBmSt.camera.y;
 
@@ -155,7 +159,7 @@ void PutUnitSpritesOam(void)
         if (y < -32 || y > DISPLAY_HEIGHT)
             continue;
 
-        if ((it->config & 0x80) == 0 && it->hp_bar_info != 0)
+        if (it->hp_bar_info != 0)
         {
             PutOamHi(
                 OAM1_X(0x200 + x), OAM0_Y(0x100 + y + 9), Sprite_16x8,

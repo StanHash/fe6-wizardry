@@ -4,10 +4,11 @@
 
 # main menu related array at 0868A2EC
 08336CCC MainMenu_Blank
-08336CB8 MainMenu_StartCancel "Start Cancel"
-08336CA4 MainMenu_CopyCancel "Copy Cancel"
-08336C90 MainMenu_EraseCancel "Erase Cancel"
-08336C7C MainMenu_SaveCancel "Save Cancel"
+08336CB8 MainMenu_StartCancel "Start   Cancel"
+08336CA4 MainMenu_CopyCancel "Copy    Cancel"
+08336C90 MainMenu_EraseCancel "Erase     Cancel"
+08336C7C MainMenu_SaveCancel "Save     Cancel"
+08336C60 MainMenu_NormalHard "Normal    Hard"
 
 # terrain name table at 0860D00C
 08279E58 TerrainName_Blank
@@ -375,5 +376,7 @@
 0832725C PrepMenuUnit_Separator "/"
 08327260 PrepMenuUnit_Label_Total ""
 
-# savemenu
-08336C60 SaveMenu_NormalHardLabel "Normal    Hard"
+# TODO
+08336D3C SoundRoom_08336D3C
+08336D48 SoundRoom_08336D48
+08336D54 SoundRoom_08336D54

@@ -9,6 +9,7 @@
 // #include "growthless/growthless.event"
 
 #include "hp_bars/hp_bars.event"
+#include "nat_move_speed/nat_move_speed.event"
 
 #include "fixed_growths/fixed_growths.event"
 #include "no_ngp/no_ngp.event"

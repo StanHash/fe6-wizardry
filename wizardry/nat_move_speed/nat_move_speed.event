@@ -1,0 +1,4 @@
+// makes move speeds the way I like them
+// hack by nat/stan
+
+#include "nat_move_speed.lyn.event"

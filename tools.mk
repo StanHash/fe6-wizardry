@@ -19,10 +19,12 @@ endif
 
 # EA
 
-EA_DIR := tools/EventAssembler
-EA     := $(EA_DIR)/ColorzCore
-EA_DEP := $(EA_DIR)/ea-dep
-LYN    := $(EA_DIR)/Tools/lyn
+EA_DIR   := tools/EventAssembler
+EA       := $(EA_DIR)/ColorzCore
+EA_DEP   := $(EA_DIR)/ea-dep
+LYN      := $(EA_DIR)/Tools/lyn
+PNG2DMP  := $(EA_DIR)/Tools/Png2Dmp
+COMPRESS := $(EA_DIR)/Tools/compress
 
 # Other Tools
 

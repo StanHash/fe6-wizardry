@@ -1,0 +1,7 @@
+// WARNING: this is probably not very good and there's probably glitching waiting ot happen
+
+ALIGN 4
+Img_HpBars:
+#incbin "hp_bars_sheet.4bpp.lz"
+
+#include "hp_bars.lyn.event"

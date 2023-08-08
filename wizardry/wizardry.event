@@ -8,5 +8,7 @@
 #include "misc/skip-intro.event"
 // #include "growthless/growthless.event"
 
+#include "hp_bars/hp_bars.event"
+
 #include "fixed_growths/fixed_growths.event"
 #include "no_ngp/no_ngp.event"

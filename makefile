@@ -62,3 +62,9 @@ FORCE:
 # ===================
 
 include wizardry.mk
+
+%.4bpp: %.png
+	$(PNG2DMP) $< -o $@
+
+%.lz: %
+	$(COMPRESS) $< $@

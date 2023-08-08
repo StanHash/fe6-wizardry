@@ -12,3 +12,5 @@
 *.lyn.event
 *.asm
 *.dmp
+*.4bpp
+*.lz

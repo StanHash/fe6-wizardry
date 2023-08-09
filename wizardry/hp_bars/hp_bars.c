@@ -45,7 +45,7 @@ void ApplySystemObjectsGraphics(void)
     // NOTE: if cloud weather, don't load hp bars graphics
     // because weather graphics take up all of the space
 
-    if (gBmSt.lock_display == 0 && gPlaySt.weather != WEATHER_CLOUDS)
+    if (gPlaySt.weather != WEATHER_CLOUDS)
         ApplyHpBarsGraphics();
 }
 

@@ -21,6 +21,8 @@ PUSH
     POIN UString_UnitPanel_Label_Res
     ORG $02C030
     POIN UString_StaffOffensePanel_Label_Accuracy
+    ORG $02C0C0
+    POIN UString_TradePanel_NoItems
     ORG $05D384
     POIN UString_Banim_LevelUp_Label_Physical_Hp
     ORG $05D4B8
@@ -64,12 +66,26 @@ PUSH
     POIN UString_PrepMenuUnit_Label_Remaining
     POIN UString_PrepMenuUnit_Separator
     POIN UString_PrepMenuUnit_Label_Total
+    ORG $07DACC
+    POIN UString_Unk_08327294
+    ORG $07DD54
+    POIN UString_Unk_083272A4
+    ORG $07DE5C
+    POIN UString_Unk_083272A4
+    ORG $07FE74
+    POIN UString_Unk_083272AC
+    ORG $07FE7C
+    POIN UString_Unk_083272B8
+    ORG $07FF44
+    POIN UString_Unk_083272C4
     ORG $08878C
     POIN UString_MainMenu_NormalHard
     ORG $08C078
     POIN UString_SoundRoom_08336D3C
     POIN UString_SoundRoom_08336D48
     POIN UString_SoundRoom_08336D54
+    ORG $097048
+    POIN UString_Unk_0835CA44
     ORG $105788
     POIN UString_ItemRange_1ToMag
     POIN UString_ItemRange_1
@@ -117,6 +133,8 @@ PUSH
     POIN UString_ClassReel_Label_Speed
     POIN UString_ClassReel_Label_Defense
     POIN UString_ClassReel_Label_Resistance
+    ORG $35CA4C
+    POIN UString_Unk_0835CA44
     ORG $5C526C
     POIN UString_StatusName_None
     POIN UString_StatusName_Poison

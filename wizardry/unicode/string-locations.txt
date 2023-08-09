@@ -307,6 +307,8 @@
 
 08105D88 StaffOffensePanel_Label_Accuracy
 
+08105D90 TradePanel_NoItems "Nothing"
+
 # unit screen labels
 0832724C UnitScreen_Label_0
 08327244 UnitScreen_Label_1
@@ -380,3 +382,13 @@
 08336D3C SoundRoom_08336D3C
 08336D48 SoundRoom_08336D48
 08336D54 SoundRoom_08336D54
+
+# Supply
+08327294 Unk_08327294
+083272A4 Unk_083272A4
+083272AC Unk_083272AC
+083272B8 Unk_083272B8
+083272C4 Unk_083272C4
+
+# Shop
+0835CA44 Unk_0835CA44 # G

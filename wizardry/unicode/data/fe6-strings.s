@@ -1335,6 +1335,11 @@ UString_UnitPanel_Label_Arrow: @ '→'
 UString_StaffOffensePanel_Label_Accuracy: @ '命中'
     .asciz "命中"
 
+    .global UString_TradePanel_NoItems
+    .type UString_TradePanel_NoItems, object
+UString_TradePanel_NoItems: @ '何もありません'
+    .asciz "Nothing"
+
     .global UString_UnitScreen_Label_0
     .type UString_UnitScreen_Label_0, object
 UString_UnitScreen_Label_0: @ '名前'
@@ -1635,8 +1640,38 @@ UString_SoundRoom_08336D48: @ 'ＢＧＭ停止'
 UString_SoundRoom_08336D54: @ '終わる'
     .asciz "終わる"
 
+    .global UString_Unk_08327294
+    .type UString_Unk_08327294, object
+UString_Unk_08327294: @ '何もありません'
+    .asciz "何もありません"
+
+    .global UString_Unk_083272A4
+    .type UString_Unk_083272A4, object
+UString_Unk_083272A4: @ '輸送隊'
+    .asciz "輸送隊"
+
+    .global UString_Unk_083272AC
+    .type UString_Unk_083272AC, object
+UString_Unk_083272AC: @ 'あずける'
+    .asciz "あずける"
+
+    .global UString_Unk_083272B8
+    .type UString_Unk_083272B8, object
+UString_Unk_083272B8: @ 'うけとる'
+    .asciz "うけとる"
+
+    .global UString_Unk_083272C4
+    .type UString_Unk_083272C4, object
+UString_Unk_083272C4: @ 'すてる'
+    .asciz "すてる"
+
+    .global UString_Unk_0835CA44
+    .type UString_Unk_0835CA44, object
+UString_Unk_0835CA44: @ 'Ｇ'
+    .asciz "Ｇ"
+
     .global DateCvtStringsBuilt
     .type DateCvtStringsBuilt, object
 DateCvtStringsBuilt:
-    .asciz "2023-08-08"
+    .asciz "2023-08-09"
 

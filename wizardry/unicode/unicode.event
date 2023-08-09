@@ -14,3 +14,5 @@ UnicodeFontInfoTable:
     POIN UnicodeTalkFont UnicodeTalkFontEnd
 
 #include "src/utf-8.lyn.event"
+
+// TODO: InitSubtitleHelpText needs to be updated to correctly go back through the string

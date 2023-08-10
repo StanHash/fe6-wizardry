@@ -66,6 +66,12 @@ PUSH
     POIN UString_PrepMenuUnit_Label_Remaining
     POIN UString_PrepMenuUnit_Separator
     POIN UString_PrepMenuUnit_Label_Total
+    ORG $07D6A8
+    POIN UString_Unk_0832726C
+    POIN UString_Unk_08327274
+    POIN UString_Unk_0832727C
+    POIN UString_Unk_08327284
+    POIN UString_Unk_0832728C
     ORG $07DACC
     POIN UString_Unk_08327294
     ORG $07DD54
@@ -78,6 +84,11 @@ PUSH
     POIN UString_Unk_083272B8
     ORG $07FF44
     POIN UString_Unk_083272C4
+    ORG $0816DC
+    POIN UString_Unk_083272F0
+    POIN UString_Unk_083272F8
+    POIN UString_Unk_08327304
+    POIN UString_Unk_0832730C
     ORG $08878C
     POIN UString_MainMenu_NormalHard
     ORG $08C078

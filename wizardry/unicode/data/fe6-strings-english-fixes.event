@@ -26,6 +26,9 @@ PUSH
     // equip info window weapon kind label position
     ORG $01CC1E
     BYTE 0x18
+    // supply item info window kind label position
+    ORG $07D5E4
+    BYTE 2
     // ORG $01CCF8 // I used to move the icon to the top right corner but decided against it
     // BYTE 11
     // change the way the "units remaining" counter works on prep menu

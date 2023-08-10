@@ -8,7 +8,7 @@ UString_MainMenu_Blank: @ ''
     .global UString_MainMenu_StartCancel
     .type UString_MainMenu_StartCancel, object
 UString_MainMenu_StartCancel: @ 'はじめる　やめる'
-    .asciz "Start   Cancel"
+    .asciz "Start      Cancel"
 
     .global UString_MainMenu_CopyCancel
     .type UString_MainMenu_CopyCancel, object
@@ -23,7 +23,7 @@ UString_MainMenu_EraseCancel: @ '消す　　　やめる'
     .global UString_MainMenu_SaveCancel
     .type UString_MainMenu_SaveCancel, object
 UString_MainMenu_SaveCancel: @ '記録　　　やめる'
-    .asciz "Save     Cancel"
+    .asciz "Save      Cancel"
 
     .global UString_MainMenu_NormalHard
     .type UString_MainMenu_NormalHard, object
@@ -1640,6 +1640,31 @@ UString_SoundRoom_08336D48: @ 'ＢＧＭ停止'
 UString_SoundRoom_08336D54: @ '終わる'
     .asciz "終わる"
 
+    .global UString_Unk_0832726C
+    .type UString_Unk_0832726C, object
+UString_Unk_0832726C: @ '属性'
+    .asciz "Kind"
+
+    .global UString_Unk_08327274
+    .type UString_Unk_08327274, object
+UString_Unk_08327274: @ '威力'
+    .asciz "Atk"
+
+    .global UString_Unk_0832727C
+    .type UString_Unk_0832727C, object
+UString_Unk_0832727C: @ '命中'
+    .asciz "Hit"
+
+    .global UString_Unk_08327284
+    .type UString_Unk_08327284, object
+UString_Unk_08327284: @ '必殺'
+    .asciz "Crit"
+
+    .global UString_Unk_0832728C
+    .type UString_Unk_0832728C, object
+UString_Unk_0832728C: @ '重さ'
+    .asciz "Wt"
+
     .global UString_Unk_08327294
     .type UString_Unk_08327294, object
 UString_Unk_08327294: @ '何もありません'
@@ -1665,6 +1690,26 @@ UString_Unk_083272B8: @ 'うけとる'
 UString_Unk_083272C4: @ 'すてる'
     .asciz "すてる"
 
+    .global UString_Unk_083272F0
+    .type UString_Unk_083272F0, object
+UString_Unk_083272F0: @ '本当に'
+    .asciz "本当に"
+
+    .global UString_Unk_083272F8
+    .type UString_Unk_083272F8, object
+UString_Unk_083272F8: @ 'すてますか'
+    .asciz "すてますか"
+
+    .global UString_Unk_08327304
+    .type UString_Unk_08327304, object
+UString_Unk_08327304: @ 'はい'
+    .asciz "はい"
+
+    .global UString_Unk_0832730C
+    .type UString_Unk_0832730C, object
+UString_Unk_0832730C: @ 'いいえ'
+    .asciz "いいえ"
+
     .global UString_Unk_0835CA44
     .type UString_Unk_0835CA44, object
 UString_Unk_0835CA44: @ 'Ｇ'
@@ -1673,5 +1718,5 @@ UString_Unk_0835CA44: @ 'Ｇ'
     .global DateCvtStringsBuilt
     .type DateCvtStringsBuilt, object
 DateCvtStringsBuilt:
-    .asciz "2023-08-09"
+    .asciz "2023-08-10"
 

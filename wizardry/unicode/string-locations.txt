@@ -3,11 +3,12 @@
 # any sjis string needs to be listed, even if they don't need to be translated
 
 # main menu related array at 0868A2EC
+# most of those are still a bit off
 08336CCC MainMenu_Blank
-08336CB8 MainMenu_StartCancel "Start   Cancel"
+08336CB8 MainMenu_StartCancel "Start      Cancel"
 08336CA4 MainMenu_CopyCancel "Copy    Cancel"
 08336C90 MainMenu_EraseCancel "Erase     Cancel"
-08336C7C MainMenu_SaveCancel "Save     Cancel"
+08336C7C MainMenu_SaveCancel "Save      Cancel"
 08336C60 MainMenu_NormalHard "Normal    Hard"
 
 # terrain name table at 0860D00C
@@ -378,10 +379,17 @@
 0832725C PrepMenuUnit_Separator "/"
 08327260 PrepMenuUnit_Label_Total ""
 
-# TODO
+# Sound Room
 08336D3C SoundRoom_08336D3C
 08336D48 SoundRoom_08336D48
 08336D54 SoundRoom_08336D54
+
+# Supply View Item Info
+0832726C Unk_0832726C "Kind"
+08327274 Unk_08327274 "Atk"
+0832727C Unk_0832727C "Hit"
+08327284 Unk_08327284 "Crit"
+0832728C Unk_0832728C "Wt"
 
 # Supply
 08327294 Unk_08327294
@@ -389,6 +397,15 @@
 083272AC Unk_083272AC
 083272B8 Unk_083272B8
 083272C4 Unk_083272C4
+
+# ? is this string
+# 083272E8 Unk_083272E8
+
+# prepscreen discard menu?
+083272F0 Unk_083272F0
+083272F8 Unk_083272F8
+08327304 Unk_08327304
+0832730C Unk_0832730C
 
 # Shop
 0835CA44 Unk_0835CA44 # G

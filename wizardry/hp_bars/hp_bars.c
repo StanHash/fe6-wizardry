@@ -87,7 +87,7 @@ void RefreshUnitSprites(void)
         map_sprite->y = unit->y * 16;
         map_sprite->x = unit->x * 16;
         map_sprite->oam2 = UseUnitSprite(GetUnitMapSprite(unit)) + OAM2_PAL(GetUnitDisplayedSpritePalette(unit));
-        map_sprite->hp_bar_info = gPlaySt.weather != WEATHER_CLOUDS ? 0x0C - Div(unit->hp * 0x0C, unit->max_hp) : 0;
+        map_sprite->hp_bar_info = gPlaySt.weather != WEATHER_CLOUDS ? 0x0B - Div(unit->hp * 0x0B, unit->max_hp) : 0;
         map_sprite->config = GetUnitSpriteInfo(GetUnitMapSprite(unit)).size;
 
         if ((unit->flags & UNIT_FLAG_SEEN) != 0)
@@ -134,8 +134,10 @@ void RefreshUnitSprites(void)
 }
 
 static u8 const s_hpbar_chr_off[0x0B] = {
-    0 + CHR_LINE * 0, 2 + CHR_LINE * 0, 4 + CHR_LINE * 0, 0 + CHR_LINE * 1, 2 + CHR_LINE * 1, 4 + CHR_LINE * 1,
-    0 + CHR_LINE * 2, 2 + CHR_LINE * 2, 4 + CHR_LINE * 2, 0 + CHR_LINE * 3, 2 + CHR_LINE * 3,
+    0 + CHR_LINE * 0, 2 + CHR_LINE * 0, 4 + CHR_LINE * 0, // first row
+    0 + CHR_LINE * 1, 2 + CHR_LINE * 1, 4 + CHR_LINE * 1, // second row
+    0 + CHR_LINE * 2, 2 + CHR_LINE * 2, 4 + CHR_LINE * 2, // third row
+    0 + CHR_LINE * 3, 2 + CHR_LINE * 3,                   // fourth row
 };
 
 LYN_REPLACE_CHECK(PutUnitSpritesOam);

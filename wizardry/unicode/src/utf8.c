@@ -145,7 +145,7 @@ void SetTextFontGlyphs(int glyph_set)
 
 // replaces
 LYN_REPLACE_CHECK(GetCharTextLen);
-char const * GetCharTextLen(char const * str, int * out_width)
+char const * GetCharTextLen(char const * str, i32 * out_width)
 {
     u32 character = Utf8DecodeCharacter(&str);
 

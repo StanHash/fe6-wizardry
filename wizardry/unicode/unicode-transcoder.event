@@ -2,4 +2,4 @@
 // hack by stan
 
 #include "data/unicode-transcoder-luts.lyn.event"
-#include "src/sjis-to-utf-8.lyn.event"
+#include "src/sjis-to-utf8.lyn.event"
